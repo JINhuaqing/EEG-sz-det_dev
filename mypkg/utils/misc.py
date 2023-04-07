@@ -1,6 +1,19 @@
 import numpy as np
 import pickle
 from easydict import EasyDict as edict
+import time
+
+
+def load_txt(p):
+    with open(p, "r") as f:
+        txt = f.readlines()
+    return txt
+
+def delta_time(t):
+    """Return the time diff from t
+    """
+    delta_t = time.time() - t
+    return delta_t
 
 
 def load_pkl_folder2dict(folder, excluding=[], including=["*"], verbose=True):
