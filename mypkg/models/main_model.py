@@ -1,5 +1,6 @@
 # the main model we use for gTVDN
 # It is cumstmized from https://github.com/karpathy/nanoGPT
+# almost no changes
 import numpy as np
 import torch
 import torch.nn as nn

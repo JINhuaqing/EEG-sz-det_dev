@@ -3,6 +3,25 @@ import pickle
 from easydict import EasyDict as edict
 import time
 
+def truncated_mean_upper(data, upper_pct=0.2):
+    """
+    Calculates the mean of the data after removing the upper percentage of data points specified by upper_pct.
+
+    Args:
+    data: A list or array of numerical data.
+    upper_pct: A float between 0 and 1 representing the percentage of data points to remove from the upper end of the data.
+
+    Returns:
+    The mean of the truncated data.
+    """
+    data = np.array(data)
+    assert 0 <= upper_pct <= 1, "Upper percentile should be between 0 and 1."
+
+    upper_threshold = np.percentile(data, 100 * (1 - upper_pct))
+
+    truncated_data = data[data <= upper_threshold]
+
+    return np.mean(truncated_data)
 
 def load_txt(p):
     with open(p, "r") as f:
