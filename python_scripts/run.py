@@ -3,18 +3,13 @@
 
 # This file is to test my model on the TUH-EEG-seizure data
 # 
-# Now my model is a VAR(k) model, where k is a move step.
-# 
-# I do not use the SC layer. 
-# 
-# X_t+k = exp(A_t k*dlt)X_t for k =1, ldots, KX_t+k = exp(A_t k*dlt)X_t for k =1, ldots, K
-
 # In[1]:
 
 
-RUN_PYTHON_SCRIPT = False
-MODEL_NAME = "Lay2_TVDN"
+RUN_PYTHON_SCRIPT = True
+MODEL_NAME_PRE = "DisMSELoss"
 SAVED_MODEL = None
+MODEL_CLASS = "my_main_model_dis_base.py"
 
 
 # In[2]:
@@ -22,7 +17,7 @@ SAVED_MODEL = None
 
 import sys
 sys.path.append("../mypkg")
-from constants import RES_ROOT, FIG_ROOT, DATA_ROOT
+from constants import RES_ROOT, FIG_ROOT, DATA_ROOT, MODEL_ROOT
 
 
 # In[3]:
@@ -34,30 +29,27 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from easydict import EasyDict as edict
 import time
+# copy file
+import shutil
 
 if not RUN_PYTHON_SCRIPT:
     plt.style.use(FIG_ROOT/"base.mplstyle")
 
 
-# In[4]:
-
-
 import importlib
-import data_utils.eeg_load
-importlib.reload(data_utils.eeg_load)
 
 
-# In[15]:
+# In[7]:
 
 
-from models.my_main_model import myNet
-from models.model_utils import generate_position_encode
-from models.netout2pred_fns import netout2loss_tvdn
-from data_utils.eeg_load import EEG_data, MyDataLoader
+from models.my_main_model_dis_base import myNet
+from models.losses import ordinal_mse_loss
+from models.model_utils import generate_position_encode 
+from data_utils.eeg_load import EEG_data, MyDataLoader, digitize_data, rec_data
 from utils.misc import delta_time, load_pkl_folder2dict, save_pkl_dict2folder, truncated_mean_upper
 
 
-# In[6]:
+# In[8]:
 
 
 # pkgs for pytorch (on Apr 3, 2023)
@@ -69,44 +61,38 @@ from torch.utils.data import DataLoader
 
 torch.set_default_dtype(torch.float64)
 if torch.cuda.is_available():
-    torch.set_default_tensor_type(torch.cuda.DoubleTensor)
     torch.backends.cudnn.benchmark = True
     device = torch.device("cuda")
 else:
-    torch.set_default_tensor_type(torch.DoubleTensor)
     device = torch.device("cpu")
-
-
-# In[ ]:
-
-
-
+torch.set_default_device(device)
+print(device)
 
 
 # # training
 
-# In[8]:
+# In[22]:
 
 
 if SAVED_MODEL is None:
     config = edict()
     config.nfeature = 19 # the dim of features at each time point
-    config.ndim = 256 # the output of the first FC layer
-    config.dropout = 0 # the dropout rate
-    config.n_layer = 2 # the number of self-attention layers
+    config.ndim = 512 # the output of the first FC layer
+    config.dropout = 0.5 # the dropout rate
+    config.n_layer = 8 # the number of self-attention layers
     config.n_head = 8 # numher of heads for multi-head attention
     config.is_mask = True # Use mask to make the attention causal
     config.is_bias = True # Bias  for layernorm
-    config.block_size = 512 # the preset length of seq, 
-    config.batch_size = 2 # the batch size
-    config.move_step = 32 # k, movestep
+    config.block_size = 256 # the preset length of seq, 
+    config.batch_size = 64 # the batch size
+    config.move_step = 10 # k, movestep
     config.fs = 90
-    config.num_Bs = 45 # no use now (on May 9, 2023)
-    config.target_dim = 19**2
+    config.target_dim = 19
+    config.k = 6 # discretize to 2^k levels
     
     paras_train = edict()
-    paras_train.nepoch= 2
-    paras_train.loss_out = 10
+    paras_train.nepoch= 10
+    paras_train.loss_out = 2
     paras_train.clip = 1 # 
     paras_train.lr_step = 300
     paras_train.test_loss_out = 50
@@ -118,43 +104,46 @@ else:
     config = saved_model.config
     paras_train = saved_model.paras_train
 
+MODEL_NAME = f"{MODEL_NAME_PRE}_step{config.move_step}_dis{config.k}_nlay{config.n_layer}_ndim{config.ndim}"
 
-# override saved paras and config
-paras_train.nepoch= 3
-# In[9]:
+print(config)
+print(MODEL_NAME)
+
+
+# In[23]:
 
 
 def trans_batch(batch):
     """transform the batch to make it easy for training
     """
-    batch = batch * 1e6
-    X, Y = batch[:, :config.block_size], batch[:, 1:]
-    Y_move = batch[:, :-1] # use X_t as prediction of X_t+1
-    return X, Y, Y_move
+    batch_dis = digitize_data(batch.cpu().numpy(), config.k)
+    batch_rec = rec_data(batch_dis, config.k)
+    batch_dis = torch.tensor(batch_dis)
+    batch_rec = torch.tensor(batch_rec)
+    
+    X, Y = batch_rec[:, :-config.move_step], batch_rec[:, config.move_step:]
+    Y_dis = batch_dis[:, config.move_step:]
+    Y_dis_move = batch_dis[:, (config.move_step-1):-1] # use X_t as prediction of X_t+1
+    Y_dis_move = nn.functional.one_hot(Y_dis_move, num_classes=2**config.k).double()
+    return X, Y_dis, Y_dis_move
 
 
-def trun_MSE_loss(Y, Y_pred, quantile=0.5):
-    loss_fn1 = nn.MSELoss(reduction='none')
-    ls = loss_fn1(Y, Y_pred)
-    qv = torch.quantile(ls, quantile)
-    loss_v = ls[ls < qv].mean()
-    return loss_v
+# In[24]:
 
 
-# In[10]:
-
-
-train_data = EEG_data("train_train", "AR", 
+train_data = EEG_data("train_train_health", "AR", 
+#train_data = EEG_data("train_train_health_small", "AR", 
                       move_dict=dict(winsize=config.block_size+config.move_step,
-                                     stepsize=config.block_size+config.move_step,
+                                     stepsize=config.block_size+config.move_step, 
                                      marginsize=None),
                       preprocess_dict=dict(is_detrend=True, 
                                       is_drop=True,
                                       target_fs=90, 
                                       filter_limit=[1, 45], 
-                                      is_diff=False)
+                                      is_diff=False), 
+                      scale_fct=None
                      )
-test_data = EEG_data("train_test", "AR", 
+test_data = EEG_data("train_test_health", "AR", 
                       move_dict=dict(winsize=config.block_size+config.move_step,
                                      stepsize=config.block_size+config.move_step,
                                      marginsize=None),
@@ -162,7 +151,8 @@ test_data = EEG_data("train_test", "AR",
                                       is_drop=True,
                                       target_fs=90, 
                                       filter_limit=[1, 45], 
-                                      is_diff=False)
+                                      is_diff=False),
+                      scale_fct=None
                     )
 
 train_data_loader = MyDataLoader(train_data, batch_size=config.batch_size, shuffle=True)
@@ -170,11 +160,11 @@ test_data_loader = MyDataLoader(test_data, batch_size=4, shuffle=False)
 print(len(train_data_loader), len(test_data_loader))
 
 
-# In[11]:
+# In[25]:
 
 
 pos_enc = generate_position_encode(config.block_size, config.nfeature).unsqueeze(0)
-loss_fn = nn.HuberLoss()
+loss_fn = ordinal_mse_loss
 if SAVED_MODEL is None:
     net = myNet(config)
 else:
@@ -182,15 +172,16 @@ else:
     if torch.cuda.is_available():
         net = net.cuda()
 optimizer = torch.optim.Adam(net.parameters(), lr=1e-4, weight_decay=0)
-scheduler = ExponentialLR(optimizer, gamma=0.1, verbose=True)
+scheduler = ExponentialLR(optimizer, gamma=0.6)
 
 
-# In[12]:
+# In[ ]:
 
 
 
 
-# In[16]:
+
+# In[ ]:
 
 
 def evaluate(net):
@@ -203,9 +194,9 @@ def evaluate(net):
         X_testp = X_test + pos_enc;
         net.eval()
         with torch.no_grad():
-            netout = net(X_testp)
-            loss = netout2loss_tvdn(netout, X_test, Y_test, loss_fn, config, num_seg=None)
-            loss_base = loss_fn(Y_test, Y_test_move)
+            netout = net(X_testp, X_test)
+            loss = ordinal_mse_loss(netout, Y_test, num_cls=2**config.k)
+            loss_base = ordinal_mse_loss(Y_test_move, Y_test, num_cls=2**config.k)
         losses.append(loss.item())
         losses_base.append(loss_base.item())
     net.train()
@@ -224,6 +215,7 @@ else:
 t0 = time.time()
 for iep in range(paras_train.nepoch):
     train_data_loader = MyDataLoader(train_data, batch_size=config.batch_size, shuffle=True)
+    print(f"The current lr is {scheduler.get_last_lr()}.")
     for ix in range(len(train_data_loader)):
         batch = train_data_loader(ix)
         X, Y, Y_move = trans_batch(batch)
@@ -231,9 +223,9 @@ for iep in range(paras_train.nepoch):
         # Zero the gradients
         optimizer.zero_grad()
         
-        netout = net(Xp)
-        loss = netout2loss_tvdn(netout, X, Y, loss_fn, config, num_seg=None)
-        loss_base = loss_fn(Y, Y_move)
+        netout = net(Xp, X)
+        loss = ordinal_mse_loss(netout, Y, num_cls=2**config.k)
+        loss_base = ordinal_mse_loss(Y_move, Y, num_cls=2**config.k)
         
         # Perform backward pass
         loss.backward()
@@ -268,7 +260,6 @@ for iep in range(paras_train.nepoch):
     
     # save the model 
     model_res = edict()
-    model_res.model = net.cpu()
     model_res.config = config
     model_res.loss_fn = loss_fn
     model_res.losses = losses
@@ -279,27 +270,13 @@ for iep in range(paras_train.nepoch):
         cur_model_name = f"{MODEL_NAME}_epoch{iep+1}"
     else:
         cur_model_name = f"{MODEL_NAME}_epoch{iep+1}_w_{SAVED_MODEL}"
+        
     save_pkl_dict2folder(RES_ROOT/cur_model_name, model_res, is_force=True)
-    net.cuda()
-
-
-# In[40]:
-
-
-if not RUN_PYTHON_SCRIPT:
-    #plt.plot(losses)
-    plt.plot(losses_test)
-    #plt.yscale("log")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
+    # save model     
+    torch.save(net.state_dict(), RES_ROOT/cur_model_name/"model.pth")
+    torch.save(optimizer.state_dict(), RES_ROOT/cur_model_name/"optimizer.pth")
+    torch.save(scheduler.state_dict(), RES_ROOT/cur_model_name/"scheduler.pth")
+    # copy class file 
+    shutil.copy(MODEL_ROOT/MODEL_CLASS, RES_ROOT/cur_model_name/"model_class.py")
 
 

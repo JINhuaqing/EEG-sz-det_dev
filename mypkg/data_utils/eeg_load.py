@@ -7,6 +7,7 @@ from easydict import EasyDict as edict
 import torch
 import mne
 import time
+import pdb
 
 #sel_chs_raw = "Fp1, Fp2, F7, F3, F4, F8, A1, T3, T4, A2, T5, T6, C3, Cz, C4, P3, P4, O1, O2"
 # The below is from Fei,  but some data has no Fz and Pz, so I replace them with A1 A2 
@@ -14,7 +15,6 @@ import time
 sel_chs_raw = "Fp1, Fp2, F7, F3, Fz, F4, F8, T3, T4, T5, T6, C3, Cz, C4, P3, Pz, P4, O1, O2"
 # the selected channels for analysis
 SEL_CHS = [ch.strip().upper() for ch in sel_chs_raw.split(",")]
-EEG_ROOT = list(DATA_ROOT.glob("EEG_seizure"))[0]
 
 def robust_EEG_rescale(data, data_max=None):
     """rescale data robustly.
@@ -27,52 +27,9 @@ def robust_EEG_rescale(data, data_max=None):
     #data_minmax = 2*(data-data_min)/(data_max-data_min) - 1;
     return data_rescaled
 
-def rec_data(data_dis, k, verbose=False, typ="_rescale_health"):
-    """ Reconstruct the digitized data for 2^k levels.
-        Approximate inverse operator of digitize_data
-    """
-    fil = EEG_ROOT/f"discrete_cuts/cuts_2power{k}{typ}.pkl";
-    assert fil.exists(), "No cutoff values"
-    cuts = load_pkl(fil, verbose=verbose);
-    cuts_all = np.sort(np.concatenate([-cuts, [0], cuts]));
-    filled_vs = (cuts_all[1:] + cuts_all[:-1])/2;
-    filled_vs_full = np.concatenate([cuts_all[:1], filled_vs, cuts_all[-1:]]);
-    return filled_vs_full[data_dis]
-
-def digitize_data(data, k, verbose=False, typ="_rescale_health"):
-    """ Discretize the data into 2^k levels.
-    """
-    fil = EEG_ROOT/f"discrete_cuts/cuts_2power{k}{typ}.pkl";
-    assert fil.exists(), "No cutoff values"
-    cuts = load_pkl(fil, verbose=verbose);
-    cuts_all = np.sort(np.concatenate([-cuts, [0], cuts]));
-    data_discrete = np.digitize(data, cuts_all);
-    return data_discrete
 
 
-def seiz_lab_fn(lab_info_cl):
-    """Parse the seizure lab and return (start_time, end_time)
-        if no seizure, [(0, 0)]
-    """
-    lab_info_out = []
-    if len(lab_info_cl) == 0:
-        lab_info_out.append((0, 0))
-    else:
-        for lab in lab_info_cl:
-            dat = lab.split(",")[1:3]
-            dat = [float(la) for la in dat]
-            lab_info_out.append(tuple(dat))
-    return lab_info_out
 
-def seiz_lab_from_row_fn(obs_row, root=None):
-    """A convinient wrapper of `seiz_lab_fn`
-    """
-    if root is None:
-        root = DATA_ROOT/"EEG_seizure"
-    fil_path = root/"edf"/obs_row["relative_path"]
-    lab_info = load_txt(fil_path.with_suffix(".csv_bi"))
-    lab_info_cl =  [lab for lab in lab_info if lab.startswith("TERM") and "seiz" in lab]
-    return seiz_lab_fn(lab_info_cl)
 
 def sel_fn(row):
     """ Select the row including all the chs in SEL_CHS
@@ -82,35 +39,6 @@ def sel_fn(row):
     return len(ex_chs) == 0
 
 
-def txt2labinfo(txt):
-    """extract the useful info from csv_bi data, 
-       including
-           1. is_seizure or not
-           2. start time
-           3. end time
-           4. total duration time
-           5. type
-        data like 
-            ['# version = csv_v1.0.0\n',
-             '# bname = aaaaatvr_s005_t008\n',
-             '# duration = 301.00 secs\n',
-             '# montage_file = $NEDC_NFC/lib/nedc_eas_default_montage.txt\n',
-             '#\n',
-             'channel,start_time,stop_time,label,confidence\n',
-             'TERM,0.0000,301.0000,bckg,1.0000\n']
-    """
-    ress = dict(total_dur = float(txt[2].split("=")[-1].split("secs")[0]))
-    labs = txt[6:]
-    for ix, lab in enumerate(txt[6:]):
-        res = dict(
-        st = float(lab.split(",")[1]),
-        et = float(lab.split(",")[2]),
-        typ = lab.split(",")[3], 
-        )
-        ress[f"lab{ix+1}"] = res
-   
-    ress["is_seizure"] = bool(np.sum(['seiz' in i for i in txt]))
-    return ress
 
 def len2num(len_seq, winsize, stepsize, marginsize=None):
     """
@@ -170,7 +98,7 @@ def find_closest_false_idx(bool_array, idx):
     
     return new_idx
 
-class EEG_data(Dataset):
+class EEGData(Dataset):
     """The main data class
     """
     def __init__(self, dataset, subset, 
@@ -186,7 +114,8 @@ class EEG_data(Dataset):
         The EEG data with sampling freq 250
 
         Args:
-            dataset: The data set we want to load, train, dev or eval
+            dataset: The data set we want to load, 
+                     train, dev or eval
             subset: the subset to choose: LE, AR, AR_A, ALL
             move_dict: the moving parameters
             root: The root of dataset,
@@ -208,7 +137,7 @@ class EEG_data(Dataset):
         self.hook.sub_idxs = []
         
         if root is None:
-            root = list(DATA_ROOT.glob("EEG_seizure"))[0]
+            root = list(DATA_ROOT.glob("EEG_seizure"))[0]/"edf"
         self.root = root
         self.scale_fct = scale_fct
         self.move_dict.update(move_dict)
@@ -234,6 +163,7 @@ class EEG_data(Dataset):
             self.all_data = all_data[all_data["montage"].str.endswith(subset.lower())]
         
         # remove the data not including all channels in SEL_CHS
+        #pdb.set_trace()
         self.all_data = self.all_data[self.all_data.apply(sel_fn, axis=1)]
             
         # remove the first and last 10 seconds and remove the subject with too-short seq
@@ -241,6 +171,7 @@ class EEG_data(Dataset):
         self.all_data.loc[:, "total_dur"] = self.all_data.loc[:, "total_dur"] - 2* self.rm_len
         self.all_data = self.all_data[self.all_data["total_dur"] > self.keep_len]
         self.all_data = self.all_data.reset_index()
+
         
         self.num_sps_persub = np.array([len2num(total_dur*self.preprocess_dict.target_fs, 
                                                 self.move_dict.winsize, 
@@ -256,6 +187,8 @@ class EEG_data(Dataset):
             int: The length of the dataset.
         """
         return int(self.num_sps_persub.sum())
+
+    
 
     def __getitem__(self, idx):
         """
@@ -317,7 +250,7 @@ class EEG_data(Dataset):
         """ preprocess data
         """
         relative_path = self.all_data["relative_path"].iloc[sub_idx]
-        data_path = (self.root/"edf"/relative_path).with_suffix(".edf")
+        data_path = (self.root/relative_path).with_suffix(".edf")
         data = mne.io.read_raw_edf(data_path, preload=True, verbose=False)
         
         
@@ -328,7 +261,7 @@ class EEG_data(Dataset):
                 pick_names = [f"EEG {ch}-REF" for ch in SEL_CHS]
             elif "le" in self.all_data["montage"].iloc[sub_idx]:
                 pick_names = [f"EEG {ch}-LE" for ch in SEL_CHS]
-            data.pick_channels(pick_names)
+            data.pick(pick_names)
             
             # to make sure the order is the same
             data.reorder_channels(pick_names)
@@ -385,7 +318,7 @@ class EEG_data(Dataset):
         """
         relative_path = self.all_data["relative_path"].iloc[sub_idx]
         relative_path = relative_path + "_" + self._dict2name(self.preprocess_dict)
-        data_path = (self.root/"edf"/relative_path).with_suffix(".pkl")
+        data_path = (self.root/relative_path).with_suffix(".pkl")
         if (not data_path.exists()) or regen:
             data = self._preprocess_data(sub_idx)
             save_pkl(data_path, data, verbose=verbose)
@@ -400,7 +333,7 @@ class EEG_data(Dataset):
         """
         relative_path = self.all_data["relative_path"].iloc[sub_idx]
         relative_path = relative_path + "_" + self._dict2name(self.preprocess_dict)
-        data_path = (self.root/"edf"/relative_path).with_suffix(".pkl")
+        data_path = (self.root/relative_path).with_suffix(".pkl")
         if not data_path.exists():
             if verbose:
                 print("No data need to be removed")
@@ -467,3 +400,5 @@ class MyDataLoader:
             batch.append(self.dataset[int(idx)])
         batch = np.array(batch)
         return torch.tensor(batch)
+
+

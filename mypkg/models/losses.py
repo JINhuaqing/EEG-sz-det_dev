@@ -1,14 +1,14 @@
 import torch.nn as nn
 import torch
 
-def ordinal_mse_loss(output, target, num_cls):
+def ordinal_mse_loss(output_prob, target_cls, num_cls):
     """calculate the loss with MSE for ordinal classification 
-        output: tensor (*dim, num_cls), prob of each cls
-        target: tensor (*dim), cls label, 0, 1, ldots, num_cls-1
+        output_prob: tensor (*dim, num_cls), prob of each cls
+        target_cls: tensor (*dim), cls label, 0, 1, ldots, num_cls-1
     """
     mse = nn.MSELoss()
-    output_cum_prob = output.cumsum(dim=-1);
-    target_one_hot_cum = nn.functional.one_hot(target, num_classes=num_cls).cumsum(dim=-1).double();
+    output_cum_prob = output_prob.cumsum(dim=-1);
+    target_one_hot_cum = nn.functional.one_hot(target_cls, num_classes=num_cls).cumsum(dim=-1).double();
     return mse(output_cum_prob, target_one_hot_cum)
 
 def my_nllloss(probs, target, num_cls=None):

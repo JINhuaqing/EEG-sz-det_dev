@@ -1,0 +1,1295 @@
+Running prime number generator program on 6 CPU cores
+cuda
+8116 12349
+number of parameters: 25.24M
+The current lr is [0.0001].
+At iter 10/8116, epoch 1, the losses are 70.211 (train). the base losses are 103.229 (train). The time used is 167.892s. 
+At iter 20/8116, epoch 1, the losses are 65.909 (train). the base losses are 103.698 (train). The time used is 162.385s. 
+At iter 30/8116, epoch 1, the losses are 64.375 (train). the base losses are 103.425 (train). The time used is 147.042s. 
+At iter 40/8116, epoch 1, the losses are 61.094 (train). the base losses are 103.622 (train). The time used is 167.232s. 
+At iter 50/8116, epoch 1, the losses are 56.512 (train). the base losses are 103.324 (train). The time used is 165.895s. 
+At iter 50/8116, epoch 1, the losses are 57.591 (test). the base losses are 104.507 (test). 
+At iter 60/8116, epoch 1, the losses are 51.907 (train). the base losses are 103.093 (train). The time used is 180.884s. 
+At iter 70/8116, epoch 1, the losses are 48.301 (train). the base losses are 103.156 (train). The time used is 157.867s. 
+At iter 80/8116, epoch 1, the losses are 45.348 (train). the base losses are 103.035 (train). The time used is 154.486s. 
+At iter 90/8116, epoch 1, the losses are 43.031 (train). the base losses are 103.398 (train). The time used is 169.899s. 
+At iter 100/8116, epoch 1, the losses are 39.944 (train). the base losses are 103.305 (train). The time used is 142.128s. 
+At iter 100/8116, epoch 1, the losses are 38.213 (test). the base losses are 105.617 (test). 
+At iter 110/8116, epoch 1, the losses are 38.134 (train). the base losses are 102.974 (train). The time used is 163.281s. 
+At iter 120/8116, epoch 1, the losses are 36.689 (train). the base losses are 103.580 (train). The time used is 164.448s. 
+At iter 130/8116, epoch 1, the losses are 34.957 (train). the base losses are 103.564 (train). The time used is 153.994s. 
+At iter 140/8116, epoch 1, the losses are 32.850 (train). the base losses are 102.712 (train). The time used is 157.323s. 
+At iter 150/8116, epoch 1, the losses are 30.799 (train). the base losses are 103.106 (train). The time used is 157.212s. 
+At iter 150/8116, epoch 1, the losses are 28.916 (test). the base losses are 106.247 (test). 
+At iter 160/8116, epoch 1, the losses are 28.601 (train). the base losses are 102.920 (train). The time used is 177.760s. 
+At iter 170/8116, epoch 1, the losses are 27.248 (train). the base losses are 103.507 (train). The time used is 155.568s. 
+At iter 180/8116, epoch 1, the losses are 26.955 (train). the base losses are 103.609 (train). The time used is 161.440s. 
+At iter 190/8116, epoch 1, the losses are 26.235 (train). the base losses are 103.068 (train). The time used is 154.648s. 
+At iter 200/8116, epoch 1, the losses are 24.833 (train). the base losses are 102.812 (train). The time used is 158.904s. 
+At iter 200/8116, epoch 1, the losses are 25.041 (test). the base losses are 105.484 (test). 
+At iter 210/8116, epoch 1, the losses are 25.035 (train). the base losses are 102.780 (train). The time used is 165.179s. 
+At iter 220/8116, epoch 1, the losses are 23.856 (train). the base losses are 103.570 (train). The time used is 157.133s. 
+At iter 230/8116, epoch 1, the losses are 23.059 (train). the base losses are 102.977 (train). The time used is 151.430s. 
+At iter 240/8116, epoch 1, the losses are 21.982 (train). the base losses are 103.068 (train). The time used is 171.318s. 
+At iter 250/8116, epoch 1, the losses are 21.119 (train). the base losses are 103.040 (train). The time used is 161.675s. 
+At iter 250/8116, epoch 1, the losses are 21.800 (test). the base losses are 105.499 (test). 
+At iter 260/8116, epoch 1, the losses are 20.209 (train). the base losses are 103.503 (train). The time used is 179.044s. 
+At iter 270/8116, epoch 1, the losses are 18.604 (train). the base losses are 103.518 (train). The time used is 155.622s. 
+At iter 280/8116, epoch 1, the losses are 20.580 (train). the base losses are 103.389 (train). The time used is 150.647s. 
+At iter 290/8116, epoch 1, the losses are 20.727 (train). the base losses are 103.002 (train). The time used is 166.308s. 
+At iter 300/8116, epoch 1, the losses are 19.072 (train). the base losses are 103.034 (train). The time used is 163.209s. 
+At iter 300/8116, epoch 1, the losses are 17.552 (test). the base losses are 102.871 (test). 
+At iter 310/8116, epoch 1, the losses are 15.799 (train). the base losses are 103.180 (train). The time used is 162.551s. 
+At iter 320/8116, epoch 1, the losses are 15.107 (train). the base losses are 102.905 (train). The time used is 146.268s. 
+At iter 330/8116, epoch 1, the losses are 14.262 (train). the base losses are 102.708 (train). The time used is 160.694s. 
+At iter 340/8116, epoch 1, the losses are 14.403 (train). the base losses are 103.095 (train). The time used is 165.359s. 
+At iter 350/8116, epoch 1, the losses are 13.573 (train). the base losses are 103.171 (train). The time used is 160.152s. 
+At iter 350/8116, epoch 1, the losses are 13.586 (test). the base losses are 106.765 (test). 
+At iter 360/8116, epoch 1, the losses are 13.159 (train). the base losses are 103.241 (train). The time used is 165.224s. 
+At iter 370/8116, epoch 1, the losses are 12.692 (train). the base losses are 103.381 (train). The time used is 157.244s. 
+At iter 380/8116, epoch 1, the losses are 12.361 (train). the base losses are 103.348 (train). The time used is 155.531s. 
+At iter 390/8116, epoch 1, the losses are 12.005 (train). the base losses are 103.525 (train). The time used is 160.460s. 
+At iter 400/8116, epoch 1, the losses are 11.831 (train). the base losses are 103.014 (train). The time used is 165.516s. 
+At iter 400/8116, epoch 1, the losses are 11.740 (test). the base losses are 103.845 (test). 
+At iter 410/8116, epoch 1, the losses are 11.540 (train). the base losses are 103.107 (train). The time used is 165.781s. 
+At iter 420/8116, epoch 1, the losses are 11.199 (train). the base losses are 103.599 (train). The time used is 158.708s. 
+At iter 430/8116, epoch 1, the losses are 11.020 (train). the base losses are 103.247 (train). The time used is 166.634s. 
+At iter 440/8116, epoch 1, the losses are 10.749 (train). the base losses are 102.754 (train). The time used is 157.580s. 
+At iter 450/8116, epoch 1, the losses are 10.481 (train). the base losses are 103.374 (train). The time used is 161.908s. 
+At iter 450/8116, epoch 1, the losses are 10.499 (test). the base losses are 106.789 (test). 
+At iter 460/8116, epoch 1, the losses are 10.178 (train). the base losses are 103.087 (train). The time used is 169.887s. 
+At iter 470/8116, epoch 1, the losses are 9.885 (train). the base losses are 103.200 (train). The time used is 150.793s. 
+At iter 480/8116, epoch 1, the losses are 9.751 (train). the base losses are 103.457 (train). The time used is 154.120s. 
+At iter 490/8116, epoch 1, the losses are 9.540 (train). the base losses are 103.271 (train). The time used is 161.495s. 
+At iter 500/8116, epoch 1, the losses are 9.330 (train). the base losses are 102.527 (train). The time used is 165.627s. 
+At iter 500/8116, epoch 1, the losses are 9.693 (test). the base losses are 102.907 (test). 
+At iter 510/8116, epoch 1, the losses are 9.105 (train). the base losses are 103.243 (train). The time used is 165.302s. 
+At iter 520/8116, epoch 1, the losses are 8.912 (train). the base losses are 103.054 (train). The time used is 164.816s. 
+At iter 530/8116, epoch 1, the losses are 8.803 (train). the base losses are 103.226 (train). The time used is 149.598s. 
+At iter 540/8116, epoch 1, the losses are 8.619 (train). the base losses are 103.400 (train). The time used is 165.620s. 
+At iter 550/8116, epoch 1, the losses are 8.490 (train). the base losses are 102.772 (train). The time used is 166.245s. 
+At iter 550/8116, epoch 1, the losses are 8.796 (test). the base losses are 103.502 (test). 
+At iter 560/8116, epoch 1, the losses are 8.331 (train). the base losses are 103.514 (train). The time used is 172.540s. 
+At iter 570/8116, epoch 1, the losses are 8.180 (train). the base losses are 103.681 (train). The time used is 158.727s. 
+At iter 580/8116, epoch 1, the losses are 8.000 (train). the base losses are 103.067 (train). The time used is 148.647s. 
+At iter 590/8116, epoch 1, the losses are 7.904 (train). the base losses are 103.607 (train). The time used is 154.147s. 
+At iter 600/8116, epoch 1, the losses are 7.784 (train). the base losses are 103.100 (train). The time used is 161.365s. 
+At iter 600/8116, epoch 1, the losses are 7.882 (test). the base losses are 104.235 (test). 
+At iter 610/8116, epoch 1, the losses are 7.616 (train). the base losses are 102.693 (train). The time used is 175.229s. 
+At iter 620/8116, epoch 1, the losses are 7.576 (train). the base losses are 103.327 (train). The time used is 168.116s. 
+At iter 630/8116, epoch 1, the losses are 7.458 (train). the base losses are 102.891 (train). The time used is 155.480s. 
+At iter 640/8116, epoch 1, the losses are 7.363 (train). the base losses are 103.195 (train). The time used is 164.486s. 
+At iter 650/8116, epoch 1, the losses are 7.220 (train). the base losses are 102.984 (train). The time used is 169.074s. 
+At iter 650/8116, epoch 1, the losses are 7.256 (test). the base losses are 105.981 (test). 
+At iter 660/8116, epoch 1, the losses are 7.136 (train). the base losses are 103.510 (train). The time used is 172.602s. 
+At iter 670/8116, epoch 1, the losses are 7.089 (train). the base losses are 102.711 (train). The time used is 149.254s. 
+At iter 680/8116, epoch 1, the losses are 7.007 (train). the base losses are 103.590 (train). The time used is 156.569s. 
+At iter 690/8116, epoch 1, the losses are 6.935 (train). the base losses are 103.553 (train). The time used is 146.193s. 
+At iter 700/8116, epoch 1, the losses are 6.867 (train). the base losses are 103.538 (train). The time used is 164.727s. 
+At iter 700/8116, epoch 1, the losses are 7.023 (test). the base losses are 105.200 (test). 
+At iter 710/8116, epoch 1, the losses are 6.801 (train). the base losses are 103.825 (train). The time used is 148.772s. 
+At iter 720/8116, epoch 1, the losses are 6.706 (train). the base losses are 103.258 (train). The time used is 151.135s. 
+At iter 730/8116, epoch 1, the losses are 6.637 (train). the base losses are 103.453 (train). The time used is 164.917s. 
+At iter 740/8116, epoch 1, the losses are 6.691 (train). the base losses are 103.624 (train). The time used is 153.459s. 
+At iter 750/8116, epoch 1, the losses are 6.541 (train). the base losses are 102.765 (train). The time used is 167.509s. 
+At iter 750/8116, epoch 1, the losses are 6.629 (test). the base losses are 104.945 (test). 
+At iter 760/8116, epoch 1, the losses are 6.482 (train). the base losses are 102.862 (train). The time used is 164.698s. 
+At iter 770/8116, epoch 1, the losses are 6.393 (train). the base losses are 103.129 (train). The time used is 153.878s. 
+At iter 780/8116, epoch 1, the losses are 6.311 (train). the base losses are 103.008 (train). The time used is 154.590s. 
+At iter 790/8116, epoch 1, the losses are 6.288 (train). the base losses are 103.894 (train). The time used is 175.625s. 
+At iter 800/8116, epoch 1, the losses are 6.242 (train). the base losses are 102.484 (train). The time used is 157.696s. 
+At iter 800/8116, epoch 1, the losses are 6.467 (test). the base losses are 106.401 (test). 
+At iter 810/8116, epoch 1, the losses are 6.135 (train). the base losses are 103.177 (train). The time used is 149.304s. 
+At iter 820/8116, epoch 1, the losses are 6.164 (train). the base losses are 103.404 (train). The time used is 158.566s. 
+At iter 830/8116, epoch 1, the losses are 6.100 (train). the base losses are 103.112 (train). The time used is 166.815s. 
+At iter 840/8116, epoch 1, the losses are 6.067 (train). the base losses are 103.112 (train). The time used is 154.024s. 
+At iter 850/8116, epoch 1, the losses are 6.063 (train). the base losses are 102.975 (train). The time used is 168.940s. 
+At iter 850/8116, epoch 1, the losses are 6.096 (test). the base losses are 101.439 (test). 
+At iter 860/8116, epoch 1, the losses are 6.022 (train). the base losses are 103.325 (train). The time used is 165.584s. 
+At iter 870/8116, epoch 1, the losses are 5.960 (train). the base losses are 103.322 (train). The time used is 146.268s. 
+At iter 880/8116, epoch 1, the losses are 5.894 (train). the base losses are 103.274 (train). The time used is 171.209s. 
+At iter 890/8116, epoch 1, the losses are 5.878 (train). the base losses are 102.915 (train). The time used is 155.203s. 
+At iter 900/8116, epoch 1, the losses are 5.848 (train). the base losses are 103.210 (train). The time used is 162.668s. 
+At iter 900/8116, epoch 1, the losses are 5.993 (test). the base losses are 104.046 (test). 
+At iter 910/8116, epoch 1, the losses are 5.766 (train). the base losses are 102.558 (train). The time used is 168.511s. 
+At iter 920/8116, epoch 1, the losses are 5.773 (train). the base losses are 103.159 (train). The time used is 156.238s. 
+At iter 930/8116, epoch 1, the losses are 5.742 (train). the base losses are 103.298 (train). The time used is 153.966s. 
+At iter 940/8116, epoch 1, the losses are 5.724 (train). the base losses are 103.157 (train). The time used is 150.987s. 
+At iter 950/8116, epoch 1, the losses are 5.699 (train). the base losses are 103.188 (train). The time used is 157.509s. 
+At iter 950/8116, epoch 1, the losses are 5.826 (test). the base losses are 103.936 (test). 
+At iter 960/8116, epoch 1, the losses are 5.694 (train). the base losses are 103.260 (train). The time used is 165.774s. 
+At iter 970/8116, epoch 1, the losses are 5.645 (train). the base losses are 103.443 (train). The time used is 140.223s. 
+At iter 980/8116, epoch 1, the losses are 5.623 (train). the base losses are 103.338 (train). The time used is 163.779s. 
+At iter 990/8116, epoch 1, the losses are 5.620 (train). the base losses are 103.190 (train). The time used is 149.400s. 
+At iter 1000/8116, epoch 1, the losses are 5.526 (train). the base losses are 103.412 (train). The time used is 170.616s. 
+At iter 1000/8116, epoch 1, the losses are 5.754 (test). the base losses are 105.792 (test). 
+At iter 1010/8116, epoch 1, the losses are 5.567 (train). the base losses are 102.505 (train). The time used is 166.191s. 
+At iter 1020/8116, epoch 1, the losses are 5.524 (train). the base losses are 103.291 (train). The time used is 150.862s. 
+At iter 1030/8116, epoch 1, the losses are 5.539 (train). the base losses are 103.387 (train). The time used is 148.472s. 
+At iter 1040/8116, epoch 1, the losses are 5.486 (train). the base losses are 102.592 (train). The time used is 155.313s. 
+At iter 1050/8116, epoch 1, the losses are 5.481 (train). the base losses are 103.255 (train). The time used is 155.066s. 
+At iter 1050/8116, epoch 1, the losses are 5.600 (test). the base losses are 104.265 (test). 
+At iter 1060/8116, epoch 1, the losses are 5.433 (train). the base losses are 103.284 (train). The time used is 160.938s. 
+At iter 1070/8116, epoch 1, the losses are 5.422 (train). the base losses are 103.487 (train). The time used is 162.457s. 
+At iter 1080/8116, epoch 1, the losses are 5.392 (train). the base losses are 103.197 (train). The time used is 153.892s. 
+At iter 1090/8116, epoch 1, the losses are 5.365 (train). the base losses are 103.406 (train). The time used is 159.039s. 
+At iter 1100/8116, epoch 1, the losses are 5.378 (train). the base losses are 102.733 (train). The time used is 152.582s. 
+At iter 1100/8116, epoch 1, the losses are 5.609 (test). the base losses are 104.363 (test). 
+At iter 1110/8116, epoch 1, the losses are 5.384 (train). the base losses are 103.026 (train). The time used is 178.018s. 
+At iter 1120/8116, epoch 1, the losses are 5.322 (train). the base losses are 103.054 (train). The time used is 144.710s. 
+At iter 1130/8116, epoch 1, the losses are 5.279 (train). the base losses are 102.673 (train). The time used is 150.190s. 
+At iter 1140/8116, epoch 1, the losses are 5.312 (train). the base losses are 102.992 (train). The time used is 172.640s. 
+At iter 1150/8116, epoch 1, the losses are 5.337 (train). the base losses are 103.182 (train). The time used is 151.571s. 
+At iter 1150/8116, epoch 1, the losses are 5.381 (test). the base losses are 105.226 (test). 
+At iter 1160/8116, epoch 1, the losses are 5.343 (train). the base losses are 103.483 (train). The time used is 160.790s. 
+At iter 1170/8116, epoch 1, the losses are 5.268 (train). the base losses are 103.361 (train). The time used is 166.524s. 
+At iter 1180/8116, epoch 1, the losses are 5.276 (train). the base losses are 103.462 (train). The time used is 154.470s. 
+At iter 1190/8116, epoch 1, the losses are 5.259 (train). the base losses are 103.298 (train). The time used is 161.933s. 
+At iter 1200/8116, epoch 1, the losses are 5.229 (train). the base losses are 103.048 (train). The time used is 156.298s. 
+At iter 1200/8116, epoch 1, the losses are 5.409 (test). the base losses are 105.117 (test). 
+At iter 1210/8116, epoch 1, the losses are 5.231 (train). the base losses are 103.004 (train). The time used is 171.636s. 
+At iter 1220/8116, epoch 1, the losses are 5.217 (train). the base losses are 102.907 (train). The time used is 168.417s. 
+At iter 1230/8116, epoch 1, the losses are 5.190 (train). the base losses are 103.493 (train). The time used is 166.098s. 
+At iter 1240/8116, epoch 1, the losses are 5.173 (train). the base losses are 103.077 (train). The time used is 149.264s. 
+At iter 1250/8116, epoch 1, the losses are 5.171 (train). the base losses are 103.368 (train). The time used is 160.347s. 
+At iter 1250/8116, epoch 1, the losses are 5.282 (test). the base losses are 102.623 (test). 
+At iter 1260/8116, epoch 1, the losses are 5.138 (train). the base losses are 102.873 (train). The time used is 172.748s. 
+At iter 1270/8116, epoch 1, the losses are 5.134 (train). the base losses are 103.327 (train). The time used is 162.144s. 
+At iter 1280/8116, epoch 1, the losses are 5.139 (train). the base losses are 102.715 (train). The time used is 164.536s. 
+At iter 1290/8116, epoch 1, the losses are 5.101 (train). the base losses are 103.105 (train). The time used is 156.100s. 
+At iter 1300/8116, epoch 1, the losses are 5.125 (train). the base losses are 102.877 (train). The time used is 155.107s. 
+At iter 1300/8116, epoch 1, the losses are 5.298 (test). the base losses are 108.233 (test). 
+At iter 1310/8116, epoch 1, the losses are 5.142 (train). the base losses are 103.160 (train). The time used is 169.748s. 
+At iter 1320/8116, epoch 1, the losses are 5.135 (train). the base losses are 103.000 (train). The time used is 143.473s. 
+At iter 1330/8116, epoch 1, the losses are 5.095 (train). the base losses are 103.274 (train). The time used is 169.392s. 
+At iter 1340/8116, epoch 1, the losses are 5.099 (train). the base losses are 103.033 (train). The time used is 162.669s. 
+At iter 1350/8116, epoch 1, the losses are 5.076 (train). the base losses are 102.556 (train). The time used is 163.963s. 
+At iter 1350/8116, epoch 1, the losses are 5.327 (test). the base losses are 107.357 (test). 
+At iter 1360/8116, epoch 1, the losses are 5.071 (train). the base losses are 103.784 (train). The time used is 174.719s. 
+At iter 1370/8116, epoch 1, the losses are 5.021 (train). the base losses are 103.660 (train). The time used is 164.475s. 
+At iter 1380/8116, epoch 1, the losses are 5.043 (train). the base losses are 103.559 (train). The time used is 138.824s. 
+At iter 1390/8116, epoch 1, the losses are 5.021 (train). the base losses are 103.439 (train). The time used is 163.675s. 
+At iter 1400/8116, epoch 1, the losses are 5.058 (train). the base losses are 103.667 (train). The time used is 149.726s. 
+At iter 1400/8116, epoch 1, the losses are 5.218 (test). the base losses are 105.528 (test). 
+At iter 1410/8116, epoch 1, the losses are 5.006 (train). the base losses are 102.998 (train). The time used is 152.159s. 
+At iter 1420/8116, epoch 1, the losses are 4.985 (train). the base losses are 102.571 (train). The time used is 164.663s. 
+At iter 1430/8116, epoch 1, the losses are 5.018 (train). the base losses are 103.380 (train). The time used is 159.311s. 
+At iter 1440/8116, epoch 1, the losses are 5.007 (train). the base losses are 103.195 (train). The time used is 159.048s. 
+At iter 1450/8116, epoch 1, the losses are 4.986 (train). the base losses are 102.972 (train). The time used is 175.255s. 
+At iter 1450/8116, epoch 1, the losses are 5.110 (test). the base losses are 105.067 (test). 
+At iter 1460/8116, epoch 1, the losses are 4.991 (train). the base losses are 102.957 (train). The time used is 155.859s. 
+At iter 1470/8116, epoch 1, the losses are 5.001 (train). the base losses are 103.977 (train). The time used is 146.249s. 
+At iter 1480/8116, epoch 1, the losses are 4.994 (train). the base losses are 103.021 (train). The time used is 168.403s. 
+At iter 1490/8116, epoch 1, the losses are 4.970 (train). the base losses are 103.289 (train). The time used is 152.132s. 
+At iter 1500/8116, epoch 1, the losses are 4.954 (train). the base losses are 103.050 (train). The time used is 151.962s. 
+At iter 1500/8116, epoch 1, the losses are 5.160 (test). the base losses are 104.812 (test). 
+At iter 1510/8116, epoch 1, the losses are 4.960 (train). the base losses are 103.136 (train). The time used is 181.423s. 
+At iter 1520/8116, epoch 1, the losses are 4.947 (train). the base losses are 102.905 (train). The time used is 162.597s. 
+At iter 1530/8116, epoch 1, the losses are 4.943 (train). the base losses are 103.719 (train). The time used is 168.094s. 
+At iter 1540/8116, epoch 1, the losses are 4.952 (train). the base losses are 103.600 (train). The time used is 157.039s. 
+At iter 1550/8116, epoch 1, the losses are 4.909 (train). the base losses are 103.162 (train). The time used is 140.226s. 
+At iter 1550/8116, epoch 1, the losses are 5.106 (test). the base losses are 105.653 (test). 
+At iter 1560/8116, epoch 1, the losses are 4.921 (train). the base losses are 102.959 (train). The time used is 179.653s. 
+At iter 1570/8116, epoch 1, the losses are 4.903 (train). the base losses are 103.299 (train). The time used is 154.485s. 
+At iter 1580/8116, epoch 1, the losses are 4.895 (train). the base losses are 102.595 (train). The time used is 176.522s. 
+At iter 1590/8116, epoch 1, the losses are 4.903 (train). the base losses are 103.598 (train). The time used is 151.839s. 
+At iter 1600/8116, epoch 1, the losses are 4.892 (train). the base losses are 102.803 (train). The time used is 160.294s. 
+At iter 1600/8116, epoch 1, the losses are 5.051 (test). the base losses are 104.581 (test). 
+At iter 1610/8116, epoch 1, the losses are 4.869 (train). the base losses are 103.136 (train). The time used is 167.350s. 
+At iter 1620/8116, epoch 1, the losses are 4.900 (train). the base losses are 103.169 (train). The time used is 166.263s. 
+At iter 1630/8116, epoch 1, the losses are 4.862 (train). the base losses are 103.235 (train). The time used is 156.117s. 
+At iter 1640/8116, epoch 1, the losses are 4.854 (train). the base losses are 103.167 (train). The time used is 171.039s. 
+At iter 1650/8116, epoch 1, the losses are 4.862 (train). the base losses are 103.686 (train). The time used is 152.966s. 
+At iter 1650/8116, epoch 1, the losses are 5.016 (test). the base losses are 105.073 (test). 
+At iter 1660/8116, epoch 1, the losses are 4.884 (train). the base losses are 103.647 (train). The time used is 178.848s. 
+At iter 1670/8116, epoch 1, the losses are 4.848 (train). the base losses are 103.587 (train). The time used is 175.252s. 
+At iter 1680/8116, epoch 1, the losses are 4.870 (train). the base losses are 103.246 (train). The time used is 153.732s. 
+At iter 1690/8116, epoch 1, the losses are 4.852 (train). the base losses are 103.769 (train). The time used is 163.522s. 
+At iter 1700/8116, epoch 1, the losses are 4.845 (train). the base losses are 103.074 (train). The time used is 163.495s. 
+At iter 1700/8116, epoch 1, the losses are 5.038 (test). the base losses are 105.324 (test). 
+At iter 1710/8116, epoch 1, the losses are 4.848 (train). the base losses are 103.488 (train). The time used is 170.281s. 
+At iter 1720/8116, epoch 1, the losses are 4.806 (train). the base losses are 102.637 (train). The time used is 173.174s. 
+At iter 1730/8116, epoch 1, the losses are 4.821 (train). the base losses are 103.586 (train). The time used is 168.982s. 
+At iter 1740/8116, epoch 1, the losses are 4.817 (train). the base losses are 103.090 (train). The time used is 174.254s. 
+At iter 1750/8116, epoch 1, the losses are 4.826 (train). the base losses are 103.066 (train). The time used is 157.809s. 
+At iter 1750/8116, epoch 1, the losses are 5.091 (test). the base losses are 104.797 (test). 
+At iter 1760/8116, epoch 1, the losses are 4.805 (train). the base losses are 102.887 (train). The time used is 166.559s. 
+At iter 1770/8116, epoch 1, the losses are 4.786 (train). the base losses are 103.225 (train). The time used is 162.704s. 
+At iter 1780/8116, epoch 1, the losses are 4.808 (train). the base losses are 103.333 (train). The time used is 154.943s. 
+At iter 1790/8116, epoch 1, the losses are 4.816 (train). the base losses are 103.725 (train). The time used is 160.112s. 
+At iter 1800/8116, epoch 1, the losses are 4.805 (train). the base losses are 102.826 (train). The time used is 141.844s. 
+At iter 1800/8116, epoch 1, the losses are 4.873 (test). the base losses are 101.714 (test). 
+At iter 1810/8116, epoch 1, the losses are 4.797 (train). the base losses are 103.195 (train). The time used is 158.816s. 
+At iter 1820/8116, epoch 1, the losses are 4.781 (train). the base losses are 102.815 (train). The time used is 167.125s. 
+At iter 1830/8116, epoch 1, the losses are 4.764 (train). the base losses are 103.293 (train). The time used is 158.893s. 
+At iter 1840/8116, epoch 1, the losses are 4.788 (train). the base losses are 103.225 (train). The time used is 157.574s. 
+At iter 1850/8116, epoch 1, the losses are 4.841 (train). the base losses are 103.193 (train). The time used is 155.164s. 
+At iter 1850/8116, epoch 1, the losses are 4.923 (test). the base losses are 104.966 (test). 
+At iter 1860/8116, epoch 1, the losses are 4.804 (train). the base losses are 102.674 (train). The time used is 158.932s. 
+At iter 1870/8116, epoch 1, the losses are 4.772 (train). the base losses are 102.764 (train). The time used is 164.323s. 
+At iter 1880/8116, epoch 1, the losses are 4.779 (train). the base losses are 103.739 (train). The time used is 168.085s. 
+At iter 1890/8116, epoch 1, the losses are 4.763 (train). the base losses are 103.297 (train). The time used is 155.223s. 
+At iter 1900/8116, epoch 1, the losses are 4.760 (train). the base losses are 102.681 (train). The time used is 169.951s. 
+At iter 1900/8116, epoch 1, the losses are 4.955 (test). the base losses are 104.623 (test). 
+At iter 1910/8116, epoch 1, the losses are 4.765 (train). the base losses are 103.123 (train). The time used is 192.465s. 
+At iter 1920/8116, epoch 1, the losses are 4.751 (train). the base losses are 102.621 (train). The time used is 160.361s. 
+At iter 1930/8116, epoch 1, the losses are 4.741 (train). the base losses are 103.545 (train). The time used is 167.972s. 
+At iter 1940/8116, epoch 1, the losses are 4.740 (train). the base losses are 103.162 (train). The time used is 166.219s. 
+At iter 1950/8116, epoch 1, the losses are 4.736 (train). the base losses are 102.955 (train). The time used is 169.739s. 
+At iter 1950/8116, epoch 1, the losses are 4.901 (test). the base losses are 104.762 (test). 
+At iter 1960/8116, epoch 1, the losses are 4.724 (train). the base losses are 103.430 (train). The time used is 168.084s. 
+At iter 1970/8116, epoch 1, the losses are 4.728 (train). the base losses are 102.699 (train). The time used is 175.251s. 
+At iter 1980/8116, epoch 1, the losses are 4.750 (train). the base losses are 103.212 (train). The time used is 162.124s. 
+At iter 1990/8116, epoch 1, the losses are 4.748 (train). the base losses are 103.293 (train). The time used is 165.376s. 
+At iter 2000/8116, epoch 1, the losses are 4.718 (train). the base losses are 103.436 (train). The time used is 143.758s. 
+At iter 2000/8116, epoch 1, the losses are 4.887 (test). the base losses are 100.679 (test). 
+At iter 2010/8116, epoch 1, the losses are 4.712 (train). the base losses are 102.668 (train). The time used is 171.534s. 
+At iter 2020/8116, epoch 1, the losses are 4.722 (train). the base losses are 103.573 (train). The time used is 148.053s. 
+At iter 2030/8116, epoch 1, the losses are 4.718 (train). the base losses are 103.376 (train). The time used is 175.567s. 
+At iter 2040/8116, epoch 1, the losses are 4.721 (train). the base losses are 103.639 (train). The time used is 161.950s. 
+At iter 2050/8116, epoch 1, the losses are 4.701 (train). the base losses are 102.656 (train). The time used is 166.496s. 
+At iter 2050/8116, epoch 1, the losses are 4.860 (test). the base losses are 101.907 (test). 
+At iter 2060/8116, epoch 1, the losses are 4.723 (train). the base losses are 103.438 (train). The time used is 169.780s. 
+At iter 2070/8116, epoch 1, the losses are 4.730 (train). the base losses are 102.994 (train). The time used is 173.081s. 
+At iter 2080/8116, epoch 1, the losses are 4.723 (train). the base losses are 103.092 (train). The time used is 159.332s. 
+At iter 2090/8116, epoch 1, the losses are 4.713 (train). the base losses are 103.233 (train). The time used is 163.835s. 
+At iter 2100/8116, epoch 1, the losses are 4.687 (train). the base losses are 103.325 (train). The time used is 162.555s. 
+At iter 2100/8116, epoch 1, the losses are 4.838 (test). the base losses are 103.800 (test). 
+At iter 2110/8116, epoch 1, the losses are 4.705 (train). the base losses are 103.575 (train). The time used is 177.225s. 
+At iter 2120/8116, epoch 1, the losses are 4.653 (train). the base losses are 103.436 (train). The time used is 160.537s. 
+At iter 2130/8116, epoch 1, the losses are 4.709 (train). the base losses are 103.291 (train). The time used is 176.939s. 
+At iter 2140/8116, epoch 1, the losses are 4.651 (train). the base losses are 102.755 (train). The time used is 147.566s. 
+At iter 2150/8116, epoch 1, the losses are 4.692 (train). the base losses are 103.408 (train). The time used is 150.772s. 
+At iter 2150/8116, epoch 1, the losses are 4.836 (test). the base losses are 104.584 (test). 
+At iter 2160/8116, epoch 1, the losses are 4.686 (train). the base losses are 103.244 (train). The time used is 178.510s. 
+At iter 2170/8116, epoch 1, the losses are 4.725 (train). the base losses are 103.338 (train). The time used is 145.770s. 
+At iter 2180/8116, epoch 1, the losses are 4.660 (train). the base losses are 102.845 (train). The time used is 155.846s. 
+At iter 2190/8116, epoch 1, the losses are 4.673 (train). the base losses are 102.568 (train). The time used is 160.002s. 
+At iter 2200/8116, epoch 1, the losses are 4.666 (train). the base losses are 103.411 (train). The time used is 163.038s. 
+At iter 2200/8116, epoch 1, the losses are 4.784 (test). the base losses are 104.916 (test). 
+At iter 2210/8116, epoch 1, the losses are 4.661 (train). the base losses are 103.209 (train). The time used is 183.777s. 
+At iter 2220/8116, epoch 1, the losses are 4.664 (train). the base losses are 103.060 (train). The time used is 150.653s. 
+At iter 2230/8116, epoch 1, the losses are 4.689 (train). the base losses are 103.632 (train). The time used is 168.904s. 
+At iter 2240/8116, epoch 1, the losses are 4.679 (train). the base losses are 103.589 (train). The time used is 168.207s. 
+At iter 2250/8116, epoch 1, the losses are 4.651 (train). the base losses are 103.989 (train). The time used is 151.850s. 
+At iter 2250/8116, epoch 1, the losses are 4.738 (test). the base losses are 104.383 (test). 
+At iter 2260/8116, epoch 1, the losses are 4.658 (train). the base losses are 102.923 (train). The time used is 176.774s. 
+At iter 2270/8116, epoch 1, the losses are 4.668 (train). the base losses are 103.218 (train). The time used is 153.238s. 
+At iter 2280/8116, epoch 1, the losses are 4.643 (train). the base losses are 103.229 (train). The time used is 156.456s. 
+At iter 2290/8116, epoch 1, the losses are 4.683 (train). the base losses are 102.945 (train). The time used is 160.108s. 
+At iter 2300/8116, epoch 1, the losses are 4.681 (train). the base losses are 103.788 (train). The time used is 171.441s. 
+At iter 2300/8116, epoch 1, the losses are 4.769 (test). the base losses are 103.321 (test). 
+At iter 2310/8116, epoch 1, the losses are 4.630 (train). the base losses are 102.919 (train). The time used is 160.758s. 
+At iter 2320/8116, epoch 1, the losses are 4.650 (train). the base losses are 103.453 (train). The time used is 162.921s. 
+At iter 2330/8116, epoch 1, the losses are 4.642 (train). the base losses are 102.887 (train). The time used is 168.796s. 
+At iter 2340/8116, epoch 1, the losses are 4.670 (train). the base losses are 103.413 (train). The time used is 157.929s. 
+At iter 2350/8116, epoch 1, the losses are 4.616 (train). the base losses are 102.953 (train). The time used is 167.164s. 
+At iter 2350/8116, epoch 1, the losses are 4.703 (test). the base losses are 103.454 (test). 
+At iter 2360/8116, epoch 1, the losses are 4.631 (train). the base losses are 103.165 (train). The time used is 183.612s. 
+At iter 2370/8116, epoch 1, the losses are 4.637 (train). the base losses are 102.667 (train). The time used is 167.175s. 
+At iter 2380/8116, epoch 1, the losses are 4.664 (train). the base losses are 103.059 (train). The time used is 148.889s. 
+At iter 2390/8116, epoch 1, the losses are 4.625 (train). the base losses are 103.346 (train). The time used is 160.666s. 
+At iter 2400/8116, epoch 1, the losses are 4.614 (train). the base losses are 103.759 (train). The time used is 159.014s. 
+At iter 2400/8116, epoch 1, the losses are 4.783 (test). the base losses are 105.484 (test). 
+At iter 2410/8116, epoch 1, the losses are 4.626 (train). the base losses are 103.502 (train). The time used is 163.352s. 
+At iter 2420/8116, epoch 1, the losses are 4.622 (train). the base losses are 103.398 (train). The time used is 157.382s. 
+At iter 2430/8116, epoch 1, the losses are 4.615 (train). the base losses are 103.542 (train). The time used is 164.625s. 
+At iter 2440/8116, epoch 1, the losses are 4.638 (train). the base losses are 103.174 (train). The time used is 154.203s. 
+At iter 2450/8116, epoch 1, the losses are 4.633 (train). the base losses are 103.103 (train). The time used is 165.327s. 
+At iter 2450/8116, epoch 1, the losses are 4.782 (test). the base losses are 105.221 (test). 
+At iter 2460/8116, epoch 1, the losses are 4.609 (train). the base losses are 102.398 (train). The time used is 168.060s. 
+At iter 2470/8116, epoch 1, the losses are 4.620 (train). the base losses are 103.302 (train). The time used is 161.287s. 
+At iter 2480/8116, epoch 1, the losses are 4.624 (train). the base losses are 103.080 (train). The time used is 164.657s. 
+At iter 2490/8116, epoch 1, the losses are 4.568 (train). the base losses are 102.494 (train). The time used is 161.448s. 
+At iter 2500/8116, epoch 1, the losses are 4.630 (train). the base losses are 102.914 (train). The time used is 167.267s. 
+At iter 2500/8116, epoch 1, the losses are 4.802 (test). the base losses are 104.357 (test). 
+At iter 2510/8116, epoch 1, the losses are 4.614 (train). the base losses are 103.101 (train). The time used is 180.690s. 
+At iter 2520/8116, epoch 1, the losses are 4.607 (train). the base losses are 103.268 (train). The time used is 153.824s. 
+At iter 2530/8116, epoch 1, the losses are 4.610 (train). the base losses are 103.517 (train). The time used is 167.966s. 
+At iter 2540/8116, epoch 1, the losses are 4.585 (train). the base losses are 102.821 (train). The time used is 164.523s. 
+At iter 2550/8116, epoch 1, the losses are 4.588 (train). the base losses are 103.133 (train). The time used is 152.289s. 
+At iter 2550/8116, epoch 1, the losses are 4.730 (test). the base losses are 103.780 (test). 
+At iter 2560/8116, epoch 1, the losses are 4.621 (train). the base losses are 104.010 (train). The time used is 175.127s. 
+At iter 2570/8116, epoch 1, the losses are 4.604 (train). the base losses are 103.375 (train). The time used is 142.450s. 
+At iter 2580/8116, epoch 1, the losses are 4.597 (train). the base losses are 103.208 (train). The time used is 161.007s. 
+At iter 2590/8116, epoch 1, the losses are 4.591 (train). the base losses are 103.125 (train). The time used is 166.059s. 
+At iter 2600/8116, epoch 1, the losses are 4.593 (train). the base losses are 103.183 (train). The time used is 156.185s. 
+At iter 2600/8116, epoch 1, the losses are 4.696 (test). the base losses are 103.969 (test). 
+At iter 2610/8116, epoch 1, the losses are 4.577 (train). the base losses are 103.282 (train). The time used is 167.431s. 
+At iter 2620/8116, epoch 1, the losses are 4.589 (train). the base losses are 103.063 (train). The time used is 159.325s. 
+At iter 2630/8116, epoch 1, the losses are 4.588 (train). the base losses are 102.795 (train). The time used is 157.391s. 
+At iter 2640/8116, epoch 1, the losses are 4.588 (train). the base losses are 103.496 (train). The time used is 159.863s. 
+At iter 2650/8116, epoch 1, the losses are 4.560 (train). the base losses are 103.382 (train). The time used is 158.791s. 
+At iter 2650/8116, epoch 1, the losses are 4.690 (test). the base losses are 104.377 (test). 
+At iter 2660/8116, epoch 1, the losses are 4.575 (train). the base losses are 103.261 (train). The time used is 163.395s. 
+At iter 2670/8116, epoch 1, the losses are 4.591 (train). the base losses are 103.120 (train). The time used is 157.399s. 
+At iter 2680/8116, epoch 1, the losses are 4.573 (train). the base losses are 102.870 (train). The time used is 158.811s. 
+At iter 2690/8116, epoch 1, the losses are 4.583 (train). the base losses are 103.173 (train). The time used is 149.203s. 
+At iter 2700/8116, epoch 1, the losses are 4.604 (train). the base losses are 103.576 (train). The time used is 155.605s. 
+At iter 2700/8116, epoch 1, the losses are 4.737 (test). the base losses are 106.629 (test). 
+At iter 2710/8116, epoch 1, the losses are 4.565 (train). the base losses are 103.158 (train). The time used is 182.287s. 
+At iter 2720/8116, epoch 1, the losses are 4.592 (train). the base losses are 103.337 (train). The time used is 159.964s. 
+At iter 2730/8116, epoch 1, the losses are 4.586 (train). the base losses are 103.584 (train). The time used is 157.712s. 
+At iter 2740/8116, epoch 1, the losses are 4.575 (train). the base losses are 103.833 (train). The time used is 156.861s. 
+At iter 2750/8116, epoch 1, the losses are 4.545 (train). the base losses are 103.399 (train). The time used is 152.609s. 
+At iter 2750/8116, epoch 1, the losses are 4.720 (test). the base losses are 106.235 (test). 
+At iter 2760/8116, epoch 1, the losses are 4.587 (train). the base losses are 103.041 (train). The time used is 169.746s. 
+At iter 2770/8116, epoch 1, the losses are 4.580 (train). the base losses are 103.044 (train). The time used is 163.310s. 
+At iter 2780/8116, epoch 1, the losses are 4.531 (train). the base losses are 103.219 (train). The time used is 170.694s. 
+At iter 2790/8116, epoch 1, the losses are 4.543 (train). the base losses are 102.800 (train). The time used is 175.312s. 
+At iter 2800/8116, epoch 1, the losses are 4.584 (train). the base losses are 103.060 (train). The time used is 164.303s. 
+At iter 2800/8116, epoch 1, the losses are 4.661 (test). the base losses are 103.578 (test). 
+At iter 2810/8116, epoch 1, the losses are 4.539 (train). the base losses are 103.414 (train). The time used is 171.692s. 
+At iter 2820/8116, epoch 1, the losses are 4.540 (train). the base losses are 103.373 (train). The time used is 152.430s. 
+At iter 2830/8116, epoch 1, the losses are 4.547 (train). the base losses are 103.069 (train). The time used is 171.747s. 
+At iter 2840/8116, epoch 1, the losses are 4.560 (train). the base losses are 102.837 (train). The time used is 169.490s. 
+At iter 2850/8116, epoch 1, the losses are 4.553 (train). the base losses are 103.600 (train). The time used is 166.184s. 
+At iter 2850/8116, epoch 1, the losses are 4.681 (test). the base losses are 104.144 (test). 
+At iter 2860/8116, epoch 1, the losses are 4.534 (train). the base losses are 103.049 (train). The time used is 170.856s. 
+At iter 2870/8116, epoch 1, the losses are 4.561 (train). the base losses are 103.001 (train). The time used is 182.067s. 
+At iter 2880/8116, epoch 1, the losses are 4.567 (train). the base losses are 102.886 (train). The time used is 167.856s. 
+At iter 2890/8116, epoch 1, the losses are 4.564 (train). the base losses are 103.267 (train). The time used is 159.316s. 
+At iter 2900/8116, epoch 1, the losses are 4.567 (train). the base losses are 103.026 (train). The time used is 168.089s. 
+At iter 2900/8116, epoch 1, the losses are 4.686 (test). the base losses are 105.632 (test). 
+At iter 2910/8116, epoch 1, the losses are 4.554 (train). the base losses are 103.264 (train). The time used is 171.272s. 
+At iter 2920/8116, epoch 1, the losses are 4.532 (train). the base losses are 102.953 (train). The time used is 167.764s. 
+At iter 2930/8116, epoch 1, the losses are 4.521 (train). the base losses are 103.377 (train). The time used is 149.229s. 
+At iter 2940/8116, epoch 1, the losses are 4.536 (train). the base losses are 102.836 (train). The time used is 152.841s. 
+At iter 2950/8116, epoch 1, the losses are 4.542 (train). the base losses are 102.655 (train). The time used is 164.044s. 
+At iter 2950/8116, epoch 1, the losses are 4.677 (test). the base losses are 104.815 (test). 
+At iter 2960/8116, epoch 1, the losses are 4.574 (train). the base losses are 103.027 (train). The time used is 180.012s. 
+At iter 2970/8116, epoch 1, the losses are 4.554 (train). the base losses are 102.950 (train). The time used is 157.052s. 
+At iter 2980/8116, epoch 1, the losses are 4.540 (train). the base losses are 103.261 (train). The time used is 172.677s. 
+At iter 2990/8116, epoch 1, the losses are 4.499 (train). the base losses are 102.951 (train). The time used is 175.521s. 
+At iter 3000/8116, epoch 1, the losses are 4.542 (train). the base losses are 103.163 (train). The time used is 174.132s. 
+At iter 3000/8116, epoch 1, the losses are 4.678 (test). the base losses are 105.093 (test). 
+At iter 3010/8116, epoch 1, the losses are 4.558 (train). the base losses are 103.290 (train). The time used is 171.737s. 
+At iter 3020/8116, epoch 1, the losses are 4.522 (train). the base losses are 103.183 (train). The time used is 157.060s. 
+At iter 3030/8116, epoch 1, the losses are 4.544 (train). the base losses are 103.285 (train). The time used is 164.103s. 
+At iter 3040/8116, epoch 1, the losses are 4.522 (train). the base losses are 103.382 (train). The time used is 160.690s. 
+At iter 3050/8116, epoch 1, the losses are 4.546 (train). the base losses are 103.515 (train). The time used is 166.540s. 
+At iter 3050/8116, epoch 1, the losses are 4.611 (test). the base losses are 106.901 (test). 
+At iter 3060/8116, epoch 1, the losses are 4.536 (train). the base losses are 104.081 (train). The time used is 177.261s. 
+At iter 3070/8116, epoch 1, the losses are 4.531 (train). the base losses are 102.838 (train). The time used is 162.541s. 
+At iter 3080/8116, epoch 1, the losses are 4.504 (train). the base losses are 103.803 (train). The time used is 166.050s. 
+At iter 3090/8116, epoch 1, the losses are 4.521 (train). the base losses are 103.320 (train). The time used is 154.057s. 
+At iter 3100/8116, epoch 1, the losses are 4.502 (train). the base losses are 102.708 (train). The time used is 168.904s. 
+At iter 3100/8116, epoch 1, the losses are 4.657 (test). the base losses are 105.768 (test). 
+At iter 3110/8116, epoch 1, the losses are 4.531 (train). the base losses are 103.338 (train). The time used is 177.667s. 
+At iter 3120/8116, epoch 1, the losses are 4.519 (train). the base losses are 103.112 (train). The time used is 153.092s. 
+At iter 3130/8116, epoch 1, the losses are 4.521 (train). the base losses are 103.854 (train). The time used is 160.868s. 
+At iter 3140/8116, epoch 1, the losses are 4.505 (train). the base losses are 102.895 (train). The time used is 152.673s. 
+At iter 3150/8116, epoch 1, the losses are 4.476 (train). the base losses are 102.861 (train). The time used is 167.906s. 
+At iter 3150/8116, epoch 1, the losses are 4.621 (test). the base losses are 103.327 (test). 
+At iter 3160/8116, epoch 1, the losses are 4.515 (train). the base losses are 102.766 (train). The time used is 156.859s. 
+At iter 3170/8116, epoch 1, the losses are 4.515 (train). the base losses are 102.719 (train). The time used is 160.978s. 
+At iter 3180/8116, epoch 1, the losses are 4.541 (train). the base losses are 103.768 (train). The time used is 156.246s. 
+At iter 3190/8116, epoch 1, the losses are 4.544 (train). the base losses are 103.480 (train). The time used is 157.570s. 
+At iter 3200/8116, epoch 1, the losses are 4.525 (train). the base losses are 102.797 (train). The time used is 160.182s. 
+At iter 3200/8116, epoch 1, the losses are 4.637 (test). the base losses are 106.685 (test). 
+At iter 3210/8116, epoch 1, the losses are 4.499 (train). the base losses are 103.329 (train). The time used is 176.521s. 
+At iter 3220/8116, epoch 1, the losses are 4.497 (train). the base losses are 103.413 (train). The time used is 147.289s. 
+At iter 3230/8116, epoch 1, the losses are 4.497 (train). the base losses are 103.085 (train). The time used is 161.687s. 
+At iter 3240/8116, epoch 1, the losses are 4.496 (train). the base losses are 103.159 (train). The time used is 161.387s. 
+At iter 3250/8116, epoch 1, the losses are 4.475 (train). the base losses are 102.957 (train). The time used is 153.562s. 
+At iter 3250/8116, epoch 1, the losses are 4.575 (test). the base losses are 103.182 (test). 
+At iter 3260/8116, epoch 1, the losses are 4.500 (train). the base losses are 103.289 (train). The time used is 171.901s. 
+At iter 3270/8116, epoch 1, the losses are 4.530 (train). the base losses are 102.839 (train). The time used is 167.654s. 
+At iter 3280/8116, epoch 1, the losses are 4.493 (train). the base losses are 103.703 (train). The time used is 152.097s. 
+At iter 3290/8116, epoch 1, the losses are 4.480 (train). the base losses are 103.132 (train). The time used is 168.869s. 
+At iter 3300/8116, epoch 1, the losses are 4.482 (train). the base losses are 103.227 (train). The time used is 168.565s. 
+At iter 3300/8116, epoch 1, the losses are 4.593 (test). the base losses are 103.096 (test). 
+At iter 3310/8116, epoch 1, the losses are 4.492 (train). the base losses are 103.365 (train). The time used is 161.539s. 
+At iter 3320/8116, epoch 1, the losses are 4.487 (train). the base losses are 103.577 (train). The time used is 166.578s. 
+At iter 3330/8116, epoch 1, the losses are 4.506 (train). the base losses are 103.478 (train). The time used is 169.043s. 
+At iter 3340/8116, epoch 1, the losses are 4.469 (train). the base losses are 103.429 (train). The time used is 162.423s. 
+At iter 3350/8116, epoch 1, the losses are 4.499 (train). the base losses are 103.384 (train). The time used is 144.318s. 
+At iter 3350/8116, epoch 1, the losses are 4.580 (test). the base losses are 105.783 (test). 
+At iter 3360/8116, epoch 1, the losses are 4.499 (train). the base losses are 103.392 (train). The time used is 163.727s. 
+At iter 3370/8116, epoch 1, the losses are 4.492 (train). the base losses are 102.946 (train). The time used is 155.839s. 
+At iter 3380/8116, epoch 1, the losses are 4.489 (train). the base losses are 103.711 (train). The time used is 157.703s. 
+At iter 3390/8116, epoch 1, the losses are 4.468 (train). the base losses are 102.943 (train). The time used is 161.447s. 
+At iter 3400/8116, epoch 1, the losses are 4.483 (train). the base losses are 103.599 (train). The time used is 150.407s. 
+At iter 3400/8116, epoch 1, the losses are 4.555 (test). the base losses are 107.043 (test). 
+At iter 3410/8116, epoch 1, the losses are 4.484 (train). the base losses are 103.246 (train). The time used is 171.932s. 
+At iter 3420/8116, epoch 1, the losses are 4.478 (train). the base losses are 103.529 (train). The time used is 153.293s. 
+At iter 3430/8116, epoch 1, the losses are 4.470 (train). the base losses are 103.049 (train). The time used is 159.991s. 
+At iter 3440/8116, epoch 1, the losses are 4.461 (train). the base losses are 103.054 (train). The time used is 164.835s. 
+At iter 3450/8116, epoch 1, the losses are 4.500 (train). the base losses are 103.481 (train). The time used is 174.888s. 
+At iter 3450/8116, epoch 1, the losses are 4.566 (test). the base losses are 106.132 (test). 
+At iter 3460/8116, epoch 1, the losses are 4.456 (train). the base losses are 103.147 (train). The time used is 164.957s. 
+At iter 3470/8116, epoch 1, the losses are 4.454 (train). the base losses are 103.091 (train). The time used is 142.685s. 
+At iter 3480/8116, epoch 1, the losses are 4.475 (train). the base losses are 102.758 (train). The time used is 154.943s. 
+At iter 3490/8116, epoch 1, the losses are 4.455 (train). the base losses are 103.118 (train). The time used is 147.803s. 
+At iter 3500/8116, epoch 1, the losses are 4.473 (train). the base losses are 102.925 (train). The time used is 141.307s. 
+At iter 3500/8116, epoch 1, the losses are 4.583 (test). the base losses are 103.789 (test). 
+At iter 3510/8116, epoch 1, the losses are 4.482 (train). the base losses are 103.064 (train). The time used is 165.709s. 
+At iter 3520/8116, epoch 1, the losses are 4.450 (train). the base losses are 103.324 (train). The time used is 153.691s. 
+At iter 3530/8116, epoch 1, the losses are 4.475 (train). the base losses are 103.150 (train). The time used is 159.974s. 
+At iter 3540/8116, epoch 1, the losses are 4.469 (train). the base losses are 102.670 (train). The time used is 153.920s. 
+At iter 3550/8116, epoch 1, the losses are 4.487 (train). the base losses are 103.313 (train). The time used is 151.361s. 
+At iter 3550/8116, epoch 1, the losses are 4.520 (test). the base losses are 103.306 (test). 
+At iter 3560/8116, epoch 1, the losses are 4.445 (train). the base losses are 103.321 (train). The time used is 173.226s. 
+At iter 3570/8116, epoch 1, the losses are 4.469 (train). the base losses are 103.311 (train). The time used is 175.390s. 
+At iter 3580/8116, epoch 1, the losses are 4.464 (train). the base losses are 103.211 (train). The time used is 159.879s. 
+At iter 3590/8116, epoch 1, the losses are 4.483 (train). the base losses are 103.160 (train). The time used is 169.518s. 
+At iter 3600/8116, epoch 1, the losses are 4.470 (train). the base losses are 102.810 (train). The time used is 176.236s. 
+At iter 3600/8116, epoch 1, the losses are 4.588 (test). the base losses are 104.605 (test). 
+At iter 3610/8116, epoch 1, the losses are 4.442 (train). the base losses are 103.393 (train). The time used is 176.498s. 
+At iter 3620/8116, epoch 1, the losses are 4.435 (train). the base losses are 102.259 (train). The time used is 159.178s. 
+At iter 3630/8116, epoch 1, the losses are 4.467 (train). the base losses are 103.469 (train). The time used is 169.704s. 
+At iter 3640/8116, epoch 1, the losses are 4.447 (train). the base losses are 103.394 (train). The time used is 168.301s. 
+At iter 3650/8116, epoch 1, the losses are 4.448 (train). the base losses are 103.054 (train). The time used is 153.458s. 
+At iter 3650/8116, epoch 1, the losses are 4.577 (test). the base losses are 105.451 (test). 
+At iter 3660/8116, epoch 1, the losses are 4.458 (train). the base losses are 103.404 (train). The time used is 170.789s. 
+At iter 3670/8116, epoch 1, the losses are 4.440 (train). the base losses are 102.857 (train). The time used is 161.225s. 
+At iter 3680/8116, epoch 1, the losses are 4.433 (train). the base losses are 102.524 (train). The time used is 154.925s. 
+At iter 3690/8116, epoch 1, the losses are 4.460 (train). the base losses are 103.169 (train). The time used is 150.590s. 
+At iter 3700/8116, epoch 1, the losses are 4.443 (train). the base losses are 102.742 (train). The time used is 156.744s. 
+At iter 3700/8116, epoch 1, the losses are 4.514 (test). the base losses are 104.993 (test). 
+At iter 3710/8116, epoch 1, the losses are 4.474 (train). the base losses are 102.768 (train). The time used is 194.393s. 
+At iter 3720/8116, epoch 1, the losses are 4.479 (train). the base losses are 103.301 (train). The time used is 157.792s. 
+At iter 3730/8116, epoch 1, the losses are 4.450 (train). the base losses are 103.156 (train). The time used is 170.932s. 
+At iter 3740/8116, epoch 1, the losses are 4.441 (train). the base losses are 102.965 (train). The time used is 152.192s. 
+At iter 3750/8116, epoch 1, the losses are 4.444 (train). the base losses are 103.456 (train). The time used is 157.956s. 
+At iter 3750/8116, epoch 1, the losses are 4.535 (test). the base losses are 106.315 (test). 
+At iter 3760/8116, epoch 1, the losses are 4.476 (train). the base losses are 102.987 (train). The time used is 168.274s. 
+At iter 3770/8116, epoch 1, the losses are 4.446 (train). the base losses are 103.675 (train). The time used is 157.502s. 
+At iter 3780/8116, epoch 1, the losses are 4.458 (train). the base losses are 103.420 (train). The time used is 160.815s. 
+At iter 3790/8116, epoch 1, the losses are 4.443 (train). the base losses are 103.035 (train). The time used is 171.126s. 
+At iter 3800/8116, epoch 1, the losses are 4.442 (train). the base losses are 103.015 (train). The time used is 167.254s. 
+At iter 3800/8116, epoch 1, the losses are 4.583 (test). the base losses are 104.463 (test). 
+At iter 3810/8116, epoch 1, the losses are 4.425 (train). the base losses are 102.622 (train). The time used is 171.949s. 
+At iter 3820/8116, epoch 1, the losses are 4.466 (train). the base losses are 102.954 (train). The time used is 157.924s. 
+At iter 3830/8116, epoch 1, the losses are 4.439 (train). the base losses are 103.013 (train). The time used is 161.956s. 
+At iter 3840/8116, epoch 1, the losses are 4.435 (train). the base losses are 103.162 (train). The time used is 162.175s. 
+At iter 3850/8116, epoch 1, the losses are 4.448 (train). the base losses are 103.317 (train). The time used is 162.150s. 
+At iter 3850/8116, epoch 1, the losses are 4.581 (test). the base losses are 105.437 (test). 
+At iter 3860/8116, epoch 1, the losses are 4.442 (train). the base losses are 103.290 (train). The time used is 163.394s. 
+At iter 3870/8116, epoch 1, the losses are 4.431 (train). the base losses are 103.215 (train). The time used is 153.693s. 
+At iter 3880/8116, epoch 1, the losses are 4.433 (train). the base losses are 103.250 (train). The time used is 162.953s. 
+At iter 3890/8116, epoch 1, the losses are 4.445 (train). the base losses are 102.979 (train). The time used is 162.363s. 
+At iter 3900/8116, epoch 1, the losses are 4.439 (train). the base losses are 103.163 (train). The time used is 156.741s. 
+At iter 3900/8116, epoch 1, the losses are 4.589 (test). the base losses are 106.747 (test). 
+At iter 3910/8116, epoch 1, the losses are 4.418 (train). the base losses are 103.568 (train). The time used is 176.664s. 
+At iter 3920/8116, epoch 1, the losses are 4.451 (train). the base losses are 103.309 (train). The time used is 168.243s. 
+At iter 3930/8116, epoch 1, the losses are 4.440 (train). the base losses are 103.488 (train). The time used is 167.335s. 
+At iter 3940/8116, epoch 1, the losses are 4.424 (train). the base losses are 102.727 (train). The time used is 160.038s. 
+At iter 3950/8116, epoch 1, the losses are 4.458 (train). the base losses are 102.937 (train). The time used is 159.653s. 
+At iter 3950/8116, epoch 1, the losses are 4.523 (test). the base losses are 105.472 (test). 
+At iter 3960/8116, epoch 1, the losses are 4.451 (train). the base losses are 103.684 (train). The time used is 180.621s. 
+At iter 3970/8116, epoch 1, the losses are 4.416 (train). the base losses are 103.441 (train). The time used is 166.974s. 
+At iter 3980/8116, epoch 1, the losses are 4.440 (train). the base losses are 103.215 (train). The time used is 171.857s. 
+At iter 3990/8116, epoch 1, the losses are 4.432 (train). the base losses are 103.585 (train). The time used is 152.837s. 
+At iter 4000/8116, epoch 1, the losses are 4.427 (train). the base losses are 102.824 (train). The time used is 153.169s. 
+At iter 4000/8116, epoch 1, the losses are 4.571 (test). the base losses are 105.132 (test). 
+At iter 4010/8116, epoch 1, the losses are 4.431 (train). the base losses are 102.889 (train). The time used is 179.915s. 
+At iter 4020/8116, epoch 1, the losses are 4.461 (train). the base losses are 103.609 (train). The time used is 162.967s. 
+At iter 4030/8116, epoch 1, the losses are 4.436 (train). the base losses are 103.212 (train). The time used is 168.350s. 
+At iter 4040/8116, epoch 1, the losses are 4.439 (train). the base losses are 103.527 (train). The time used is 162.031s. 
+At iter 4050/8116, epoch 1, the losses are 4.434 (train). the base losses are 103.010 (train). The time used is 162.675s. 
+At iter 4050/8116, epoch 1, the losses are 4.585 (test). the base losses are 106.126 (test). 
+At iter 4060/8116, epoch 1, the losses are 4.425 (train). the base losses are 103.732 (train). The time used is 172.904s. 
+At iter 4070/8116, epoch 1, the losses are 4.434 (train). the base losses are 103.249 (train). The time used is 161.395s. 
+At iter 4080/8116, epoch 1, the losses are 4.442 (train). the base losses are 103.436 (train). The time used is 148.003s. 
+At iter 4090/8116, epoch 1, the losses are 4.409 (train). the base losses are 103.144 (train). The time used is 168.965s. 
+At iter 4100/8116, epoch 1, the losses are 4.416 (train). the base losses are 101.685 (train). The time used is 162.779s. 
+At iter 4100/8116, epoch 1, the losses are 4.549 (test). the base losses are 105.987 (test). 
+At iter 4110/8116, epoch 1, the losses are 4.414 (train). the base losses are 103.101 (train). The time used is 153.500s. 
+At iter 4120/8116, epoch 1, the losses are 4.428 (train). the base losses are 102.859 (train). The time used is 161.452s. 
+At iter 4130/8116, epoch 1, the losses are 4.435 (train). the base losses are 103.182 (train). The time used is 173.812s. 
+At iter 4140/8116, epoch 1, the losses are 4.405 (train). the base losses are 103.189 (train). The time used is 166.183s. 
+At iter 4150/8116, epoch 1, the losses are 4.425 (train). the base losses are 103.349 (train). The time used is 153.541s. 
+At iter 4150/8116, epoch 1, the losses are 4.593 (test). the base losses are 103.948 (test). 
+At iter 4160/8116, epoch 1, the losses are 4.430 (train). the base losses are 103.739 (train). The time used is 175.497s. 
+At iter 4170/8116, epoch 1, the losses are 4.446 (train). the base losses are 103.634 (train). The time used is 161.587s. 
+At iter 4180/8116, epoch 1, the losses are 4.436 (train). the base losses are 103.548 (train). The time used is 167.834s. 
+At iter 4190/8116, epoch 1, the losses are 4.422 (train). the base losses are 103.153 (train). The time used is 175.289s. 
+At iter 4200/8116, epoch 1, the losses are 4.409 (train). the base losses are 102.845 (train). The time used is 159.826s. 
+At iter 4200/8116, epoch 1, the losses are 4.532 (test). the base losses are 103.407 (test). 
+At iter 4210/8116, epoch 1, the losses are 4.420 (train). the base losses are 103.312 (train). The time used is 172.402s. 
+At iter 4220/8116, epoch 1, the losses are 4.400 (train). the base losses are 102.568 (train). The time used is 168.624s. 
+At iter 4230/8116, epoch 1, the losses are 4.416 (train). the base losses are 103.449 (train). The time used is 155.507s. 
+At iter 4240/8116, epoch 1, the losses are 4.414 (train). the base losses are 103.158 (train). The time used is 161.512s. 
+At iter 4250/8116, epoch 1, the losses are 4.424 (train). the base losses are 103.276 (train). The time used is 175.907s. 
+At iter 4250/8116, epoch 1, the losses are 4.547 (test). the base losses are 105.499 (test). 
+At iter 4260/8116, epoch 1, the losses are 4.394 (train). the base losses are 104.048 (train). The time used is 159.625s. 
+At iter 4270/8116, epoch 1, the losses are 4.398 (train). the base losses are 103.561 (train). The time used is 160.077s. 
+At iter 4280/8116, epoch 1, the losses are 4.424 (train). the base losses are 103.202 (train). The time used is 150.638s. 
+At iter 4290/8116, epoch 1, the losses are 4.429 (train). the base losses are 103.156 (train). The time used is 146.477s. 
+At iter 4300/8116, epoch 1, the losses are 4.427 (train). the base losses are 103.217 (train). The time used is 156.245s. 
+At iter 4300/8116, epoch 1, the losses are 4.519 (test). the base losses are 105.466 (test). 
+At iter 4310/8116, epoch 1, the losses are 4.409 (train). the base losses are 103.014 (train). The time used is 172.112s. 
+At iter 4320/8116, epoch 1, the losses are 4.426 (train). the base losses are 103.297 (train). The time used is 143.914s. 
+At iter 4330/8116, epoch 1, the losses are 4.393 (train). the base losses are 103.179 (train). The time used is 174.759s. 
+At iter 4340/8116, epoch 1, the losses are 4.418 (train). the base losses are 103.467 (train). The time used is 159.060s. 
+At iter 4350/8116, epoch 1, the losses are 4.390 (train). the base losses are 102.466 (train). The time used is 155.231s. 
+At iter 4350/8116, epoch 1, the losses are 4.541 (test). the base losses are 106.061 (test). 
+At iter 4360/8116, epoch 1, the losses are 4.415 (train). the base losses are 103.203 (train). The time used is 172.283s. 
+At iter 4370/8116, epoch 1, the losses are 4.434 (train). the base losses are 103.136 (train). The time used is 146.920s. 
+At iter 4380/8116, epoch 1, the losses are 4.378 (train). the base losses are 103.352 (train). The time used is 167.789s. 
+At iter 4390/8116, epoch 1, the losses are 4.411 (train). the base losses are 103.086 (train). The time used is 151.256s. 
+At iter 4400/8116, epoch 1, the losses are 4.409 (train). the base losses are 102.691 (train). The time used is 155.257s. 
+At iter 4400/8116, epoch 1, the losses are 4.448 (test). the base losses are 103.203 (test). 
+At iter 4410/8116, epoch 1, the losses are 4.417 (train). the base losses are 102.697 (train). The time used is 159.646s. 
+At iter 4420/8116, epoch 1, the losses are 4.417 (train). the base losses are 103.761 (train). The time used is 164.029s. 
+At iter 4430/8116, epoch 1, the losses are 4.415 (train). the base losses are 102.906 (train). The time used is 154.556s. 
+At iter 4440/8116, epoch 1, the losses are 4.405 (train). the base losses are 103.702 (train). The time used is 166.783s. 
+At iter 4450/8116, epoch 1, the losses are 4.393 (train). the base losses are 103.091 (train). The time used is 179.073s. 
+At iter 4450/8116, epoch 1, the losses are 4.520 (test). the base losses are 105.510 (test). 
+At iter 4460/8116, epoch 1, the losses are 4.389 (train). the base losses are 103.379 (train). The time used is 171.313s. 
+At iter 4470/8116, epoch 1, the losses are 4.404 (train). the base losses are 102.930 (train). The time used is 168.680s. 
+At iter 4480/8116, epoch 1, the losses are 4.402 (train). the base losses are 102.950 (train). The time used is 150.859s. 
+At iter 4490/8116, epoch 1, the losses are 4.421 (train). the base losses are 103.465 (train). The time used is 163.459s. 
+At iter 4500/8116, epoch 1, the losses are 4.400 (train). the base losses are 102.657 (train). The time used is 169.036s. 
+At iter 4500/8116, epoch 1, the losses are 4.504 (test). the base losses are 105.617 (test). 
+At iter 4510/8116, epoch 1, the losses are 4.399 (train). the base losses are 103.150 (train). The time used is 175.426s. 
+At iter 4520/8116, epoch 1, the losses are 4.400 (train). the base losses are 102.815 (train). The time used is 162.673s. 
+At iter 4530/8116, epoch 1, the losses are 4.402 (train). the base losses are 103.236 (train). The time used is 155.164s. 
+At iter 4540/8116, epoch 1, the losses are 4.401 (train). the base losses are 103.179 (train). The time used is 166.323s. 
+At iter 4550/8116, epoch 1, the losses are 4.403 (train). the base losses are 103.436 (train). The time used is 156.902s. 
+At iter 4550/8116, epoch 1, the losses are 4.474 (test). the base losses are 102.836 (test). 
+At iter 4560/8116, epoch 1, the losses are 4.376 (train). the base losses are 102.698 (train). The time used is 167.859s. 
+At iter 4570/8116, epoch 1, the losses are 4.390 (train). the base losses are 103.099 (train). The time used is 163.259s. 
+At iter 4580/8116, epoch 1, the losses are 4.403 (train). the base losses are 102.975 (train). The time used is 163.341s. 
+At iter 4590/8116, epoch 1, the losses are 4.397 (train). the base losses are 103.210 (train). The time used is 158.784s. 
+At iter 4600/8116, epoch 1, the losses are 4.364 (train). the base losses are 102.728 (train). The time used is 157.223s. 
+At iter 4600/8116, epoch 1, the losses are 4.516 (test). the base losses are 102.158 (test). 
+At iter 4610/8116, epoch 1, the losses are 4.397 (train). the base losses are 103.855 (train). The time used is 177.094s. 
+At iter 4620/8116, epoch 1, the losses are 4.382 (train). the base losses are 103.281 (train). The time used is 146.145s. 
+At iter 4630/8116, epoch 1, the losses are 4.384 (train). the base losses are 103.464 (train). The time used is 157.779s. 
+At iter 4640/8116, epoch 1, the losses are 4.400 (train). the base losses are 103.194 (train). The time used is 150.634s. 
+At iter 4650/8116, epoch 1, the losses are 4.396 (train). the base losses are 103.122 (train). The time used is 167.758s. 
+At iter 4650/8116, epoch 1, the losses are 4.508 (test). the base losses are 105.295 (test). 
+At iter 4660/8116, epoch 1, the losses are 4.411 (train). the base losses are 102.770 (train). The time used is 173.773s. 
+At iter 4670/8116, epoch 1, the losses are 4.389 (train). the base losses are 102.890 (train). The time used is 177.452s. 
+At iter 4680/8116, epoch 1, the losses are 4.406 (train). the base losses are 102.935 (train). The time used is 161.123s. 
+At iter 4690/8116, epoch 1, the losses are 4.379 (train). the base losses are 102.967 (train). The time used is 150.174s. 
+At iter 4700/8116, epoch 1, the losses are 4.404 (train). the base losses are 102.795 (train). The time used is 156.973s. 
+At iter 4700/8116, epoch 1, the losses are 4.510 (test). the base losses are 103.623 (test). 
+At iter 4710/8116, epoch 1, the losses are 4.376 (train). the base losses are 103.460 (train). The time used is 180.862s. 
+At iter 4720/8116, epoch 1, the losses are 4.413 (train). the base losses are 103.226 (train). The time used is 157.099s. 
+At iter 4730/8116, epoch 1, the losses are 4.395 (train). the base losses are 103.912 (train). The time used is 166.856s. 
+At iter 4740/8116, epoch 1, the losses are 4.361 (train). the base losses are 102.916 (train). The time used is 160.536s. 
+At iter 4750/8116, epoch 1, the losses are 4.382 (train). the base losses are 103.235 (train). The time used is 158.327s. 
+At iter 4750/8116, epoch 1, the losses are 4.524 (test). the base losses are 103.623 (test). 
+At iter 4760/8116, epoch 1, the losses are 4.369 (train). the base losses are 103.605 (train). The time used is 159.348s. 
+At iter 4770/8116, epoch 1, the losses are 4.394 (train). the base losses are 103.448 (train). The time used is 162.733s. 
+At iter 4780/8116, epoch 1, the losses are 4.394 (train). the base losses are 103.487 (train). The time used is 155.912s. 
+At iter 4790/8116, epoch 1, the losses are 4.387 (train). the base losses are 103.328 (train). The time used is 173.494s. 
+At iter 4800/8116, epoch 1, the losses are 4.406 (train). the base losses are 103.238 (train). The time used is 152.399s. 
+At iter 4800/8116, epoch 1, the losses are 4.534 (test). the base losses are 105.342 (test). 
+At iter 4810/8116, epoch 1, the losses are 4.408 (train). the base losses are 103.077 (train). The time used is 167.935s. 
+At iter 4820/8116, epoch 1, the losses are 4.381 (train). the base losses are 103.074 (train). The time used is 167.005s. 
+At iter 4830/8116, epoch 1, the losses are 4.384 (train). the base losses are 102.960 (train). The time used is 159.184s. 
+At iter 4840/8116, epoch 1, the losses are 4.390 (train). the base losses are 103.135 (train). The time used is 181.752s. 
+At iter 4850/8116, epoch 1, the losses are 4.400 (train). the base losses are 103.229 (train). The time used is 152.897s. 
+At iter 4850/8116, epoch 1, the losses are 4.465 (test). the base losses are 105.623 (test). 
+At iter 4860/8116, epoch 1, the losses are 4.398 (train). the base losses are 103.163 (train). The time used is 172.869s. 
+At iter 4870/8116, epoch 1, the losses are 4.388 (train). the base losses are 103.225 (train). The time used is 169.479s. 
+At iter 4880/8116, epoch 1, the losses are 4.350 (train). the base losses are 103.238 (train). The time used is 171.802s. 
+At iter 4890/8116, epoch 1, the losses are 4.393 (train). the base losses are 102.819 (train). The time used is 162.764s. 
+At iter 4900/8116, epoch 1, the losses are 4.384 (train). the base losses are 103.682 (train). The time used is 158.726s. 
+At iter 4900/8116, epoch 1, the losses are 4.488 (test). the base losses are 105.182 (test). 
+At iter 4910/8116, epoch 1, the losses are 4.370 (train). the base losses are 103.423 (train). The time used is 167.788s. 
+At iter 4920/8116, epoch 1, the losses are 4.392 (train). the base losses are 103.379 (train). The time used is 158.115s. 
+At iter 4930/8116, epoch 1, the losses are 4.382 (train). the base losses are 102.979 (train). The time used is 168.701s. 
+At iter 4940/8116, epoch 1, the losses are 4.375 (train). the base losses are 103.618 (train). The time used is 159.732s. 
+At iter 4950/8116, epoch 1, the losses are 4.374 (train). the base losses are 102.347 (train). The time used is 164.641s. 
+At iter 4950/8116, epoch 1, the losses are 4.521 (test). the base losses are 106.227 (test). 
+At iter 4960/8116, epoch 1, the losses are 4.410 (train). the base losses are 103.178 (train). The time used is 167.141s. 
+At iter 4970/8116, epoch 1, the losses are 4.383 (train). the base losses are 103.166 (train). The time used is 159.210s. 
+At iter 4980/8116, epoch 1, the losses are 4.376 (train). the base losses are 103.143 (train). The time used is 172.802s. 
+At iter 4990/8116, epoch 1, the losses are 4.373 (train). the base losses are 103.147 (train). The time used is 156.643s. 
+At iter 5000/8116, epoch 1, the losses are 4.369 (train). the base losses are 102.796 (train). The time used is 161.940s. 
+At iter 5000/8116, epoch 1, the losses are 4.404 (test). the base losses are 102.519 (test). 
+At iter 5010/8116, epoch 1, the losses are 4.357 (train). the base losses are 102.975 (train). The time used is 180.625s. 
+At iter 5020/8116, epoch 1, the losses are 4.381 (train). the base losses are 103.197 (train). The time used is 161.298s. 
+At iter 5030/8116, epoch 1, the losses are 4.404 (train). the base losses are 103.108 (train). The time used is 160.314s. 
+At iter 5040/8116, epoch 1, the losses are 4.382 (train). the base losses are 103.012 (train). The time used is 158.235s. 
+At iter 5050/8116, epoch 1, the losses are 4.372 (train). the base losses are 103.523 (train). The time used is 164.045s. 
+At iter 5050/8116, epoch 1, the losses are 4.468 (test). the base losses are 104.978 (test). 
+At iter 5060/8116, epoch 1, the losses are 4.354 (train). the base losses are 103.518 (train). The time used is 188.809s. 
+At iter 5070/8116, epoch 1, the losses are 4.353 (train). the base losses are 102.463 (train). The time used is 160.842s. 
+At iter 5080/8116, epoch 1, the losses are 4.358 (train). the base losses are 102.975 (train). The time used is 161.812s. 
+At iter 5090/8116, epoch 1, the losses are 4.383 (train). the base losses are 103.281 (train). The time used is 152.116s. 
+At iter 5100/8116, epoch 1, the losses are 4.367 (train). the base losses are 102.575 (train). The time used is 145.325s. 
+At iter 5100/8116, epoch 1, the losses are 4.490 (test). the base losses are 104.076 (test). 
+At iter 5110/8116, epoch 1, the losses are 4.377 (train). the base losses are 103.293 (train). The time used is 164.437s. 
+At iter 5120/8116, epoch 1, the losses are 4.375 (train). the base losses are 103.082 (train). The time used is 157.886s. 
+At iter 5130/8116, epoch 1, the losses are 4.362 (train). the base losses are 103.553 (train). The time used is 148.285s. 
+At iter 5140/8116, epoch 1, the losses are 4.390 (train). the base losses are 103.201 (train). The time used is 155.606s. 
+At iter 5150/8116, epoch 1, the losses are 4.353 (train). the base losses are 103.485 (train). The time used is 157.714s. 
+At iter 5150/8116, epoch 1, the losses are 4.482 (test). the base losses are 105.540 (test). 
+At iter 5160/8116, epoch 1, the losses are 4.387 (train). the base losses are 103.604 (train). The time used is 177.671s. 
+At iter 5170/8116, epoch 1, the losses are 4.366 (train). the base losses are 103.186 (train). The time used is 154.427s. 
+At iter 5180/8116, epoch 1, the losses are 4.382 (train). the base losses are 103.254 (train). The time used is 145.718s. 
+At iter 5190/8116, epoch 1, the losses are 4.365 (train). the base losses are 103.405 (train). The time used is 158.329s. 
+At iter 5200/8116, epoch 1, the losses are 4.360 (train). the base losses are 103.289 (train). The time used is 150.360s. 
+At iter 5200/8116, epoch 1, the losses are 4.482 (test). the base losses are 107.262 (test). 
+At iter 5210/8116, epoch 1, the losses are 4.353 (train). the base losses are 103.515 (train). The time used is 183.102s. 
+At iter 5220/8116, epoch 1, the losses are 4.365 (train). the base losses are 103.822 (train). The time used is 162.788s. 
+At iter 5230/8116, epoch 1, the losses are 4.325 (train). the base losses are 103.041 (train). The time used is 178.552s. 
+At iter 5240/8116, epoch 1, the losses are 4.375 (train). the base losses are 103.058 (train). The time used is 171.620s. 
+At iter 5250/8116, epoch 1, the losses are 4.337 (train). the base losses are 103.379 (train). The time used is 158.531s. 
+At iter 5250/8116, epoch 1, the losses are 4.441 (test). the base losses are 105.942 (test). 
+At iter 5260/8116, epoch 1, the losses are 4.374 (train). the base losses are 102.168 (train). The time used is 164.428s. 
+At iter 5270/8116, epoch 1, the losses are 4.378 (train). the base losses are 102.882 (train). The time used is 151.728s. 
+At iter 5280/8116, epoch 1, the losses are 4.345 (train). the base losses are 103.248 (train). The time used is 165.926s. 
+At iter 5290/8116, epoch 1, the losses are 4.357 (train). the base losses are 102.998 (train). The time used is 148.651s. 
+At iter 5300/8116, epoch 1, the losses are 4.344 (train). the base losses are 103.496 (train). The time used is 159.755s. 
+At iter 5300/8116, epoch 1, the losses are 4.456 (test). the base losses are 106.070 (test). 
+At iter 5310/8116, epoch 1, the losses are 4.362 (train). the base losses are 103.256 (train). The time used is 166.796s. 
+At iter 5320/8116, epoch 1, the losses are 4.387 (train). the base losses are 102.760 (train). The time used is 166.320s. 
+At iter 5330/8116, epoch 1, the losses are 4.382 (train). the base losses are 103.151 (train). The time used is 162.654s. 
+At iter 5340/8116, epoch 1, the losses are 4.368 (train). the base losses are 103.333 (train). The time used is 164.185s. 
+At iter 5350/8116, epoch 1, the losses are 4.357 (train). the base losses are 103.357 (train). The time used is 161.938s. 
+At iter 5350/8116, epoch 1, the losses are 4.477 (test). the base losses are 103.289 (test). 
+At iter 5360/8116, epoch 1, the losses are 4.360 (train). the base losses are 103.271 (train). The time used is 170.947s. 
+At iter 5370/8116, epoch 1, the losses are 4.386 (train). the base losses are 103.430 (train). The time used is 160.688s. 
+At iter 5380/8116, epoch 1, the losses are 4.364 (train). the base losses are 103.520 (train). The time used is 170.840s. 
+At iter 5390/8116, epoch 1, the losses are 4.365 (train). the base losses are 102.979 (train). The time used is 162.181s. 
+At iter 5400/8116, epoch 1, the losses are 4.365 (train). the base losses are 103.625 (train). The time used is 154.807s. 
+At iter 5400/8116, epoch 1, the losses are 4.468 (test). the base losses are 103.463 (test). 
+At iter 5410/8116, epoch 1, the losses are 4.361 (train). the base losses are 102.715 (train). The time used is 156.886s. 
+At iter 5420/8116, epoch 1, the losses are 4.350 (train). the base losses are 103.184 (train). The time used is 162.302s. 
+At iter 5430/8116, epoch 1, the losses are 4.346 (train). the base losses are 102.123 (train). The time used is 147.651s. 
+At iter 5440/8116, epoch 1, the losses are 4.376 (train). the base losses are 102.971 (train). The time used is 158.445s. 
+At iter 5450/8116, epoch 1, the losses are 4.376 (train). the base losses are 103.149 (train). The time used is 168.004s. 
+At iter 5450/8116, epoch 1, the losses are 4.502 (test). the base losses are 104.978 (test). 
+At iter 5460/8116, epoch 1, the losses are 4.319 (train). the base losses are 102.854 (train). The time used is 177.957s. 
+At iter 5470/8116, epoch 1, the losses are 4.357 (train). the base losses are 103.477 (train). The time used is 160.518s. 
+At iter 5480/8116, epoch 1, the losses are 4.356 (train). the base losses are 103.072 (train). The time used is 142.315s. 
+At iter 5490/8116, epoch 1, the losses are 4.354 (train). the base losses are 103.627 (train). The time used is 172.266s. 
+At iter 5500/8116, epoch 1, the losses are 4.379 (train). the base losses are 103.616 (train). The time used is 175.671s. 
+At iter 5500/8116, epoch 1, the losses are 4.443 (test). the base losses are 105.419 (test). 
+At iter 5510/8116, epoch 1, the losses are 4.336 (train). the base losses are 103.011 (train). The time used is 166.784s. 
+At iter 5520/8116, epoch 1, the losses are 4.348 (train). the base losses are 102.651 (train). The time used is 170.246s. 
+At iter 5530/8116, epoch 1, the losses are 4.382 (train). the base losses are 103.180 (train). The time used is 169.254s. 
+At iter 5540/8116, epoch 1, the losses are 4.335 (train). the base losses are 103.047 (train). The time used is 162.301s. 
+At iter 5550/8116, epoch 1, the losses are 4.355 (train). the base losses are 103.277 (train). The time used is 156.766s. 
+At iter 5550/8116, epoch 1, the losses are 4.457 (test). the base losses are 103.220 (test). 
+At iter 5560/8116, epoch 1, the losses are 4.350 (train). the base losses are 103.212 (train). The time used is 153.009s. 
+At iter 5570/8116, epoch 1, the losses are 4.344 (train). the base losses are 102.786 (train). The time used is 155.849s. 
+At iter 5580/8116, epoch 1, the losses are 4.368 (train). the base losses are 103.478 (train). The time used is 152.474s. 
+At iter 5590/8116, epoch 1, the losses are 4.378 (train). the base losses are 103.271 (train). The time used is 169.032s. 
+At iter 5600/8116, epoch 1, the losses are 4.359 (train). the base losses are 102.824 (train). The time used is 153.791s. 
+At iter 5600/8116, epoch 1, the losses are 4.433 (test). the base losses are 104.292 (test). 
+At iter 5610/8116, epoch 1, the losses are 4.343 (train). the base losses are 103.173 (train). The time used is 161.652s. 
+At iter 5620/8116, epoch 1, the losses are 4.334 (train). the base losses are 102.828 (train). The time used is 167.103s. 
+At iter 5630/8116, epoch 1, the losses are 4.349 (train). the base losses are 103.174 (train). The time used is 164.987s. 
+At iter 5640/8116, epoch 1, the losses are 4.353 (train). the base losses are 102.908 (train). The time used is 154.713s. 
+At iter 5650/8116, epoch 1, the losses are 4.337 (train). the base losses are 103.161 (train). The time used is 168.834s. 
+At iter 5650/8116, epoch 1, the losses are 4.458 (test). the base losses are 105.049 (test). 
+At iter 5660/8116, epoch 1, the losses are 4.348 (train). the base losses are 103.321 (train). The time used is 164.498s. 
+At iter 5670/8116, epoch 1, the losses are 4.342 (train). the base losses are 103.587 (train). The time used is 159.501s. 
+At iter 5680/8116, epoch 1, the losses are 4.353 (train). the base losses are 103.223 (train). The time used is 155.065s. 
+At iter 5690/8116, epoch 1, the losses are 4.326 (train). the base losses are 102.636 (train). The time used is 164.478s. 
+At iter 5700/8116, epoch 1, the losses are 4.334 (train). the base losses are 103.160 (train). The time used is 167.897s. 
+At iter 5700/8116, epoch 1, the losses are 4.387 (test). the base losses are 105.916 (test). 
+At iter 5710/8116, epoch 1, the losses are 4.349 (train). the base losses are 103.210 (train). The time used is 165.774s. 
+At iter 5720/8116, epoch 1, the losses are 4.346 (train). the base losses are 103.003 (train). The time used is 166.344s. 
+At iter 5730/8116, epoch 1, the losses are 4.346 (train). the base losses are 103.289 (train). The time used is 162.196s. 
+At iter 5740/8116, epoch 1, the losses are 4.343 (train). the base losses are 103.530 (train). The time used is 160.119s. 
+At iter 5750/8116, epoch 1, the losses are 4.349 (train). the base losses are 102.411 (train). The time used is 152.433s. 
+At iter 5750/8116, epoch 1, the losses are 4.483 (test). the base losses are 104.641 (test). 
+At iter 5760/8116, epoch 1, the losses are 4.364 (train). the base losses are 102.647 (train). The time used is 158.470s. 
+At iter 5770/8116, epoch 1, the losses are 4.365 (train). the base losses are 103.676 (train). The time used is 163.685s. 
+At iter 5780/8116, epoch 1, the losses are 4.333 (train). the base losses are 103.543 (train). The time used is 167.677s. 
+At iter 5790/8116, epoch 1, the losses are 4.325 (train). the base losses are 102.780 (train). The time used is 160.707s. 
+At iter 5800/8116, epoch 1, the losses are 4.335 (train). the base losses are 102.788 (train). The time used is 152.458s. 
+At iter 5800/8116, epoch 1, the losses are 4.460 (test). the base losses are 105.229 (test). 
+At iter 5810/8116, epoch 1, the losses are 4.349 (train). the base losses are 103.405 (train). The time used is 169.934s. 
+At iter 5820/8116, epoch 1, the losses are 4.352 (train). the base losses are 102.914 (train). The time used is 156.230s. 
+At iter 5830/8116, epoch 1, the losses are 4.336 (train). the base losses are 102.833 (train). The time used is 164.724s. 
+At iter 5840/8116, epoch 1, the losses are 4.338 (train). the base losses are 103.138 (train). The time used is 166.039s. 
+At iter 5850/8116, epoch 1, the losses are 4.346 (train). the base losses are 103.625 (train). The time used is 158.322s. 
+At iter 5850/8116, epoch 1, the losses are 4.456 (test). the base losses are 103.972 (test). 
+At iter 5860/8116, epoch 1, the losses are 4.349 (train). the base losses are 103.283 (train). The time used is 163.671s. 
+At iter 5870/8116, epoch 1, the losses are 4.342 (train). the base losses are 103.404 (train). The time used is 162.608s. 
+At iter 5880/8116, epoch 1, the losses are 4.335 (train). the base losses are 103.418 (train). The time used is 160.929s. 
+At iter 5890/8116, epoch 1, the losses are 4.316 (train). the base losses are 103.443 (train). The time used is 158.773s. 
+At iter 5900/8116, epoch 1, the losses are 4.325 (train). the base losses are 103.175 (train). The time used is 161.046s. 
+At iter 5900/8116, epoch 1, the losses are 4.418 (test). the base losses are 103.718 (test). 
+At iter 5910/8116, epoch 1, the losses are 4.349 (train). the base losses are 102.990 (train). The time used is 169.870s. 
+At iter 5920/8116, epoch 1, the losses are 4.339 (train). the base losses are 103.092 (train). The time used is 155.853s. 
+At iter 5930/8116, epoch 1, the losses are 4.335 (train). the base losses are 102.593 (train). The time used is 149.664s. 
+At iter 5940/8116, epoch 1, the losses are 4.334 (train). the base losses are 102.849 (train). The time used is 175.320s. 
+At iter 5950/8116, epoch 1, the losses are 4.349 (train). the base losses are 103.416 (train). The time used is 153.726s. 
+At iter 5950/8116, epoch 1, the losses are 4.442 (test). the base losses are 105.090 (test). 
+At iter 5960/8116, epoch 1, the losses are 4.309 (train). the base losses are 103.612 (train). The time used is 170.615s. 
+At iter 5970/8116, epoch 1, the losses are 4.363 (train). the base losses are 103.129 (train). The time used is 179.897s. 
+At iter 5980/8116, epoch 1, the losses are 4.348 (train). the base losses are 103.040 (train). The time used is 169.363s. 
+At iter 5990/8116, epoch 1, the losses are 4.337 (train). the base losses are 103.909 (train). The time used is 162.505s. 
+At iter 6000/8116, epoch 1, the losses are 4.327 (train). the base losses are 102.985 (train). The time used is 165.229s. 
+At iter 6000/8116, epoch 1, the losses are 4.479 (test). the base losses are 104.076 (test). 
+At iter 6010/8116, epoch 1, the losses are 4.305 (train). the base losses are 102.874 (train). The time used is 167.148s. 
+At iter 6020/8116, epoch 1, the losses are 4.327 (train). the base losses are 102.695 (train). The time used is 173.667s. 
+At iter 6030/8116, epoch 1, the losses are 4.306 (train). the base losses are 102.950 (train). The time used is 158.046s. 
+At iter 6040/8116, epoch 1, the losses are 4.337 (train). the base losses are 103.280 (train). The time used is 164.445s. 
+At iter 6050/8116, epoch 1, the losses are 4.345 (train). the base losses are 102.504 (train). The time used is 149.373s. 
+At iter 6050/8116, epoch 1, the losses are 4.431 (test). the base losses are 104.259 (test). 
+At iter 6060/8116, epoch 1, the losses are 4.324 (train). the base losses are 102.878 (train). The time used is 170.326s. 
+At iter 6070/8116, epoch 1, the losses are 4.332 (train). the base losses are 102.825 (train). The time used is 151.008s. 
+At iter 6080/8116, epoch 1, the losses are 4.306 (train). the base losses are 102.890 (train). The time used is 153.487s. 
+At iter 6090/8116, epoch 1, the losses are 4.346 (train). the base losses are 103.863 (train). The time used is 166.334s. 
+At iter 6100/8116, epoch 1, the losses are 4.345 (train). the base losses are 103.351 (train). The time used is 162.796s. 
+At iter 6100/8116, epoch 1, the losses are 4.389 (test). the base losses are 104.312 (test). 
+At iter 6110/8116, epoch 1, the losses are 4.327 (train). the base losses are 103.013 (train). The time used is 167.665s. 
+At iter 6120/8116, epoch 1, the losses are 4.329 (train). the base losses are 103.188 (train). The time used is 156.208s. 
+At iter 6130/8116, epoch 1, the losses are 4.324 (train). the base losses are 103.314 (train). The time used is 150.667s. 
+At iter 6140/8116, epoch 1, the losses are 4.320 (train). the base losses are 102.891 (train). The time used is 171.465s. 
+At iter 6150/8116, epoch 1, the losses are 4.335 (train). the base losses are 103.195 (train). The time used is 160.258s. 
+At iter 6150/8116, epoch 1, the losses are 4.387 (test). the base losses are 107.425 (test). 
+At iter 6160/8116, epoch 1, the losses are 4.349 (train). the base losses are 103.353 (train). The time used is 173.678s. 
+At iter 6170/8116, epoch 1, the losses are 4.318 (train). the base losses are 103.277 (train). The time used is 180.120s. 
+At iter 6180/8116, epoch 1, the losses are 4.337 (train). the base losses are 103.872 (train). The time used is 156.967s. 
+At iter 6190/8116, epoch 1, the losses are 4.324 (train). the base losses are 103.022 (train). The time used is 169.233s. 
+At iter 6200/8116, epoch 1, the losses are 4.344 (train). the base losses are 103.230 (train). The time used is 168.441s. 
+At iter 6200/8116, epoch 1, the losses are 4.473 (test). the base losses are 105.904 (test). 
+At iter 6210/8116, epoch 1, the losses are 4.336 (train). the base losses are 102.949 (train). The time used is 163.711s. 
+At iter 6220/8116, epoch 1, the losses are 4.336 (train). the base losses are 102.435 (train). The time used is 151.770s. 
+At iter 6230/8116, epoch 1, the losses are 4.300 (train). the base losses are 103.131 (train). The time used is 155.472s. 
+At iter 6240/8116, epoch 1, the losses are 4.355 (train). the base losses are 103.482 (train). The time used is 150.659s. 
+At iter 6250/8116, epoch 1, the losses are 4.311 (train). the base losses are 102.938 (train). The time used is 170.701s. 
+At iter 6250/8116, epoch 1, the losses are 4.403 (test). the base losses are 104.596 (test). 
+At iter 6260/8116, epoch 1, the losses are 4.344 (train). the base losses are 103.233 (train). The time used is 172.928s. 
+At iter 6270/8116, epoch 1, the losses are 4.345 (train). the base losses are 103.488 (train). The time used is 166.823s. 
+At iter 6280/8116, epoch 1, the losses are 4.332 (train). the base losses are 103.267 (train). The time used is 156.845s. 
+At iter 6290/8116, epoch 1, the losses are 4.357 (train). the base losses are 103.075 (train). The time used is 148.457s. 
+At iter 6300/8116, epoch 1, the losses are 4.333 (train). the base losses are 103.273 (train). The time used is 160.146s. 
+At iter 6300/8116, epoch 1, the losses are 4.454 (test). the base losses are 105.250 (test). 
+At iter 6310/8116, epoch 1, the losses are 4.313 (train). the base losses are 103.575 (train). The time used is 191.791s. 
+At iter 6320/8116, epoch 1, the losses are 4.321 (train). the base losses are 103.520 (train). The time used is 154.416s. 
+At iter 6330/8116, epoch 1, the losses are 4.315 (train). the base losses are 103.085 (train). The time used is 161.096s. 
+At iter 6340/8116, epoch 1, the losses are 4.312 (train). the base losses are 102.498 (train). The time used is 149.016s. 
+At iter 6350/8116, epoch 1, the losses are 4.319 (train). the base losses are 102.774 (train). The time used is 170.474s. 
+At iter 6350/8116, epoch 1, the losses are 4.423 (test). the base losses are 103.182 (test). 
+At iter 6360/8116, epoch 1, the losses are 4.311 (train). the base losses are 103.692 (train). The time used is 166.129s. 
+At iter 6370/8116, epoch 1, the losses are 4.316 (train). the base losses are 103.286 (train). The time used is 154.258s. 
+At iter 6380/8116, epoch 1, the losses are 4.344 (train). the base losses are 103.289 (train). The time used is 164.875s. 
+At iter 6390/8116, epoch 1, the losses are 4.330 (train). the base losses are 103.498 (train). The time used is 162.171s. 
+At iter 6400/8116, epoch 1, the losses are 4.296 (train). the base losses are 103.496 (train). The time used is 151.629s. 
+At iter 6400/8116, epoch 1, the losses are 4.417 (test). the base losses are 102.392 (test). 
+At iter 6410/8116, epoch 1, the losses are 4.290 (train). the base losses are 103.610 (train). The time used is 171.823s. 
+At iter 6420/8116, epoch 1, the losses are 4.306 (train). the base losses are 103.221 (train). The time used is 270.635s. 
+At iter 6430/8116, epoch 1, the losses are 4.347 (train). the base losses are 103.358 (train). The time used is 245.085s. 
+At iter 6440/8116, epoch 1, the losses are 4.301 (train). the base losses are 102.666 (train). The time used is 217.619s. 
+At iter 6450/8116, epoch 1, the losses are 4.328 (train). the base losses are 103.661 (train). The time used is 221.883s. 
+At iter 6450/8116, epoch 1, the losses are 4.427 (test). the base losses are 106.703 (test). 
+At iter 6460/8116, epoch 1, the losses are 4.326 (train). the base losses are 102.519 (train). The time used is 234.197s. 
+At iter 6470/8116, epoch 1, the losses are 4.329 (train). the base losses are 103.613 (train). The time used is 206.818s. 
+At iter 6480/8116, epoch 1, the losses are 4.318 (train). the base losses are 103.219 (train). The time used is 205.011s. 
+At iter 6490/8116, epoch 1, the losses are 4.338 (train). the base losses are 103.127 (train). The time used is 184.787s. 
+At iter 6500/8116, epoch 1, the losses are 4.298 (train). the base losses are 103.231 (train). The time used is 193.546s. 
+At iter 6500/8116, epoch 1, the losses are 4.447 (test). the base losses are 102.398 (test). 
+At iter 6510/8116, epoch 1, the losses are 4.296 (train). the base losses are 102.922 (train). The time used is 191.059s. 
+At iter 6520/8116, epoch 1, the losses are 4.298 (train). the base losses are 103.232 (train). The time used is 155.245s. 
+At iter 6530/8116, epoch 1, the losses are 4.323 (train). the base losses are 102.774 (train). The time used is 177.249s. 
+At iter 6540/8116, epoch 1, the losses are 4.312 (train). the base losses are 103.072 (train). The time used is 174.359s. 
+At iter 6550/8116, epoch 1, the losses are 4.329 (train). the base losses are 103.293 (train). The time used is 158.502s. 
+At iter 6550/8116, epoch 1, the losses are 4.405 (test). the base losses are 104.090 (test). 
+At iter 6560/8116, epoch 1, the losses are 4.316 (train). the base losses are 103.399 (train). The time used is 175.913s. 
+At iter 6570/8116, epoch 1, the losses are 4.324 (train). the base losses are 103.713 (train). The time used is 153.490s. 
+At iter 6580/8116, epoch 1, the losses are 4.285 (train). the base losses are 103.059 (train). The time used is 163.936s. 
+At iter 6590/8116, epoch 1, the losses are 4.324 (train). the base losses are 103.329 (train). The time used is 174.555s. 
+At iter 6600/8116, epoch 1, the losses are 4.310 (train). the base losses are 103.334 (train). The time used is 163.248s. 
+At iter 6600/8116, epoch 1, the losses are 4.404 (test). the base losses are 103.549 (test). 
+At iter 6610/8116, epoch 1, the losses are 4.338 (train). the base losses are 103.787 (train). The time used is 165.977s. 
+At iter 6620/8116, epoch 1, the losses are 4.298 (train). the base losses are 103.122 (train). The time used is 174.469s. 
+At iter 6630/8116, epoch 1, the losses are 4.312 (train). the base losses are 102.980 (train). The time used is 157.420s. 
+At iter 6640/8116, epoch 1, the losses are 4.324 (train). the base losses are 102.918 (train). The time used is 162.371s. 
+At iter 6650/8116, epoch 1, the losses are 4.324 (train). the base losses are 102.889 (train). The time used is 174.216s. 
+At iter 6650/8116, epoch 1, the losses are 4.410 (test). the base losses are 104.617 (test). 
+At iter 6660/8116, epoch 1, the losses are 4.314 (train). the base losses are 103.241 (train). The time used is 183.928s. 
+At iter 6670/8116, epoch 1, the losses are 4.307 (train). the base losses are 103.665 (train). The time used is 161.681s. 
+At iter 6680/8116, epoch 1, the losses are 4.319 (train). the base losses are 102.810 (train). The time used is 159.622s. 
+At iter 6690/8116, epoch 1, the losses are 4.334 (train). the base losses are 102.519 (train). The time used is 169.609s. 
+At iter 6700/8116, epoch 1, the losses are 4.334 (train). the base losses are 103.349 (train). The time used is 152.392s. 
+At iter 6700/8116, epoch 1, the losses are 4.409 (test). the base losses are 103.575 (test). 
+At iter 6710/8116, epoch 1, the losses are 4.301 (train). the base losses are 103.305 (train). The time used is 175.989s. 
+At iter 6720/8116, epoch 1, the losses are 4.313 (train). the base losses are 103.335 (train). The time used is 160.357s. 
+At iter 6730/8116, epoch 1, the losses are 4.300 (train). the base losses are 103.178 (train). The time used is 157.116s. 
+At iter 6740/8116, epoch 1, the losses are 4.300 (train). the base losses are 102.589 (train). The time used is 156.283s. 
+At iter 6750/8116, epoch 1, the losses are 4.294 (train). the base losses are 102.506 (train). The time used is 164.153s. 
+At iter 6750/8116, epoch 1, the losses are 4.435 (test). the base losses are 103.679 (test). 
+At iter 6760/8116, epoch 1, the losses are 4.300 (train). the base losses are 103.105 (train). The time used is 166.067s. 
+At iter 6770/8116, epoch 1, the losses are 4.305 (train). the base losses are 103.564 (train). The time used is 167.582s. 
+At iter 6780/8116, epoch 1, the losses are 4.289 (train). the base losses are 103.643 (train). The time used is 150.080s. 
+At iter 6790/8116, epoch 1, the losses are 4.321 (train). the base losses are 103.955 (train). The time used is 145.690s. 
+At iter 6800/8116, epoch 1, the losses are 4.311 (train). the base losses are 103.611 (train). The time used is 143.349s. 
+At iter 6800/8116, epoch 1, the losses are 4.404 (test). the base losses are 103.289 (test). 
+At iter 6810/8116, epoch 1, the losses are 4.305 (train). the base losses are 102.485 (train). The time used is 164.560s. 
+At iter 6820/8116, epoch 1, the losses are 4.334 (train). the base losses are 102.945 (train). The time used is 162.627s. 
+At iter 6830/8116, epoch 1, the losses are 4.314 (train). the base losses are 103.032 (train). The time used is 157.335s. 
+At iter 6840/8116, epoch 1, the losses are 4.307 (train). the base losses are 103.463 (train). The time used is 156.957s. 
+At iter 6850/8116, epoch 1, the losses are 4.321 (train). the base losses are 102.898 (train). The time used is 142.017s. 
+At iter 6850/8116, epoch 1, the losses are 4.461 (test). the base losses are 105.090 (test). 
+At iter 6860/8116, epoch 1, the losses are 4.363 (train). the base losses are 103.339 (train). The time used is 169.951s. 
+At iter 6870/8116, epoch 1, the losses are 4.343 (train). the base losses are 103.218 (train). The time used is 152.337s. 
+At iter 6880/8116, epoch 1, the losses are 4.293 (train). the base losses are 102.642 (train). The time used is 161.983s. 
+At iter 6890/8116, epoch 1, the losses are 4.293 (train). the base losses are 103.579 (train). The time used is 166.264s. 
+At iter 6900/8116, epoch 1, the losses are 4.322 (train). the base losses are 103.021 (train). The time used is 166.851s. 
+At iter 6900/8116, epoch 1, the losses are 4.440 (test). the base losses are 105.028 (test). 
+At iter 6910/8116, epoch 1, the losses are 4.294 (train). the base losses are 103.395 (train). The time used is 180.461s. 
+At iter 6920/8116, epoch 1, the losses are 4.302 (train). the base losses are 103.018 (train). The time used is 158.762s. 
+At iter 6930/8116, epoch 1, the losses are 4.294 (train). the base losses are 102.811 (train). The time used is 166.433s. 
+At iter 6940/8116, epoch 1, the losses are 4.274 (train). the base losses are 102.616 (train). The time used is 161.796s. 
+At iter 6950/8116, epoch 1, the losses are 4.286 (train). the base losses are 102.370 (train). The time used is 159.991s. 
+At iter 6950/8116, epoch 1, the losses are 4.413 (test). the base losses are 105.274 (test). 
+At iter 6960/8116, epoch 1, the losses are 4.328 (train). the base losses are 103.563 (train). The time used is 189.675s. 
+At iter 6970/8116, epoch 1, the losses are 4.288 (train). the base losses are 102.809 (train). The time used is 174.083s. 
+At iter 6980/8116, epoch 1, the losses are 4.295 (train). the base losses are 103.077 (train). The time used is 142.589s. 
+At iter 6990/8116, epoch 1, the losses are 4.304 (train). the base losses are 102.715 (train). The time used is 146.910s. 
+At iter 7000/8116, epoch 1, the losses are 4.312 (train). the base losses are 103.537 (train). The time used is 149.899s. 
+At iter 7000/8116, epoch 1, the losses are 4.466 (test). the base losses are 104.874 (test). 
+At iter 7010/8116, epoch 1, the losses are 4.315 (train). the base losses are 103.380 (train). The time used is 180.813s. 
+At iter 7020/8116, epoch 1, the losses are 4.301 (train). the base losses are 103.074 (train). The time used is 146.406s. 
+At iter 7030/8116, epoch 1, the losses are 4.326 (train). the base losses are 103.263 (train). The time used is 158.779s. 
+At iter 7040/8116, epoch 1, the losses are 4.310 (train). the base losses are 103.118 (train). The time used is 154.003s. 
+At iter 7050/8116, epoch 1, the losses are 4.300 (train). the base losses are 103.058 (train). The time used is 149.362s. 
+At iter 7050/8116, epoch 1, the losses are 4.433 (test). the base losses are 105.354 (test). 
+At iter 7060/8116, epoch 1, the losses are 4.284 (train). the base losses are 102.876 (train). The time used is 163.856s. 
+At iter 7070/8116, epoch 1, the losses are 4.317 (train). the base losses are 103.314 (train). The time used is 163.297s. 
+At iter 7080/8116, epoch 1, the losses are 4.314 (train). the base losses are 103.375 (train). The time used is 146.080s. 
+At iter 7090/8116, epoch 1, the losses are 4.297 (train). the base losses are 104.022 (train). The time used is 151.198s. 
+At iter 7100/8116, epoch 1, the losses are 4.284 (train). the base losses are 103.508 (train). The time used is 150.763s. 
+At iter 7100/8116, epoch 1, the losses are 4.397 (test). the base losses are 106.567 (test). 
+At iter 7110/8116, epoch 1, the losses are 4.293 (train). the base losses are 103.207 (train). The time used is 164.336s. 
+At iter 7120/8116, epoch 1, the losses are 4.304 (train). the base losses are 102.747 (train). The time used is 151.309s. 
+At iter 7130/8116, epoch 1, the losses are 4.309 (train). the base losses are 103.117 (train). The time used is 155.632s. 
+At iter 7140/8116, epoch 1, the losses are 4.296 (train). the base losses are 102.788 (train). The time used is 154.293s. 
+At iter 7150/8116, epoch 1, the losses are 4.326 (train). the base losses are 103.513 (train). The time used is 158.328s. 
+At iter 7150/8116, epoch 1, the losses are 4.394 (test). the base losses are 103.386 (test). 
+At iter 7160/8116, epoch 1, the losses are 4.284 (train). the base losses are 103.216 (train). The time used is 168.463s. 
+At iter 7170/8116, epoch 1, the losses are 4.314 (train). the base losses are 103.073 (train). The time used is 160.801s. 
+At iter 7180/8116, epoch 1, the losses are 4.298 (train). the base losses are 103.579 (train). The time used is 154.047s. 
+At iter 7190/8116, epoch 1, the losses are 4.329 (train). the base losses are 103.376 (train). The time used is 175.614s. 
+At iter 7200/8116, epoch 1, the losses are 4.284 (train). the base losses are 102.736 (train). The time used is 150.078s. 
+At iter 7200/8116, epoch 1, the losses are 4.396 (test). the base losses are 103.475 (test). 
+At iter 7210/8116, epoch 1, the losses are 4.292 (train). the base losses are 103.631 (train). The time used is 159.524s. 
+At iter 7220/8116, epoch 1, the losses are 4.290 (train). the base losses are 102.809 (train). The time used is 157.510s. 
+At iter 7230/8116, epoch 1, the losses are 4.310 (train). the base losses are 103.016 (train). The time used is 143.949s. 
+At iter 7240/8116, epoch 1, the losses are 4.302 (train). the base losses are 103.157 (train). The time used is 151.289s. 
+At iter 7250/8116, epoch 1, the losses are 4.289 (train). the base losses are 103.211 (train). The time used is 154.891s. 
+At iter 7250/8116, epoch 1, the losses are 4.403 (test). the base losses are 106.371 (test). 
+At iter 7260/8116, epoch 1, the losses are 4.308 (train). the base losses are 102.943 (train). The time used is 168.792s. 
+At iter 7270/8116, epoch 1, the losses are 4.288 (train). the base losses are 103.001 (train). The time used is 155.148s. 
+At iter 7280/8116, epoch 1, the losses are 4.295 (train). the base losses are 102.523 (train). The time used is 152.740s. 
+At iter 7290/8116, epoch 1, the losses are 4.301 (train). the base losses are 102.963 (train). The time used is 140.806s. 
+At iter 7300/8116, epoch 1, the losses are 4.276 (train). the base losses are 103.382 (train). The time used is 158.313s. 
+At iter 7300/8116, epoch 1, the losses are 4.432 (test). the base losses are 106.247 (test). 
+At iter 7310/8116, epoch 1, the losses are 4.296 (train). the base losses are 102.443 (train). The time used is 164.245s. 
+At iter 7320/8116, epoch 1, the losses are 4.316 (train). the base losses are 102.889 (train). The time used is 158.092s. 
+At iter 7330/8116, epoch 1, the losses are 4.285 (train). the base losses are 103.163 (train). The time used is 166.270s. 
+At iter 7340/8116, epoch 1, the losses are 4.278 (train). the base losses are 103.752 (train). The time used is 154.762s. 
+At iter 7350/8116, epoch 1, the losses are 4.293 (train). the base losses are 103.252 (train). The time used is 168.829s. 
+At iter 7350/8116, epoch 1, the losses are 4.408 (test). the base losses are 104.496 (test). 
+At iter 7360/8116, epoch 1, the losses are 4.304 (train). the base losses are 103.059 (train). The time used is 167.156s. 
+At iter 7370/8116, epoch 1, the losses are 4.305 (train). the base losses are 103.341 (train). The time used is 140.285s. 
+At iter 7380/8116, epoch 1, the losses are 4.304 (train). the base losses are 103.311 (train). The time used is 155.271s. 
+At iter 7390/8116, epoch 1, the losses are 4.303 (train). the base losses are 102.918 (train). The time used is 149.923s. 
+At iter 7400/8116, epoch 1, the losses are 4.296 (train). the base losses are 102.890 (train). The time used is 153.036s. 
+At iter 7400/8116, epoch 1, the losses are 4.445 (test). the base losses are 104.436 (test). 
+At iter 7410/8116, epoch 1, the losses are 4.302 (train). the base losses are 102.882 (train). The time used is 167.244s. 
+At iter 7420/8116, epoch 1, the losses are 4.304 (train). the base losses are 103.205 (train). The time used is 168.202s. 
+At iter 7430/8116, epoch 1, the losses are 4.299 (train). the base losses are 103.027 (train). The time used is 142.974s. 
+At iter 7440/8116, epoch 1, the losses are 4.301 (train). the base losses are 103.173 (train). The time used is 152.492s. 
+At iter 7450/8116, epoch 1, the losses are 4.281 (train). the base losses are 103.227 (train). The time used is 157.901s. 
+At iter 7450/8116, epoch 1, the losses are 4.422 (test). the base losses are 105.898 (test). 
+At iter 7460/8116, epoch 1, the losses are 4.299 (train). the base losses are 102.876 (train). The time used is 171.581s. 
+At iter 7470/8116, epoch 1, the losses are 4.284 (train). the base losses are 102.142 (train). The time used is 155.306s. 
+At iter 7480/8116, epoch 1, the losses are 4.292 (train). the base losses are 102.505 (train). The time used is 164.230s. 
+At iter 7490/8116, epoch 1, the losses are 4.292 (train). the base losses are 103.143 (train). The time used is 144.237s. 
+At iter 7500/8116, epoch 1, the losses are 4.299 (train). the base losses are 103.121 (train). The time used is 168.414s. 
+At iter 7500/8116, epoch 1, the losses are 4.444 (test). the base losses are 104.457 (test). 
+At iter 7510/8116, epoch 1, the losses are 4.296 (train). the base losses are 103.752 (train). The time used is 157.069s. 
+At iter 7520/8116, epoch 1, the losses are 4.314 (train). the base losses are 103.596 (train). The time used is 148.605s. 
+At iter 7530/8116, epoch 1, the losses are 4.288 (train). the base losses are 103.019 (train). The time used is 147.922s. 
+At iter 7540/8116, epoch 1, the losses are 4.313 (train). the base losses are 103.690 (train). The time used is 155.152s. 
+At iter 7550/8116, epoch 1, the losses are 4.298 (train). the base losses are 102.928 (train). The time used is 149.964s. 
+At iter 7550/8116, epoch 1, the losses are 4.380 (test). the base losses are 104.939 (test). 
+At iter 7560/8116, epoch 1, the losses are 4.313 (train). the base losses are 103.813 (train). The time used is 162.572s. 
+At iter 7570/8116, epoch 1, the losses are 4.283 (train). the base losses are 103.010 (train). The time used is 161.788s. 
+At iter 7580/8116, epoch 1, the losses are 4.286 (train). the base losses are 102.544 (train). The time used is 157.197s. 
+At iter 7590/8116, epoch 1, the losses are 4.300 (train). the base losses are 102.565 (train). The time used is 161.321s. 
+At iter 7600/8116, epoch 1, the losses are 4.298 (train). the base losses are 103.356 (train). The time used is 154.782s. 
+At iter 7600/8116, epoch 1, the losses are 4.394 (test). the base losses are 105.685 (test). 
+At iter 7610/8116, epoch 1, the losses are 4.310 (train). the base losses are 102.735 (train). The time used is 160.053s. 
+At iter 7620/8116, epoch 1, the losses are 4.316 (train). the base losses are 103.217 (train). The time used is 155.830s. 
+At iter 7630/8116, epoch 1, the losses are 4.301 (train). the base losses are 103.459 (train). The time used is 145.815s. 
+At iter 7640/8116, epoch 1, the losses are 4.308 (train). the base losses are 103.446 (train). The time used is 154.504s. 
+At iter 7650/8116, epoch 1, the losses are 4.276 (train). the base losses are 103.068 (train). The time used is 160.852s. 
+At iter 7650/8116, epoch 1, the losses are 4.410 (test). the base losses are 103.712 (test). 
+At iter 7660/8116, epoch 1, the losses are 4.294 (train). the base losses are 103.158 (train). The time used is 170.553s. 
+At iter 7670/8116, epoch 1, the losses are 4.303 (train). the base losses are 103.738 (train). The time used is 148.825s. 
+At iter 7680/8116, epoch 1, the losses are 4.288 (train). the base losses are 104.032 (train). The time used is 165.160s. 
+At iter 7690/8116, epoch 1, the losses are 4.307 (train). the base losses are 103.610 (train). The time used is 151.448s. 
+At iter 7700/8116, epoch 1, the losses are 4.283 (train). the base losses are 103.222 (train). The time used is 157.574s. 
+At iter 7700/8116, epoch 1, the losses are 4.401 (test). the base losses are 104.904 (test). 
+At iter 7710/8116, epoch 1, the losses are 4.309 (train). the base losses are 103.514 (train). The time used is 171.504s. 
+At iter 7720/8116, epoch 1, the losses are 4.294 (train). the base losses are 103.314 (train). The time used is 163.001s. 
+At iter 7730/8116, epoch 1, the losses are 4.272 (train). the base losses are 103.630 (train). The time used is 151.134s. 
+At iter 7740/8116, epoch 1, the losses are 4.276 (train). the base losses are 103.021 (train). The time used is 152.031s. 
+At iter 7750/8116, epoch 1, the losses are 4.283 (train). the base losses are 103.123 (train). The time used is 163.573s. 
+At iter 7750/8116, epoch 1, the losses are 4.441 (test). the base losses are 105.673 (test). 
+At iter 7760/8116, epoch 1, the losses are 4.307 (train). the base losses are 103.157 (train). The time used is 162.948s. 
+At iter 7770/8116, epoch 1, the losses are 4.269 (train). the base losses are 103.548 (train). The time used is 160.992s. 
+At iter 7780/8116, epoch 1, the losses are 4.281 (train). the base losses are 103.480 (train). The time used is 152.703s. 
+At iter 7790/8116, epoch 1, the losses are 4.280 (train). the base losses are 103.319 (train). The time used is 146.809s. 
+At iter 7800/8116, epoch 1, the losses are 4.282 (train). the base losses are 103.074 (train). The time used is 155.218s. 
+At iter 7800/8116, epoch 1, the losses are 4.393 (test). the base losses are 102.717 (test). 
+At iter 7810/8116, epoch 1, the losses are 4.281 (train). the base losses are 103.144 (train). The time used is 164.647s. 
+At iter 7820/8116, epoch 1, the losses are 4.278 (train). the base losses are 102.323 (train). The time used is 157.313s. 
+At iter 7830/8116, epoch 1, the losses are 4.292 (train). the base losses are 103.421 (train). The time used is 148.474s. 
+At iter 7840/8116, epoch 1, the losses are 4.285 (train). the base losses are 103.566 (train). The time used is 144.074s. 
+At iter 7850/8116, epoch 1, the losses are 4.282 (train). the base losses are 103.280 (train). The time used is 159.366s. 
+At iter 7850/8116, epoch 1, the losses are 4.404 (test). the base losses are 103.753 (test). 
+At iter 7860/8116, epoch 1, the losses are 4.268 (train). the base losses are 103.536 (train). The time used is 173.413s. 
+At iter 7870/8116, epoch 1, the losses are 4.303 (train). the base losses are 102.684 (train). The time used is 158.909s. 
+At iter 7880/8116, epoch 1, the losses are 4.312 (train). the base losses are 103.450 (train). The time used is 147.107s. 
+At iter 7890/8116, epoch 1, the losses are 4.273 (train). the base losses are 103.137 (train). The time used is 164.151s. 
+At iter 7900/8116, epoch 1, the losses are 4.299 (train). the base losses are 102.860 (train). The time used is 147.680s. 
+At iter 7900/8116, epoch 1, the losses are 4.386 (test). the base losses are 105.215 (test). 
+At iter 7910/8116, epoch 1, the losses are 4.277 (train). the base losses are 102.812 (train). The time used is 168.935s. 
+At iter 7920/8116, epoch 1, the losses are 4.290 (train). the base losses are 103.613 (train). The time used is 156.579s. 
+At iter 7930/8116, epoch 1, the losses are 4.309 (train). the base losses are 103.410 (train). The time used is 154.679s. 
+At iter 7940/8116, epoch 1, the losses are 4.275 (train). the base losses are 103.218 (train). The time used is 181.910s. 
+At iter 7950/8116, epoch 1, the losses are 4.263 (train). the base losses are 103.768 (train). The time used is 172.020s. 
+At iter 7950/8116, epoch 1, the losses are 4.343 (test). the base losses are 104.676 (test). 
+At iter 7960/8116, epoch 1, the losses are 4.283 (train). the base losses are 103.186 (train). The time used is 169.222s. 
+At iter 7970/8116, epoch 1, the losses are 4.255 (train). the base losses are 104.011 (train). The time used is 159.275s. 
+At iter 7980/8116, epoch 1, the losses are 4.261 (train). the base losses are 103.699 (train). The time used is 147.222s. 
+At iter 7990/8116, epoch 1, the losses are 4.270 (train). the base losses are 102.647 (train). The time used is 154.436s. 
+At iter 8000/8116, epoch 1, the losses are 4.246 (train). the base losses are 103.307 (train). The time used is 163.873s. 
+At iter 8000/8116, epoch 1, the losses are 4.361 (test). the base losses are 103.910 (test). 
+At iter 8010/8116, epoch 1, the losses are 4.284 (train). the base losses are 103.126 (train). The time used is 171.185s. 
+At iter 8020/8116, epoch 1, the losses are 4.273 (train). the base losses are 102.748 (train). The time used is 151.568s. 
+At iter 8030/8116, epoch 1, the losses are 4.308 (train). the base losses are 103.352 (train). The time used is 159.638s. 
+At iter 8040/8116, epoch 1, the losses are 4.294 (train). the base losses are 102.916 (train). The time used is 164.107s. 
+At iter 8050/8116, epoch 1, the losses are 4.280 (train). the base losses are 103.582 (train). The time used is 160.564s. 
+At iter 8050/8116, epoch 1, the losses are 4.424 (test). the base losses are 105.472 (test). 
+At iter 8060/8116, epoch 1, the losses are 4.271 (train). the base losses are 103.206 (train). The time used is 160.801s. 
+At iter 8070/8116, epoch 1, the losses are 4.270 (train). the base losses are 102.776 (train). The time used is 152.339s. 
+At iter 8080/8116, epoch 1, the losses are 4.291 (train). the base losses are 103.138 (train). The time used is 168.838s. 
+At iter 8090/8116, epoch 1, the losses are 4.291 (train). the base losses are 102.632 (train). The time used is 164.484s. 
+At iter 8100/8116, epoch 1, the losses are 4.320 (train). the base losses are 102.492 (train). The time used is 157.295s. 
+At iter 8100/8116, epoch 1, the losses are 4.414 (test). the base losses are 102.217 (test). 
+At iter 8110/8116, epoch 1, the losses are 4.310 (train). the base losses are 102.767 (train). The time used is 172.756s. 
+/data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/../results/Dis_step10_dis6_nlay8_ndim512_epoch1
+Create a folder /data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/../results/Dis_step10_dis6_nlay8_ndim512_epoch1
+Save to /data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/../results/Dis_step10_dis6_nlay8_ndim512_epoch1/config.pkl
+Save to /data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/../results/Dis_step10_dis6_nlay8_ndim512_epoch1/loss_fn.pkl
+Save to /data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/../results/Dis_step10_dis6_nlay8_ndim512_epoch1/losses.pkl
+Save to /data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/../results/Dis_step10_dis6_nlay8_ndim512_epoch1/losses_test.pkl
+Save to /data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/../results/Dis_step10_dis6_nlay8_ndim512_epoch1/paras_train.pkl
+The current lr is [6e-05].
+At iter 10/8116, epoch 2, the losses are 4.269 (train). the base losses are 103.495 (train). The time used is 257.207s. 
+At iter 20/8116, epoch 2, the losses are 4.288 (train). the base losses are 103.630 (train). The time used is 166.781s. 
+At iter 30/8116, epoch 2, the losses are 4.278 (train). the base losses are 103.621 (train). The time used is 153.124s. 
+At iter 40/8116, epoch 2, the losses are 4.277 (train). the base losses are 102.883 (train). The time used is 156.508s. 
+At iter 50/8116, epoch 2, the losses are 4.269 (train). the base losses are 103.504 (train). The time used is 172.965s. 
+At iter 50/8116, epoch 2, the losses are 4.325 (test). the base losses are 105.502 (test). 
+At iter 60/8116, epoch 2, the losses are 4.266 (train). the base losses are 103.085 (train). The time used is 176.693s. 
+At iter 70/8116, epoch 2, the losses are 4.268 (train). the base losses are 103.401 (train). The time used is 161.631s. 
+At iter 80/8116, epoch 2, the losses are 4.252 (train). the base losses are 103.189 (train). The time used is 158.223s. 
+At iter 90/8116, epoch 2, the losses are 4.285 (train). the base losses are 103.121 (train). The time used is 153.026s. 
+At iter 100/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.296 (train). The time used is 164.551s. 
+At iter 100/8116, epoch 2, the losses are 4.418 (test). the base losses are 104.576 (test). 
+At iter 110/8116, epoch 2, the losses are 4.276 (train). the base losses are 103.034 (train). The time used is 156.893s. 
+At iter 120/8116, epoch 2, the losses are 4.278 (train). the base losses are 102.872 (train). The time used is 149.827s. 
+At iter 130/8116, epoch 2, the losses are 4.295 (train). the base losses are 103.599 (train). The time used is 168.290s. 
+At iter 140/8116, epoch 2, the losses are 4.268 (train). the base losses are 103.692 (train). The time used is 158.618s. 
+At iter 150/8116, epoch 2, the losses are 4.265 (train). the base losses are 102.580 (train). The time used is 152.092s. 
+At iter 150/8116, epoch 2, the losses are 4.406 (test). the base losses are 105.102 (test). 
+At iter 160/8116, epoch 2, the losses are 4.258 (train). the base losses are 103.010 (train). The time used is 164.204s. 
+At iter 170/8116, epoch 2, the losses are 4.256 (train). the base losses are 102.658 (train). The time used is 161.561s. 
+At iter 180/8116, epoch 2, the losses are 4.275 (train). the base losses are 103.198 (train). The time used is 144.223s. 
+At iter 190/8116, epoch 2, the losses are 4.293 (train). the base losses are 103.140 (train). The time used is 145.521s. 
+At iter 200/8116, epoch 2, the losses are 4.272 (train). the base losses are 102.899 (train). The time used is 153.281s. 
+At iter 200/8116, epoch 2, the losses are 4.312 (test). the base losses are 105.203 (test). 
+At iter 210/8116, epoch 2, the losses are 4.271 (train). the base losses are 102.301 (train). The time used is 157.479s. 
+At iter 220/8116, epoch 2, the losses are 4.269 (train). the base losses are 103.130 (train). The time used is 166.356s. 
+At iter 230/8116, epoch 2, the losses are 4.285 (train). the base losses are 103.458 (train). The time used is 155.961s. 
+At iter 240/8116, epoch 2, the losses are 4.264 (train). the base losses are 102.674 (train). The time used is 161.973s. 
+At iter 250/8116, epoch 2, the losses are 4.278 (train). the base losses are 103.331 (train). The time used is 153.487s. 
+At iter 250/8116, epoch 2, the losses are 4.377 (test). the base losses are 106.647 (test). 
+At iter 260/8116, epoch 2, the losses are 4.263 (train). the base losses are 103.589 (train). The time used is 162.694s. 
+At iter 270/8116, epoch 2, the losses are 4.284 (train). the base losses are 103.090 (train). The time used is 159.236s. 
+At iter 280/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.048 (train). The time used is 155.807s. 
+At iter 290/8116, epoch 2, the losses are 4.285 (train). the base losses are 103.747 (train). The time used is 140.908s. 
+At iter 300/8116, epoch 2, the losses are 4.270 (train). the base losses are 103.033 (train). The time used is 154.668s. 
+At iter 300/8116, epoch 2, the losses are 4.421 (test). the base losses are 103.345 (test). 
+At iter 310/8116, epoch 2, the losses are 4.256 (train). the base losses are 102.935 (train). The time used is 167.001s. 
+At iter 320/8116, epoch 2, the losses are 4.276 (train). the base losses are 103.134 (train). The time used is 168.278s. 
+At iter 330/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.550 (train). The time used is 156.436s. 
+At iter 340/8116, epoch 2, the losses are 4.273 (train). the base losses are 103.271 (train). The time used is 152.141s. 
+At iter 350/8116, epoch 2, the losses are 4.287 (train). the base losses are 102.768 (train). The time used is 152.068s. 
+At iter 350/8116, epoch 2, the losses are 4.413 (test). the base losses are 107.108 (test). 
+At iter 360/8116, epoch 2, the losses are 4.279 (train). the base losses are 103.814 (train). The time used is 164.293s. 
+At iter 370/8116, epoch 2, the losses are 4.253 (train). the base losses are 103.070 (train). The time used is 159.134s. 
+At iter 380/8116, epoch 2, the losses are 4.281 (train). the base losses are 103.529 (train). The time used is 155.477s. 
+At iter 390/8116, epoch 2, the losses are 4.283 (train). the base losses are 102.900 (train). The time used is 154.387s. 
+At iter 400/8116, epoch 2, the losses are 4.256 (train). the base losses are 103.438 (train). The time used is 151.942s. 
+At iter 400/8116, epoch 2, the losses are 4.379 (test). the base losses are 104.685 (test). 
+At iter 410/8116, epoch 2, the losses are 4.270 (train). the base losses are 102.959 (train). The time used is 172.539s. 
+At iter 420/8116, epoch 2, the losses are 4.261 (train). the base losses are 103.587 (train). The time used is 144.701s. 
+At iter 430/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.391 (train). The time used is 150.405s. 
+At iter 440/8116, epoch 2, the losses are 4.255 (train). the base losses are 103.157 (train). The time used is 160.836s. 
+At iter 450/8116, epoch 2, the losses are 4.269 (train). the base losses are 102.989 (train). The time used is 162.364s. 
+At iter 450/8116, epoch 2, the losses are 4.362 (test). the base losses are 106.176 (test). 
+At iter 460/8116, epoch 2, the losses are 4.260 (train). the base losses are 102.852 (train). The time used is 170.502s. 
+At iter 470/8116, epoch 2, the losses are 4.289 (train). the base losses are 103.295 (train). The time used is 153.230s. 
+At iter 480/8116, epoch 2, the losses are 4.252 (train). the base losses are 103.530 (train). The time used is 157.142s. 
+At iter 490/8116, epoch 2, the losses are 4.276 (train). the base losses are 102.370 (train). The time used is 164.187s. 
+At iter 500/8116, epoch 2, the losses are 4.257 (train). the base losses are 102.904 (train). The time used is 159.525s. 
+At iter 500/8116, epoch 2, the losses are 4.401 (test). the base losses are 104.386 (test). 
+At iter 510/8116, epoch 2, the losses are 4.266 (train). the base losses are 102.861 (train). The time used is 180.381s. 
+At iter 520/8116, epoch 2, the losses are 4.233 (train). the base losses are 103.221 (train). The time used is 157.425s. 
+At iter 530/8116, epoch 2, the losses are 4.274 (train). the base losses are 103.885 (train). The time used is 155.287s. 
+At iter 540/8116, epoch 2, the losses are 4.268 (train). the base losses are 103.057 (train). The time used is 156.926s. 
+At iter 550/8116, epoch 2, the losses are 4.284 (train). the base losses are 103.227 (train). The time used is 153.592s. 
+At iter 550/8116, epoch 2, the losses are 4.394 (test). the base losses are 104.215 (test). 
+At iter 560/8116, epoch 2, the losses are 4.254 (train). the base losses are 102.393 (train). The time used is 173.893s. 
+At iter 570/8116, epoch 2, the losses are 4.240 (train). the base losses are 103.548 (train). The time used is 155.155s. 
+At iter 580/8116, epoch 2, the losses are 4.266 (train). the base losses are 103.287 (train). The time used is 174.324s. 
+At iter 590/8116, epoch 2, the losses are 4.248 (train). the base losses are 103.129 (train). The time used is 158.788s. 
+At iter 600/8116, epoch 2, the losses are 4.283 (train). the base losses are 103.587 (train). The time used is 163.378s. 
+At iter 600/8116, epoch 2, the losses are 4.363 (test). the base losses are 105.466 (test). 
+At iter 610/8116, epoch 2, the losses are 4.271 (train). the base losses are 103.514 (train). The time used is 161.218s. 
+At iter 620/8116, epoch 2, the losses are 4.260 (train). the base losses are 103.045 (train). The time used is 158.137s. 
+At iter 630/8116, epoch 2, the losses are 4.238 (train). the base losses are 102.972 (train). The time used is 153.960s. 
+At iter 640/8116, epoch 2, the losses are 4.247 (train). the base losses are 103.528 (train). The time used is 154.442s. 
+At iter 650/8116, epoch 2, the losses are 4.280 (train). the base losses are 102.733 (train). The time used is 141.696s. 
+At iter 650/8116, epoch 2, the losses are 4.393 (test). the base losses are 104.540 (test). 
+At iter 660/8116, epoch 2, the losses are 4.276 (train). the base losses are 102.960 (train). The time used is 162.046s. 
+At iter 670/8116, epoch 2, the losses are 4.260 (train). the base losses are 102.891 (train). The time used is 159.567s. 
+At iter 680/8116, epoch 2, the losses are 4.271 (train). the base losses are 103.280 (train). The time used is 151.895s. 
+At iter 690/8116, epoch 2, the losses are 4.275 (train). the base losses are 103.102 (train). The time used is 146.007s. 
+At iter 700/8116, epoch 2, the losses are 4.273 (train). the base losses are 103.064 (train). The time used is 159.858s. 
+At iter 700/8116, epoch 2, the losses are 4.399 (test). the base losses are 103.854 (test). 
+At iter 710/8116, epoch 2, the losses are 4.269 (train). the base losses are 103.327 (train). The time used is 162.969s. 
+At iter 720/8116, epoch 2, the losses are 4.249 (train). the base losses are 102.949 (train). The time used is 138.282s. 
+At iter 730/8116, epoch 2, the losses are 4.278 (train). the base losses are 103.175 (train). The time used is 150.051s. 
+At iter 740/8116, epoch 2, the losses are 4.261 (train). the base losses are 103.478 (train). The time used is 160.902s. 
+At iter 750/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.014 (train). The time used is 160.339s. 
+At iter 750/8116, epoch 2, the losses are 4.388 (test). the base losses are 102.972 (test). 
+At iter 760/8116, epoch 2, the losses are 4.272 (train). the base losses are 103.143 (train). The time used is 172.809s. 
+At iter 770/8116, epoch 2, the losses are 4.258 (train). the base losses are 103.291 (train). The time used is 155.458s. 
+At iter 780/8116, epoch 2, the losses are 4.273 (train). the base losses are 103.687 (train). The time used is 175.286s. 
+At iter 790/8116, epoch 2, the losses are 4.268 (train). the base losses are 103.919 (train). The time used is 170.705s. 
+At iter 800/8116, epoch 2, the losses are 4.278 (train). the base losses are 102.804 (train). The time used is 144.419s. 
+At iter 800/8116, epoch 2, the losses are 4.363 (test). the base losses are 105.851 (test). 
+At iter 810/8116, epoch 2, the losses are 4.255 (train). the base losses are 103.328 (train). The time used is 181.378s. 
+At iter 820/8116, epoch 2, the losses are 4.263 (train). the base losses are 103.090 (train). The time used is 159.538s. 
+At iter 830/8116, epoch 2, the losses are 4.267 (train). the base losses are 103.053 (train). The time used is 156.257s. 
+At iter 840/8116, epoch 2, the losses are 4.261 (train). the base losses are 103.483 (train). The time used is 162.902s. 
+At iter 850/8116, epoch 2, the losses are 4.264 (train). the base losses are 104.107 (train). The time used is 145.255s. 
+At iter 850/8116, epoch 2, the losses are 4.372 (test). the base losses are 103.549 (test). 
+At iter 860/8116, epoch 2, the losses are 4.271 (train). the base losses are 103.180 (train). The time used is 162.304s. 
+At iter 870/8116, epoch 2, the losses are 4.261 (train). the base losses are 102.978 (train). The time used is 159.879s. 
+At iter 880/8116, epoch 2, the losses are 4.256 (train). the base losses are 102.872 (train). The time used is 151.792s. 
+At iter 890/8116, epoch 2, the losses are 4.249 (train). the base losses are 102.454 (train). The time used is 164.159s. 
+At iter 900/8116, epoch 2, the losses are 4.268 (train). the base losses are 102.594 (train). The time used is 153.924s. 
+At iter 900/8116, epoch 2, the losses are 4.416 (test). the base losses are 102.933 (test). 
+At iter 910/8116, epoch 2, the losses are 4.262 (train). the base losses are 103.501 (train). The time used is 171.542s. 
+At iter 920/8116, epoch 2, the losses are 4.252 (train). the base losses are 103.190 (train). The time used is 157.851s. 
+At iter 930/8116, epoch 2, the losses are 4.270 (train). the base losses are 102.948 (train). The time used is 150.797s. 
+At iter 940/8116, epoch 2, the losses are 4.266 (train). the base losses are 103.570 (train). The time used is 154.280s. 
+At iter 950/8116, epoch 2, the losses are 4.305 (train). the base losses are 102.735 (train). The time used is 155.680s. 
+At iter 950/8116, epoch 2, the losses are 4.430 (test). the base losses are 106.582 (test). 
+At iter 960/8116, epoch 2, the losses are 4.271 (train). the base losses are 103.429 (train). The time used is 161.600s. 
+At iter 970/8116, epoch 2, the losses are 4.243 (train). the base losses are 102.767 (train). The time used is 157.197s. 
+At iter 980/8116, epoch 2, the losses are 4.262 (train). the base losses are 102.798 (train). The time used is 151.110s. 
+At iter 990/8116, epoch 2, the losses are 4.253 (train). the base losses are 102.987 (train). The time used is 153.839s. 
+At iter 1000/8116, epoch 2, the losses are 4.251 (train). the base losses are 103.375 (train). The time used is 163.939s. 
+At iter 1000/8116, epoch 2, the losses are 4.384 (test). the base losses are 105.070 (test). 
+At iter 1010/8116, epoch 2, the losses are 4.255 (train). the base losses are 103.391 (train). The time used is 164.665s. 
+At iter 1020/8116, epoch 2, the losses are 4.269 (train). the base losses are 102.818 (train). The time used is 154.025s. 
+At iter 1030/8116, epoch 2, the losses are 4.239 (train). the base losses are 103.496 (train). The time used is 164.662s. 
+At iter 1040/8116, epoch 2, the losses are 4.292 (train). the base losses are 102.723 (train). The time used is 148.477s. 
+At iter 1050/8116, epoch 2, the losses are 4.262 (train). the base losses are 103.562 (train). The time used is 155.932s. 
+At iter 1050/8116, epoch 2, the losses are 4.403 (test). the base losses are 104.297 (test). 
+At iter 1060/8116, epoch 2, the losses are 4.255 (train). the base losses are 103.234 (train). The time used is 170.399s. 
+At iter 1070/8116, epoch 2, the losses are 4.257 (train). the base losses are 103.124 (train). The time used is 149.744s. 
+At iter 1080/8116, epoch 2, the losses are 4.260 (train). the base losses are 102.967 (train). The time used is 156.782s. 
+At iter 1090/8116, epoch 2, the losses are 4.268 (train). the base losses are 103.610 (train). The time used is 154.852s. 
+At iter 1100/8116, epoch 2, the losses are 4.244 (train). the base losses are 102.950 (train). The time used is 174.432s. 
+At iter 1100/8116, epoch 2, the losses are 4.394 (test). the base losses are 105.706 (test). 
+At iter 1110/8116, epoch 2, the losses are 4.251 (train). the base losses are 102.760 (train). The time used is 174.429s. 
+At iter 1120/8116, epoch 2, the losses are 4.262 (train). the base losses are 103.144 (train). The time used is 151.247s. 
+At iter 1130/8116, epoch 2, the losses are 4.254 (train). the base losses are 103.000 (train). The time used is 146.280s. 
+At iter 1140/8116, epoch 2, the losses are 4.275 (train). the base losses are 103.654 (train). The time used is 164.125s. 
+At iter 1150/8116, epoch 2, the losses are 4.260 (train). the base losses are 103.195 (train). The time used is 156.074s. 
+At iter 1150/8116, epoch 2, the losses are 4.392 (test). the base losses are 104.963 (test). 
+At iter 1160/8116, epoch 2, the losses are 4.278 (train). the base losses are 103.320 (train). The time used is 170.985s. 
+At iter 1170/8116, epoch 2, the losses are 4.232 (train). the base losses are 103.036 (train). The time used is 144.325s. 
+At iter 1180/8116, epoch 2, the losses are 4.268 (train). the base losses are 103.031 (train). The time used is 164.593s. 
+At iter 1190/8116, epoch 2, the losses are 4.255 (train). the base losses are 103.196 (train). The time used is 166.329s. 
+At iter 1200/8116, epoch 2, the losses are 4.261 (train). the base losses are 103.000 (train). The time used is 154.608s. 
+At iter 1200/8116, epoch 2, the losses are 4.364 (test). the base losses are 105.469 (test). 
+At iter 1210/8116, epoch 2, the losses are 4.254 (train). the base losses are 103.224 (train). The time used is 174.199s. 
+At iter 1220/8116, epoch 2, the losses are 4.267 (train). the base losses are 103.234 (train). The time used is 151.222s. 
+At iter 1230/8116, epoch 2, the losses are 4.261 (train). the base losses are 103.701 (train). The time used is 149.845s. 
+At iter 1240/8116, epoch 2, the losses are 4.246 (train). the base losses are 103.377 (train). The time used is 162.164s. 
+At iter 1250/8116, epoch 2, the losses are 4.233 (train). the base losses are 103.285 (train). The time used is 161.286s. 
+At iter 1250/8116, epoch 2, the losses are 4.386 (test). the base losses are 106.126 (test). 
+At iter 1260/8116, epoch 2, the losses are 4.290 (train). the base losses are 103.272 (train). The time used is 171.756s. 
+At iter 1270/8116, epoch 2, the losses are 4.234 (train). the base losses are 103.422 (train). The time used is 145.929s. 
+At iter 1280/8116, epoch 2, the losses are 4.277 (train). the base losses are 102.621 (train). The time used is 142.941s. 
+At iter 1290/8116, epoch 2, the losses are 4.237 (train). the base losses are 102.490 (train). The time used is 148.061s. 
+At iter 1300/8116, epoch 2, the losses are 4.280 (train). the base losses are 103.139 (train). The time used is 149.846s. 
+At iter 1300/8116, epoch 2, the losses are 4.383 (test). the base losses are 102.383 (test). 
+At iter 1310/8116, epoch 2, the losses are 4.271 (train). the base losses are 103.537 (train). The time used is 171.112s. 
+At iter 1320/8116, epoch 2, the losses are 4.281 (train). the base losses are 103.821 (train). The time used is 162.650s. 
+At iter 1330/8116, epoch 2, the losses are 4.248 (train). the base losses are 102.730 (train). The time used is 161.303s. 
+At iter 1340/8116, epoch 2, the losses are 4.252 (train). the base losses are 103.230 (train). The time used is 162.158s. 
+At iter 1350/8116, epoch 2, the losses are 4.253 (train). the base losses are 103.075 (train). The time used is 169.166s. 
+At iter 1350/8116, epoch 2, the losses are 4.385 (test). the base losses are 103.658 (test). 
+At iter 1360/8116, epoch 2, the losses are 4.286 (train). the base losses are 102.942 (train). The time used is 178.582s. 
+At iter 1370/8116, epoch 2, the losses are 4.282 (train). the base losses are 103.716 (train). The time used is 150.203s. 
+At iter 1380/8116, epoch 2, the losses are 4.254 (train). the base losses are 103.674 (train). The time used is 162.178s. 
+At iter 1390/8116, epoch 2, the losses are 4.242 (train). the base losses are 103.249 (train). The time used is 149.268s. 
+At iter 1400/8116, epoch 2, the losses are 4.275 (train). the base losses are 103.126 (train). The time used is 133.144s. 
+At iter 1400/8116, epoch 2, the losses are 4.389 (test). the base losses are 105.229 (test). 
+At iter 1410/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.069 (train). The time used is 169.534s. 
+At iter 1420/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.337 (train). The time used is 159.175s. 
+At iter 1430/8116, epoch 2, the losses are 4.252 (train). the base losses are 102.902 (train). The time used is 149.245s. 
+At iter 1440/8116, epoch 2, the losses are 4.263 (train). the base losses are 103.026 (train). The time used is 157.582s. 
+At iter 1450/8116, epoch 2, the losses are 4.258 (train). the base losses are 103.387 (train). The time used is 153.547s. 
+At iter 1450/8116, epoch 2, the losses are 4.300 (test). the base losses are 104.768 (test). 
+At iter 1460/8116, epoch 2, the losses are 4.260 (train). the base losses are 103.500 (train). The time used is 172.506s. 
+At iter 1470/8116, epoch 2, the losses are 4.263 (train). the base losses are 104.092 (train). The time used is 177.510s. 
+At iter 1480/8116, epoch 2, the losses are 4.266 (train). the base losses are 103.414 (train). The time used is 158.280s. 
+At iter 1490/8116, epoch 2, the losses are 4.251 (train). the base losses are 103.407 (train). The time used is 150.869s. 
+At iter 1500/8116, epoch 2, the losses are 4.256 (train). the base losses are 103.601 (train). The time used is 152.161s. 
+At iter 1500/8116, epoch 2, the losses are 4.356 (test). the base losses are 103.599 (test). 
+At iter 1510/8116, epoch 2, the losses are 4.269 (train). the base losses are 103.067 (train). The time used is 185.821s. 
+At iter 1520/8116, epoch 2, the losses are 4.267 (train). the base losses are 103.295 (train). The time used is 152.268s. 
+At iter 1530/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.237 (train). The time used is 156.345s. 
+At iter 1540/8116, epoch 2, the losses are 4.274 (train). the base losses are 102.891 (train). The time used is 156.214s. 
+At iter 1550/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.447 (train). The time used is 161.669s. 
+At iter 1550/8116, epoch 2, the losses are 4.359 (test). the base losses are 104.345 (test). 
+At iter 1560/8116, epoch 2, the losses are 4.268 (train). the base losses are 103.391 (train). The time used is 163.604s. 
+At iter 1570/8116, epoch 2, the losses are 4.252 (train). the base losses are 103.578 (train). The time used is 154.751s. 
+At iter 1580/8116, epoch 2, the losses are 4.250 (train). the base losses are 103.559 (train). The time used is 150.572s. 
+At iter 1590/8116, epoch 2, the losses are 4.272 (train). the base losses are 103.324 (train). The time used is 163.553s. 
+At iter 1600/8116, epoch 2, the losses are 4.256 (train). the base losses are 102.872 (train). The time used is 149.692s. 
+At iter 1600/8116, epoch 2, the losses are 4.361 (test). the base losses are 104.857 (test). 
+At iter 1610/8116, epoch 2, the losses are 4.248 (train). the base losses are 103.174 (train). The time used is 176.821s. 
+At iter 1620/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.197 (train). The time used is 159.169s. 
+At iter 1630/8116, epoch 2, the losses are 4.238 (train). the base losses are 103.076 (train). The time used is 151.409s. 
+At iter 1640/8116, epoch 2, the losses are 4.250 (train). the base losses are 103.460 (train). The time used is 162.922s. 
+At iter 1650/8116, epoch 2, the losses are 4.240 (train). the base losses are 102.164 (train). The time used is 162.557s. 
+At iter 1650/8116, epoch 2, the losses are 4.360 (test). the base losses are 106.253 (test). 
+At iter 1660/8116, epoch 2, the losses are 4.257 (train). the base losses are 103.053 (train). The time used is 177.319s. 
+At iter 1670/8116, epoch 2, the losses are 4.258 (train). the base losses are 103.265 (train). The time used is 149.252s. 
+At iter 1680/8116, epoch 2, the losses are 4.241 (train). the base losses are 102.681 (train). The time used is 166.151s. 
+At iter 1690/8116, epoch 2, the losses are 4.276 (train). the base losses are 103.745 (train). The time used is 156.071s. 
+At iter 1700/8116, epoch 2, the losses are 4.269 (train). the base losses are 102.723 (train). The time used is 161.449s. 
+At iter 1700/8116, epoch 2, the losses are 4.366 (test). the base losses are 106.416 (test). 
+At iter 1710/8116, epoch 2, the losses are 4.255 (train). the base losses are 103.632 (train). The time used is 161.735s. 
+At iter 1720/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.456 (train). The time used is 156.988s. 
+At iter 1730/8116, epoch 2, the losses are 4.263 (train). the base losses are 103.289 (train). The time used is 152.517s. 
+At iter 1740/8116, epoch 2, the losses are 4.248 (train). the base losses are 102.853 (train). The time used is 155.190s. 
+At iter 1750/8116, epoch 2, the losses are 4.233 (train). the base losses are 103.015 (train). The time used is 167.197s. 
+At iter 1750/8116, epoch 2, the losses are 4.363 (test). the base losses are 107.064 (test). 
+At iter 1760/8116, epoch 2, the losses are 4.250 (train). the base losses are 102.813 (train). The time used is 185.421s. 
+At iter 1770/8116, epoch 2, the losses are 4.234 (train). the base losses are 102.741 (train). The time used is 156.988s. 
+At iter 1780/8116, epoch 2, the losses are 4.241 (train). the base losses are 102.579 (train). The time used is 153.166s. 
+At iter 1790/8116, epoch 2, the losses are 4.250 (train). the base losses are 102.569 (train). The time used is 148.703s. 
+At iter 1800/8116, epoch 2, the losses are 4.276 (train). the base losses are 102.499 (train). The time used is 161.580s. 
+At iter 1800/8116, epoch 2, the losses are 4.339 (test). the base losses are 103.682 (test). 
+At iter 1810/8116, epoch 2, the losses are 4.225 (train). the base losses are 103.112 (train). The time used is 166.386s. 
+At iter 1820/8116, epoch 2, the losses are 4.236 (train). the base losses are 102.757 (train). The time used is 158.335s. 
+At iter 1830/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.467 (train). The time used is 155.932s. 
+At iter 1840/8116, epoch 2, the losses are 4.252 (train). the base losses are 103.114 (train). The time used is 145.597s. 
+At iter 1850/8116, epoch 2, the losses are 4.228 (train). the base losses are 103.214 (train). The time used is 134.717s. 
+At iter 1850/8116, epoch 2, the losses are 4.414 (test). the base losses are 107.324 (test). 
+At iter 1860/8116, epoch 2, the losses are 4.238 (train). the base losses are 103.330 (train). The time used is 156.396s. 
+At iter 1870/8116, epoch 2, the losses are 4.245 (train). the base losses are 102.634 (train). The time used is 152.579s. 
+At iter 1880/8116, epoch 2, the losses are 4.262 (train). the base losses are 103.397 (train). The time used is 159.706s. 
+At iter 1890/8116, epoch 2, the losses are 4.243 (train). the base losses are 103.425 (train). The time used is 152.685s. 
+At iter 1900/8116, epoch 2, the losses are 4.254 (train). the base losses are 102.615 (train). The time used is 150.746s. 
+At iter 1900/8116, epoch 2, the losses are 4.328 (test). the base losses are 103.919 (test). 
+At iter 1910/8116, epoch 2, the losses are 4.260 (train). the base losses are 103.166 (train). The time used is 166.914s. 
+At iter 1920/8116, epoch 2, the losses are 4.270 (train). the base losses are 103.332 (train). The time used is 159.349s. 
+At iter 1930/8116, epoch 2, the losses are 4.249 (train). the base losses are 103.134 (train). The time used is 163.073s. 
+At iter 1940/8116, epoch 2, the losses are 4.249 (train). the base losses are 103.347 (train). The time used is 151.935s. 
+At iter 1950/8116, epoch 2, the losses are 4.242 (train). the base losses are 103.041 (train). The time used is 153.388s. 
+At iter 1950/8116, epoch 2, the losses are 4.307 (test). the base losses are 104.377 (test). 
+At iter 1960/8116, epoch 2, the losses are 4.243 (train). the base losses are 102.733 (train). The time used is 163.716s. 
+At iter 1970/8116, epoch 2, the losses are 4.264 (train). the base losses are 103.262 (train). The time used is 155.950s. 
+At iter 1980/8116, epoch 2, the losses are 4.264 (train). the base losses are 103.284 (train). The time used is 159.993s. 
+At iter 1990/8116, epoch 2, the losses are 4.257 (train). the base losses are 103.368 (train). The time used is 146.457s. 
+At iter 2000/8116, epoch 2, the losses are 4.250 (train). the base losses are 103.127 (train). The time used is 150.191s. 
+At iter 2000/8116, epoch 2, the losses are 4.370 (test). the base losses are 102.957 (test). 
+At iter 2010/8116, epoch 2, the losses are 4.258 (train). the base losses are 103.535 (train). The time used is 160.345s. 
+At iter 2020/8116, epoch 2, the losses are 4.249 (train). the base losses are 103.245 (train). The time used is 158.632s. 
+At iter 2030/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.326 (train). The time used is 153.788s. 
+At iter 2040/8116, epoch 2, the losses are 4.253 (train). the base losses are 103.251 (train). The time used is 158.923s. 
+At iter 2050/8116, epoch 2, the losses are 4.260 (train). the base losses are 103.374 (train). The time used is 157.371s. 
+At iter 2050/8116, epoch 2, the losses are 4.370 (test). the base losses are 103.966 (test). 
+At iter 2060/8116, epoch 2, the losses are 4.222 (train). the base losses are 103.174 (train). The time used is 176.269s. 
+At iter 2070/8116, epoch 2, the losses are 4.240 (train). the base losses are 103.528 (train). The time used is 151.171s. 
+At iter 2080/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.769 (train). The time used is 161.278s. 
+At iter 2090/8116, epoch 2, the losses are 4.258 (train). the base losses are 102.911 (train). The time used is 163.357s. 
+At iter 2100/8116, epoch 2, the losses are 4.230 (train). the base losses are 102.982 (train). The time used is 171.528s. 
+At iter 2100/8116, epoch 2, the losses are 4.417 (test). the base losses are 106.141 (test). 
+At iter 2110/8116, epoch 2, the losses are 4.261 (train). the base losses are 103.307 (train). The time used is 179.909s. 
+At iter 2120/8116, epoch 2, the losses are 4.244 (train). the base losses are 102.708 (train). The time used is 149.817s. 
+At iter 2130/8116, epoch 2, the losses are 4.243 (train). the base losses are 103.349 (train). The time used is 163.565s. 
+At iter 2140/8116, epoch 2, the losses are 4.248 (train). the base losses are 103.416 (train). The time used is 155.169s. 
+At iter 2150/8116, epoch 2, the losses are 4.236 (train). the base losses are 102.994 (train). The time used is 165.699s. 
+At iter 2150/8116, epoch 2, the losses are 4.373 (test). the base losses are 102.880 (test). 
+At iter 2160/8116, epoch 2, the losses are 4.236 (train). the base losses are 103.034 (train). The time used is 170.523s. 
+At iter 2170/8116, epoch 2, the losses are 4.238 (train). the base losses are 103.694 (train). The time used is 153.238s. 
+At iter 2180/8116, epoch 2, the losses are 4.234 (train). the base losses are 103.821 (train). The time used is 143.886s. 
+At iter 2190/8116, epoch 2, the losses are 4.253 (train). the base losses are 103.697 (train). The time used is 166.886s. 
+At iter 2200/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.057 (train). The time used is 168.905s. 
+At iter 2200/8116, epoch 2, the losses are 4.365 (test). the base losses are 104.487 (test). 
+At iter 2210/8116, epoch 2, the losses are 4.244 (train). the base losses are 104.029 (train). The time used is 155.461s. 
+At iter 2220/8116, epoch 2, the losses are 4.256 (train). the base losses are 103.013 (train). The time used is 160.731s. 
+At iter 2230/8116, epoch 2, the losses are 4.212 (train). the base losses are 103.254 (train). The time used is 142.793s. 
+At iter 2240/8116, epoch 2, the losses are 4.239 (train). the base losses are 103.051 (train). The time used is 168.895s. 
+At iter 2250/8116, epoch 2, the losses are 4.262 (train). the base losses are 103.539 (train). The time used is 153.992s. 
+At iter 2250/8116, epoch 2, the losses are 4.396 (test). the base losses are 104.883 (test). 
+At iter 2260/8116, epoch 2, the losses are 4.228 (train). the base losses are 103.056 (train). The time used is 160.359s. 
+At iter 2270/8116, epoch 2, the losses are 4.269 (train). the base losses are 103.316 (train). The time used is 156.013s. 
+At iter 2280/8116, epoch 2, the losses are 4.239 (train). the base losses are 103.379 (train). The time used is 166.498s. 
+At iter 2290/8116, epoch 2, the losses are 4.236 (train). the base losses are 103.652 (train). The time used is 163.271s. 
+At iter 2300/8116, epoch 2, the losses are 4.251 (train). the base losses are 103.055 (train). The time used is 148.971s. 
+At iter 2300/8116, epoch 2, the losses are 4.378 (test). the base losses are 104.596 (test). 
+At iter 2310/8116, epoch 2, the losses are 4.260 (train). the base losses are 103.083 (train). The time used is 169.604s. 
+At iter 2320/8116, epoch 2, the losses are 4.238 (train). the base losses are 103.167 (train). The time used is 146.911s. 
+At iter 2330/8116, epoch 2, the losses are 4.207 (train). the base losses are 102.898 (train). The time used is 156.619s. 
+At iter 2340/8116, epoch 2, the losses are 4.240 (train). the base losses are 103.389 (train). The time used is 150.040s. 
+At iter 2350/8116, epoch 2, the losses are 4.272 (train). the base losses are 103.725 (train). The time used is 152.965s. 
+At iter 2350/8116, epoch 2, the losses are 4.426 (test). the base losses are 102.786 (test). 
+At iter 2360/8116, epoch 2, the losses are 4.244 (train). the base losses are 102.855 (train). The time used is 166.006s. 
+At iter 2370/8116, epoch 2, the losses are 4.265 (train). the base losses are 103.100 (train). The time used is 153.039s. 
+At iter 2380/8116, epoch 2, the losses are 4.215 (train). the base losses are 103.752 (train). The time used is 136.026s. 
+At iter 2390/8116, epoch 2, the losses are 4.244 (train). the base losses are 102.486 (train). The time used is 163.472s. 
+At iter 2400/8116, epoch 2, the losses are 4.257 (train). the base losses are 102.987 (train). The time used is 149.248s. 
+At iter 2400/8116, epoch 2, the losses are 4.421 (test). the base losses are 105.508 (test). 
+At iter 2410/8116, epoch 2, the losses are 4.235 (train). the base losses are 103.867 (train). The time used is 171.190s. 
+At iter 2420/8116, epoch 2, the losses are 4.226 (train). the base losses are 102.680 (train). The time used is 155.613s. 
+At iter 2430/8116, epoch 2, the losses are 4.255 (train). the base losses are 103.193 (train). The time used is 147.303s. 
+At iter 2440/8116, epoch 2, the losses are 4.228 (train). the base losses are 102.881 (train). The time used is 163.885s. 
+At iter 2450/8116, epoch 2, the losses are 4.245 (train). the base losses are 102.369 (train). The time used is 174.657s. 
+At iter 2450/8116, epoch 2, the losses are 4.359 (test). the base losses are 107.363 (test). 
+At iter 2460/8116, epoch 2, the losses are 4.276 (train). the base losses are 103.102 (train). The time used is 147.987s. 
+At iter 2470/8116, epoch 2, the losses are 4.261 (train). the base losses are 103.494 (train). The time used is 147.199s. 
+At iter 2480/8116, epoch 2, the losses are 4.234 (train). the base losses are 103.139 (train). The time used is 142.097s. 
+At iter 2490/8116, epoch 2, the losses are 4.240 (train). the base losses are 102.956 (train). The time used is 166.539s. 
+At iter 2500/8116, epoch 2, the losses are 4.248 (train). the base losses are 103.471 (train). The time used is 157.606s. 
+At iter 2500/8116, epoch 2, the losses are 4.346 (test). the base losses are 105.472 (test). 
+At iter 2510/8116, epoch 2, the losses are 4.227 (train). the base losses are 103.306 (train). The time used is 178.757s. 
+At iter 2520/8116, epoch 2, the losses are 4.219 (train). the base losses are 103.066 (train). The time used is 165.739s. 
+At iter 2530/8116, epoch 2, the losses are 4.248 (train). the base losses are 103.509 (train). The time used is 163.501s. 
+At iter 2540/8116, epoch 2, the losses are 4.259 (train). the base losses are 103.291 (train). The time used is 162.882s. 
+At iter 2550/8116, epoch 2, the losses are 4.258 (train). the base losses are 102.664 (train). The time used is 153.554s. 
+At iter 2550/8116, epoch 2, the losses are 4.317 (test). the base losses are 103.919 (test). 
+At iter 2560/8116, epoch 2, the losses are 4.250 (train). the base losses are 103.276 (train). The time used is 165.099s. 
+At iter 2570/8116, epoch 2, the losses are 4.249 (train). the base losses are 103.109 (train). The time used is 157.132s. 
+slurmstepd: error: *** JOB 18090 ON hyperion CANCELLED AT 2024-05-24T14:20:06 DUE TO TIME LIMIT ***

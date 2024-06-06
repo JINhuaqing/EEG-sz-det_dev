@@ -1,2 +1,2 @@
 #!/bin/bash
-jupyter nbconvert --to script $1
+jupyter nbconvert --to script $1 

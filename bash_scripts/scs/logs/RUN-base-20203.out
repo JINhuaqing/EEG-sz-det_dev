@@ -1,0 +1,37 @@
+Running prime number generator program on 5 CPU cores
+cuda
+{'nfeature': 19, 'ndim': 512, 'dropout': 0.5, 'n_layer': 8, 'n_head': 8, 'is_mask': True, 'is_bias': True, 'block_size': 256, 'batch_size': 256, 'move_step': 10, 'fs': 90, 'target_dim': 19, 'k': 6}
+DisMSELoss_step10_dis6_nlay8_ndim512
+2029 12349
+number of parameters: 25.24M
+The current lr is [0.0001].
+Traceback (most recent call last):
+  File "/data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../python_scripts/run.py", line 226, in <module>
+    netout = net(Xp, X)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/models/my_main_model_dis_base.py", line 199, in forward
+    x = block(x)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/models/my_main_model_dis_base.py", line 45, in forward
+    x = x + self.tattn(self.ln_1(x))
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/rajlab1/user_data/jin/MyResearch/EEG-sz-det_dev/bash_scripts/../mypkg/models/my_main_model_dis_base.py", line 91, in forward
+    q, k ,v  = self.c_attn(x).split(self.ndim, dim=2)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/hujin/jin/conda/envs/eeg-sz-det/lib/python3.9/site-packages/torch/utils/_device.py", line 78, in __torch_function__
+    return func(*args, **kwargs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 768.00 MiB. GPU 
