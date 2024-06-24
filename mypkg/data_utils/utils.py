@@ -6,30 +6,24 @@ from constants import DATA_ROOT
 from utils.misc import load_txt, save_pkl, load_pkl
 
 
-def rec_data(data_dis, k, verbose=False, typ="_rescale_health"):
-    """ Reconstruct the digitized data for 2^k levels.
+def rec_data(data_dis, cutoffs):
+    """ Reconstruct the digitized data based on the cutoffs
         Approximate inverse operator of digitize_data
     """
-    data_dis = convert_to_type(data_dis, "np")
-    EEG_ROOT = list(DATA_ROOT.glob("EEG_seizure"))[0]
-    fil = EEG_ROOT/f"discrete_cuts/cuts_2power{k}{typ}.pkl";
-    assert fil.exists(), "No cutoff values"
-    cuts = load_pkl(fil, verbose=verbose);
-    cuts_all = np.sort(np.concatenate([-cuts, [0], cuts]));
-    filled_vs = (cuts_all[1:] + cuts_all[:-1])/2;
-    filled_vs_full = np.concatenate([cuts_all[:1], filled_vs, cuts_all[-1:]]);
+    cutoffs_all = np.sort(np.concatenate([-cutoffs, [0], cutoffs]));
+    filled_vs = (cutoffs_all[1:] + cutoffs_all[:-1])/2;
+    filled_vs_full = np.concatenate([cutoffs_all[:1], filled_vs, cutoffs_all[-1:]]);
     return filled_vs_full[data_dis]
 
-def digitize_data(data, k, verbose=False, typ="_rescale_health"):
-    """ Discretize the data into 2^k levels.
+def digitize_data(data, cutoffs):
+    """ Discretize the data based on the cutoffs
+    args: 
+        data: np.ndarray, the data to be discretized
+        cutoffs: np.ndarray, the positive cutoffs
     """
     data = convert_to_type(data, "np")
-    EEG_ROOT = list(DATA_ROOT.glob("EEG_seizure"))[0]
-    fil = EEG_ROOT/f"discrete_cuts/cuts_2power{k}{typ}.pkl";
-    assert fil.exists(), "No cutoff values"
-    cuts = load_pkl(fil, verbose=verbose);
-    cuts_all = np.sort(np.concatenate([-cuts, [0], cuts]));
-    data_discrete = np.digitize(data, cuts_all);
+    cutoffs_all = np.sort(np.concatenate([-cutoffs, [0], cutoffs]));
+    data_discrete = np.digitize(data, cutoffs_all);
     return data_discrete
 
 def get_triple(X, k, nch=19):

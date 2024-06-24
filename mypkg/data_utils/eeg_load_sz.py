@@ -1,144 +1,206 @@
-from .eeg_load import EEGData
-import numpy as np
 from constants import DATA_ROOT
-import pandas as pd
-from easydict import EasyDict as edict
-import torch
-import mne
-import time
-import pdb
+from .eeg_load import EEGData
+from utils.misc import save_pkl, load_pkl, _set_verbose_level, _update_params
 
-class EEGdataSZ(EEGData):
+import pdb
+import ast
+import numpy as np
+from tqdm import tqdm
+
+import logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+if not logger.hasHandlers():
+    ch = logging.StreamHandler() # for console. 
+    ch.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    ch.setFormatter(formatter)
+    logger.addHandler(ch) 
+
+class EEGDataSZ(EEGData):
     """The main data class
     """
-    def __init__(self, dataset, subset, 
+    def __init__(self, 
+                 dataset, 
+                 subset, 
                  label, 
-                 move_param={},
-                 preprocess_dict=dict(is_detrend=True, 
-                                      is_drop=True,
-                                      target_fs=125, 
-                                      filter_limit=[1, 45], 
-                                      is_diff=False), 
-                 root=None, scale_fct=None):
+                 discrete_k=None,
+                 verbose=1, 
+                 root=None, 
+                 move_params={},
+                 pre_params={},
+                 rm_params={}):
         """
         Initializes a new instance of the EEG data class.
         The EEG data with sampling freq 250
+        This class will load data with seizure and background label
 
         Args:
             dataset: The data set we want to load, 
                      train, dev or eval
             subset: the subset to choose: LE, AR, AR_A, ALL
             label: the label of the data, sz, bckg, bckg-str
-            move_dict: the moving parameters
+            discrete_k: the number of discrete levels, if None, use the original data
+            verbose: whether to print the information, 1-4, 1 least, 4 most
             root: The root of dataset,
-            scale_fct: EEG = EEG/scale_fct
+            move_params: the moving parameters, determine how to get data segment from org EEG
+                - winsize: the length of data segment
+                - stepsize: the stepsize moveing along the time series
+                - marginsize: The minimal length of data to keep, <= winsize
+                    if None, marginsize = winsize
+            pre_params: the preprocess parameters, determine how to preprocess the data
+                - is_detrend: whether to detrend the data
+                - is_drop: whether to drop the channels not in SEL_CHS
+                - target_fs: the target sampling frequency 
+                - filter_limit: the limit of the filter, [low, high]
+                - is_diff: whether to get the difference of the channels, use False, not implemented
+                - scale_fct: EEG = EEG/scale_fct to scale the EEG
+                    - if None, scale_fct = np.quantile(np.abs(EEG), [0.95])
+            rm_params: the remove parameters, determine how to remove the outlier segments
+                - rm_len: the length of the first and last part to remove, in seconds
+                - keep_len: the minimal length of the data to keep, in seconds
+                - outliers_rate: the rate of the outliers, to remove the segments with the max value > quantile(1-outliers_rate)
         """
+        _set_verbose_level(verbose, logger)
         label = label.lower()
-        
-        # set default values of move_dict and preprocess_dict
-        move_param_def = edict(dict(winsize=256, stepsize=64, marginsize=None))
-        self.move_dict=edict(dict(winsize=256, stepsize=64, marginsize=None))
-        self.preprocess_dict=edict(dict(is_detrend=True, 
-                                        is_drop=True,
-                                        target_fs=125, 
-                                        filter_limit=[1, 45], 
-                                        is_diff=False))
-        
-        self.rm_len = 10
-        self.keep_len = 20
-        self.outliers_rate = 0.05
-        # hook is only for get the variable
-        self.hook = edict()
-        self.hook.sub_idxs = []
-        
-        if root is None:
-            root = list(DATA_ROOT.glob("EEG_seizure"))[0]/"edf"
-        self.root = root
-        self.scale_fct = scale_fct
-        self.move_dict.update(move_dict)
-        self.preprocess_dict.update(preprocess_dict)
-        self.edf_data = None
-        if self.preprocess_dict.target_fs is None:
-            self.preprocess_dict.target_fs = 250
-        
-        all_data = pd.read_csv(self.root/f"all_data_{dataset}.csv")
-        if subset.lower().endswith("all"):
-            all_data = all_data
-        else:
-            all_data = all_data[all_data["montage"].str.endswith(subset.lower())]
-        
-        # remove the data not including all channels in SEL_CHS
-        all_data = all_data[all_data.apply(sel_fn, axis=1)]
 
+        super().__init__(
+            dataset=dataset,
+            subset=subset,
+            verbose=verbose, 
+            root=root, 
+            move_params=move_params, 
+            pre_params=pre_params, 
+            rm_params=rm_params, 
+            )
+        
+        all_data = self.all_data
+        move_params = self.move_params
+        pre_params = self.pre_params
+        rm_params = self.rm_params
+        
+        # get the winlen, winsize in seconds
+        winlen = move_params.winsize/pre_params.target_fs
+        
         # remove rows based on label
         if label.startswith("sz"):
-            all_data = all_data[all_data["is_seizure"]]
+            all_data = all_data[self.all_data["is_seizure"]]
+            all_data = all_data.reset_index(drop=True)
             
-        # remove the first and last 10 seconds and remove the subject with too-short seq
-        all_data = all_data.copy()
-        all_data.loc[:, "total_dur"] = all_data.loc[:, "total_dur"] - 2* self.rm_len
-        all_data = all_data[all_data["total_dur"] > self.keep_len]
-        all_data = all_data.reset_index()
 
-
-        self.all_data = all_data
 
         # now count data seg in total
         if label == "sz":
-            self.sz_margin = (self.move_dict.winsize/self.preprocess_dict.target_fs) * 0.5
-            def _tmp_fn(x):
-                rv = [(vs[0]-self.rm_len-self.sz_margin, vs[1]-self.rm_len+self.sz_margin) for 
-                     vs in ast.literal_eval(x) 
-                     if (vs[2] == "seiz") and ((vs[1]-vs[0])>self.keep_len) and (vs[0]>self.rm_len)]
-                return rv
-            self.eff_segs = self.all_data["lab"].map(_tmp_fn)
-            num_sps_persub = []
-            for eff_seg in self.eff_segs:
-                len2num(total_dur*self.preprocess_dict.target_fs, 
-                                  self.move_dict.winsize, 
-                                  self.move_dict.stepsize, 
-                                  self.move_dict.marginsize)[0]
-                
-            
+            # sz_margin is the margin of segment to still consider as seizure segment, in seconds
+            sz_margin_len = (move_params.winsize/pre_params.target_fs) * 0.5
+            def _get_effseg_fn(row):
+                lab = row["lab"] 
+                total_dur = row["total_dur"]
+                if isinstance(lab, str):
+                    lab = ast.literal_eval(lab)
+                eff_seg = []
+                for vs in lab:
+                    if vs[2] != "seiz":
+                        continue
+                    # the start and end of the effective segment under removal
+                    vl = np.maximum(vs[0] - rm_params.rm_len, 0)
+                    vu = np.minimum(vs[1] - rm_params.rm_len, total_dur)
+                    if (vu-vl)<winlen:
+                        continue
+
+                    vl = np.maximum(vl - sz_margin_len, 0)
+                    vu = np.minimum(vu + sz_margin_len, total_dur)
+                    eff_seg.append((vl, vu))
+                eff_seg = sorted(eff_seg, key=lambda x: x[0])
+                return eff_seg
+        elif label == "bckg-str":
+            # the label bckg-str is not recommended to use, because bckg label in the dataset is very limited.
+            # In any case, we have better bckg label, so we can use it.
+            raise NotImplementedError("The label bckg-str is not recommended to use, use bckg instead.")
+            def _get_effseg_fn(row):
+                lab = row["lab"] 
+                total_dur = row["total_dur"]
+                if isinstance(lab, str):
+                    lab = ast.literal_eval(lab)
+                eff_seg = []
+                for vs in lab:
+                    if vs[2] != "bckg":
+                        continue
+                    # the start and end of the effective segment under removal
+                    vl = np.maximum(vs[0] - rm_params.rm_len, 0)
+                    vu = np.minimum(vs[1] - rm_params.rm_len, total_dur)
+                    if (vu-vl)<winlen:
+                        continue
+
+                    eff_seg.append((vl, vu))
+                eff_seg = sorted(eff_seg, key=lambda x: x[0])
+                return eff_seg
+
+        elif label == "bckg":
+            def _get_effseg_fn(row):
+                lab = row["lab"] 
+                total_dur = row["total_dur"]
+                if isinstance(lab, str):
+                    lab = ast.literal_eval(lab)
+                eff_seg_inv = []
+                for vs in lab:
+                    if vs[2] != "seiz":
+                        continue
+                    # the start and end of the effective segment under removal
+                    vl = np.maximum(vs[0] - rm_params.rm_len, 0)
+                    vu = np.minimum(vs[1] - rm_params.rm_len, total_dur)
+                    eff_seg_inv.append((vl, vu))
+                eff_seg_inv = sorted(eff_seg_inv, key=lambda x: x[0])
+                start_points = [0, ]
+                end_points = []
+                for vs in eff_seg_inv:
+                    start_points.append(vs[1])
+                    end_points.append(vs[0])
+                end_points.append(total_dur)
+                eff_seg = [(start_points[i], end_points[i]) for i in range(len(start_points)) if (end_points[i]-start_points[i])>=winlen]
+                eff_seg = sorted(eff_seg, key=lambda x: x[0])
+                return eff_seg
+        else: 
+            raise ValueError(f"Unknown label: {label}. Valid labels are sz, bckg, bckg-str")
             
 
+        eff_segs = all_data.apply(_get_effseg_fn, axis=1).tolist()
+        num_sps_persub = []
+        for eff_seg in eff_segs:
+            num_sps = [self._len2num(
+                (vs[1]-vs[0])*pre_params.target_fs, 
+                move_params.winsize, 
+                move_params.stepsize, 
+                move_params.marginsize)[0] 
+                               for vs in eff_seg]
+            num_sps_persub.append(num_sps)
 
-    
+        self.all_data = all_data
+        self.num_sps_persub = num_sps_persub
+        self.eff_segs = eff_segs
+        self.discrete_k = discrete_k
+        self.label = label
 
-        
-            
     def __len__(self):
-        """
-        Returns the length of the dataset.
-
-        Returns:
-            int: The length of the dataset.
-        """
-        return int(self.num_sps_persub.sum())
-
+        return int(np.concatenate(self.num_sps_persub).sum())
+        
     def __getitem__(self, idx):
         """
-        Gets the item at the specified index.
-
-        Args:
-            idx (int or str): The index of the item to get.
-
-        Returns:
-            tuple: A tuple containing the input data and target data.
+        Get the data segment with index idx
         """
-        if isinstance(idx, int):
+        if isinstance(idx, (int, np.integer)):
             if idx < 0:
                 idx = self.__len__() + idx
-            num_cumsum = np.cumsum(self.num_sps_persub)
+            num_sps_persub = [np.sum(idx) for idx in self.num_sps_persub]
+            num_cumsum = np.cumsum(num_sps_persub)
+            num_cumsum = num_cumsum.astype(int)
+            # this way can handle the case when num of seg is 0 for same subject
             sub_idx = np.sum(num_cumsum < (idx+1))
             if sub_idx != 0:
                 loc_idx = idx - num_cumsum[sub_idx-1]
             else:
                 loc_idx = idx
-                
-            if sub_idx > (self.__len__()-1):
-                raise IndexError
-                
+
         elif isinstance(idx, str) and idx.lower().startswith("sub"):
             sub_idx = int(idx.split("sub")[-1])
             if sub_idx < 0:
@@ -148,27 +210,85 @@ class EEGdataSZ(EEGData):
             loc_idx = None
             
         else:
-            raise NotImplementedError
-            
-        
-        self.hook.sub_idxs.append(sub_idx)
-        data = self.get_preprocess_data(sub_idx)
+            raise NotImplementedError("The index type is not supported")
+
+        data = self.get_pre_data(sub_idx)
         # remove the first and last pts
-        data = data[:, int(self.preprocess_dict.target_fs*self.rm_len):-int(self.preprocess_dict.target_fs*self.rm_len)]
-        data = robust_EEG_rescale(data, data_max=self.scale_fct)
-        
+        data = data[:, int(self.pre_params.target_fs*self.rm_params.rm_len):-int(self.pre_params.target_fs*self.rm_params.rm_len)]
+        data = self._robust_EEG_rescale(data, data_max=self.pre_params.scale_fct)
+
         if loc_idx is not None:
-            _, low_idxs = len2num(np.array(self.all_data["total_dur"])[sub_idx] * self.preprocess_dict.target_fs, 
-                                                      self.move_dict.winsize, 
-                                                      self.move_dict.stepsize, 
-                                                      self.move_dict.marginsize)
-            loc_idx = self.rm_outlier_seg(data, low_idxs, loc_idx)
-            loc_idx_low, loc_idx_up = int(low_idxs[loc_idx]), int(low_idxs[loc_idx] + self.move_dict.winsize)
+            cur_eff_segs = self.eff_segs[sub_idx]
+            low_idxss = []
+            for vs in cur_eff_segs:
+                low_idxs = self._len2num((vs[1]-vs[0])*self.pre_params.target_fs, 
+                                         self.move_params.winsize, 
+                                         self.move_params.stepsize, 
+                                         self.move_params.marginsize)[1]
+                low_idxss.append(low_idxs)
+            n_per_effseg = self.num_sps_persub[sub_idx]
+            cumsum_per_effseg = np.cumsum(n_per_effseg)
+            effseg_idx = np.sum(cumsum_per_effseg < loc_idx+1)
+            if effseg_idx != 0:
+                loc_idx_in_effseg = loc_idx - cumsum_per_effseg[effseg_idx-1]
+            else: 
+                loc_idx_in_effseg = loc_idx
+
+            loc_idx_low = int(low_idxss[effseg_idx][loc_idx_in_effseg] + cur_eff_segs[effseg_idx][0]*self.pre_params.target_fs)
+            loc_idx_up = int(loc_idx_low + self.move_params.winsize)
+            
             data = data[:, loc_idx_low:loc_idx_up]
             
-            if data.shape[1] < self.move_dict.winsize:
-                padding = np.zeros((data.shape[0], self.move_dict.winsize-data.shape[1]))
+            if data.shape[1] < self.move_params.winsize:
+                padding = np.zeros((data.shape[0], self.move_params.winsize-data.shape[1]))
                 data = np.concatenate([data, padding], axis=1)
-        #data = torch.tensor(data)
-        return data.transpose(1, 0)
-    
+        data = data.transpose(1, 0)
+        if self.discrete_k is not None:
+            data_dis = self._get_dis_data(data, self.discrete_k)
+            data_rec = self._rec_dis_data(data_dis, self.discrete_k)
+            return data_dis, data_rec
+        else:
+            return data
+
+    def _get_dis_cutoffs(self, k, seed=0, regen=False):
+        """Get the cutoffs to discretize the data 
+        args: 
+            k (int): 2^k is the number of the bins
+            seed (int): the seed to generate the cutoffs
+            regen (bool): whether to regenerate the cutoffs
+        """
+        np.random.seed(seed)
+        num_seg = 100
+
+        name_p1 = self._dict2name(self.pre_params)
+        name_p2 = self._dict2name(self.rm_params)
+        name = f"dis_cutoffs_bckg_subset_{self.subset}_{name_p1}_{name_p2}_k{k}_seed{seed}.pkl"
+        save_folder = self.root/"dis_cutoffs"
+        if not save_folder.exists():
+            save_folder.mkdir(exist_ok=True)
+
+        if (not (save_folder/name).exists()) or regen:
+            assert self.label == "bckg", "We only use the background data to generate the cutoffs"
+            logger.info(f"Generate the cutoffs for discretization")
+            seg_idxs = np.sort(np.random.choice(np.arange(len(self)), num_seg)).astype(int)
+            # get the data, and pool them together
+            if self.verbose >= 2:
+                pbar = tqdm(seg_idxs, total=len(seg_idxs), desc="Get the data to calculate the cutoffs")
+            else:
+                pbar = seg_idxs
+            vec_uni = [
+                self[ix].flatten() for ix in pbar 
+            ]
+            vec_uni_abs = np.abs(np.concatenate(vec_uni))
+
+            # get the cutoffs
+            # not that the positive and negative are the same
+            num_cls_half = 2**(k-1)
+            qs = np.arange(1, num_cls_half)/num_cls_half
+            cutoffs = np.quantile(vec_uni_abs, qs)
+
+            # save it 
+            save_pkl(save_folder/name, cutoffs, verbose=self.verbose>2, is_force=True)
+        else: 
+            cutoffs = load_pkl(save_folder/name, verbose=self.verbose>2)
+        return cutoffs
