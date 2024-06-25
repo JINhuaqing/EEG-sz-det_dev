@@ -161,6 +161,9 @@ class myNet(nn.Module):
         self.softplus = nn.Softplus()
         self.register_buffer("cuts_base", 
                             torch.arange(-int(2**config.k/2), int(2**config.k/2)+1).to(dtype=torch.get_default_dtype()))
+        self.fc_cls = nn.Linear(config.block_size*config.ndim, config.ncls, 
+                                bias=True)
+        self.logsoftmax = nn.LogSoftmax(dim=-1);
         
         # init all weights
         self.apply(self._init_weights)
@@ -185,7 +188,7 @@ class myNet(nn.Module):
             if module.bias is not None:
                 torch.nn.init.zeros_(module.bias)
 
-    def forward(self, inputs, inputs_raw):
+    def forward(self, inputs):
         """inputs: inputs + loc_enconding
         """
         b, t, nf = inputs.size() # batchsize x len_seq x num_features
@@ -198,7 +201,8 @@ class myNet(nn.Module):
         for block in self.transformer.h:
             x = block(x)
         x = self.transformer.ln_f(x)
-        x = self.fc_out(x)
+        x_flt = x.flatten(start_dim=1); # batchsize x (len_seq * confg.ndim)
+        x = self.fc_out(x) # batchsize x len_seq x num_features
         x2 = self.softplus(self.fc_cut(x))
         
         # for any x, I want to get an increase seq 
@@ -208,12 +212,17 @@ class myNet(nn.Module):
         # less flexiable. 
         # so I introduce x2 to control the interval.
         
-        # probaility
+        # loss1: probaility: predict X_t from X_t-1
         # make it >0 
         cuts_all = x2.unsqueeze(-1) * self.cuts_base;
         diff = cuts_all - x.unsqueeze(-1);
         cumprobs = snorm_cdf(diff);
         #pdb.set_trace()
-        probs = cumprobs.diff(axis=-1);
+        probs1 = cumprobs.diff(axis=-1); # batchsize x len_seq x num_features x num_cuts
+
+        # loss2: predict the label of X_t; seizure or not
+        cls = self.fc_cls(x_flt); # batchsize x num_classes
+        log_probs2 = self.logsoftmax(cls);
+
         
-        return probs
+        return probs1, log_probs2

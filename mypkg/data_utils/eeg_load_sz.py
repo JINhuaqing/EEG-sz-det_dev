@@ -59,7 +59,7 @@ class EEGDataSZ(EEGData):
             rm_params: the remove parameters, determine how to remove the outlier segments
                 - rm_len: the length of the first and last part to remove, in seconds
                 - keep_len: the minimal length of the data to keep, in seconds
-                - outliers_rate: the rate of the outliers, to remove the segments with the max value > quantile(1-outliers_rate)
+                - outliers_rate: the rate of the outliers, to remove the segments with the max value > quantile(1-outliers_rate); it is not used in this class
         """
         _set_verbose_level(verbose, logger)
         label = label.lower()

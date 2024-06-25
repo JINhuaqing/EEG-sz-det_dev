@@ -453,6 +453,11 @@ class EEGData(Dataset):
         else: 
             cutoffs = load_pkl(save_folder/name, verbose=self.verbose>2)
         return cutoffs
+
+    def get_dis_cutoffs(self):
+        """Get the cutoffs to discretize the data
+        """
+        return self._get_dis_cutoffs(self.discrete_k)
     
     def _get_dis_data(self, data, k):
         """Get the discretized data
@@ -467,52 +472,5 @@ class EEGData(Dataset):
         cutoffs = self._get_dis_cutoffs(k)
         data_rec = rec_data(data_dis, cutoffs)
         return data_rec
-
-
-        
-
-    
-class MyDataLoader:
-    def __init__(self, dataset, batch_size, shuffle=False):
-        """
-        DataLoader constructor
-        
-        Args:
-        - dataset: the dataset to load
-        - batch_size: the size of each batch
-        - shuffle: whether to shuffle the dataset before loading
-        """
-        num_segs = len(dataset)
-        all_idxs = np.arange(num_segs, dtype=int)
-        if shuffle: 
-            np.random.shuffle(all_idxs)
-        self.all_idxs = all_idxs
-        self.batch_size = batch_size
-        self.dataset = dataset
-    
-    def __len__(self):
-        """
-        Returns the number of batches in the dataset
-        """
-        return int(len(self.dataset)/self.batch_size)
-    
-    def __call__(self, ix):
-        """
-        Loads a batch of data
-        
-        Args:
-        - ix: the index of the batch to load
-        
-        Returns:
-        - a tensor containing the batch of data
-        """
-        if ix >= self.__len__():
-            ix = self.__len__() - 1
-        low, up = ix*self.batch_size, (ix+1)*self.batch_size
-        batch = []
-        for idx in self.all_idxs[low:up]:
-            batch.append(self.dataset[int(idx)])
-        batch = np.array(batch)
-        return torch.tensor(batch)
 
 
