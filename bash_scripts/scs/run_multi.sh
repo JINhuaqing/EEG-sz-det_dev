@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1
 ##SBATCH --nodelist=anahita
 #SBATCH --output=scs/logs/RUN_%x_%j.out
-#SBATCH -J lr04-5e2-aux
+#SBATCH -J multi-w5-1000
 #SBATCH --time=48:00:00
 #SBATCH --chdir=/home/hujin/jin/MyResearch/EEG-sz-det_dev/bash_scripts/
 
@@ -14,7 +14,8 @@ source /netopt/rhel7/versions/python/Anaconda3-edge/etc/profile.d/conda.sh
 #module load SCS/anaconda/anaconda3
 conda activate eeg-sz-det
 
-python -u ../python_scripts/EEG_sz_train.py --lr 0.0001  --ntrain_batch 500 --aux_loss 
+#python -u ../python_scripts/EEG_sz_train_multi.py --lr 0.0001  --ntrain_batch 1000 --move_steps 1 5 10 --nepoch 50
+python -u ../python_scripts/EEG_sz_train_multi.py --lr 0.0001  --ntrain_batch 1000 --aux_loss --move_steps 1 5 10 --aux_loss_weight 5 --nepoch 50
 
 
 

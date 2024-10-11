@@ -98,8 +98,11 @@ def convert_to_type(X, target_type):
 
 
 class MyDataLoader:
-    def __init__(self, dataset, batch_size, 
-                 shuffle=False):
+    def __init__(self, 
+                 dataset, 
+                 batch_size, 
+                 shuffle=False, 
+                 seed=None):
         """
         DataLoader constructor
         
@@ -107,7 +110,9 @@ class MyDataLoader:
         - dataset: the dataset to load
         - batch_size: the size of each batch
         - shuffle: whether to shuffle the dataset before loading
+        - seed: the random seed 
         """
+        np.random.seed(seed)
         num_segs = len(dataset)
         all_idxs = np.arange(num_segs, dtype=int)
         if shuffle: 
@@ -136,20 +141,21 @@ class MyDataLoader:
         Returns:
         - a tensor containing the batch of data
         """
-        if ix >= self.__len__():
-            ix = self.__len__() - 1
+        #if ix >= self.__len__():
+        #    ix = self.__len__() - 1
+        assert ix < self.__len__(), f"Index {ix} out of range"
         low, up = ix*self.batch_size, (ix+1)*self.batch_size
         if self.is_dis:
-            batch_dis, batch_rec = [], []
+            batch_dis, batch_raw = [], []
             for idx in self.all_idxs[low:up]:
                 batch = self.dataset[int(idx)]
                 batch_dis.append(batch[0])
-                batch_rec.append(batch[1])
+                batch_raw.append(batch[1])
             batch_dis = np.array(batch_dis)
-            batch_rec = np.array(batch_rec)
+            batch_raw = np.array(batch_raw)
             batch_dis = torch.tensor(batch_dis)
-            batch_rec = torch.tensor(batch_rec)
-            return batch_dis, batch_rec
+            batch_raw = torch.tensor(batch_raw)
+            return batch_dis, batch_raw
         else:
             batch = []
             for idx in self.all_idxs[low:up]:

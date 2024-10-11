@@ -245,8 +245,9 @@ class EEGDataSZ(EEGData):
         data = data.transpose(1, 0)
         if self.discrete_k is not None:
             data_dis = self._get_dis_data(data, self.discrete_k)
-            data_rec = self._rec_dis_data(data_dis, self.discrete_k)
-            return data_dis, data_rec
+            return data_dis, data
+            #data_rec = self._rec_dis_data(data_dis, self.discrete_k)
+            #return data_dis, data_rec
         else:
             return data
 

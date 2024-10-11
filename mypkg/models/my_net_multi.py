@@ -1,7 +1,6 @@
 # the main model we use for gTVDN
 # It is cumstmized from https://github.com/karpathy/nanoGPT
 # Here I discretize the data. And to calculate the loss, I use the latent variable model from (https://www.wikiwand.com/en/Ordinal_regression)
-# (on May 18, 2023)
 import numpy as np
 import torch
 import torch.nn as nn
@@ -156,14 +155,14 @@ class myNet(nn.Module):
             h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
             ln_f = LayerNorm(config),
         ))
-        self.fc_out = nn.Linear(config.ndim, config.target_dim, bias=False)
-        self.fc_cut = nn.Linear(config.target_dim, config.nfeature, bias=False)
-        self.softplus = nn.Softplus()
-        self.register_buffer("cuts_base", 
-                            torch.arange(-int(2**config.k/2), int(2**config.k/2)+1).to(dtype=torch.get_default_dtype()))
         self.fc_cls = nn.Linear(config.block_size*config.ndim, config.ncls, 
                                 bias=True)
         self.logsoftmax = nn.LogSoftmax(dim=-1);
+        if config.aux_loss:
+            self.fc_out = nn.Linear(config.ndim, config.nfeature*len(config.move_steps), bias=True)
+            self.softplus = nn.Softplus()
+            self.register_buffer("cuts_base", 
+                                torch.arange(-int(2**config.k/2), int(2**config.k/2)+1).to(dtype=torch.get_default_dtype()))
         
         # init all weights
         self.apply(self._init_weights)
@@ -173,7 +172,7 @@ class myNet(nn.Module):
                 torch.nn.init.normal_(p, mean=0.0, std=0.02/np.sqrt(2 * config.n_layer))
 
         # report number of parameters
-        print("number of parameters: %.2fM" % (self.get_num_params()/1e6,))
+        print("number of parameters: %.4fM" % (self.get_num_params()/1e6,))
     
     def get_num_params(self):
         """
@@ -202,27 +201,36 @@ class myNet(nn.Module):
             x = block(x)
         x = self.transformer.ln_f(x)
         x_flt = x.flatten(start_dim=1); # batchsize x (len_seq * confg.ndim)
-        x = self.fc_out(x) # batchsize x len_seq x num_features
-        x2 = self.softplus(self.fc_cut(x))
         
-        # for any x, I want to get an increase seq 
-        # then I apply cdf on it, and take the diff of cdf(seq) 
-        # in such way, each x in x can have a probs vec with uni-modal curve
-        # but the inteval of my cuts-base is fixed makes the prob vec 
-        # less flexiable. 
-        # so I introduce x2 to control the interval.
+        if self.config.aux_loss:
+            x = self.fc_out(x) # batchsize x len_seq x num_featuresxk
+            xs = x.split(self.config.nfeature, dim=-1); # get k slices of x, each is batchsize x len_seq x num_features
+            probss_aux = []
+            for cx in xs:
+                x2 = self.softplus(cx)
         
-        # loss1: probaility: predict X_t from X_t-1
-        # make it >0 
-        cuts_all = x2.unsqueeze(-1) * self.cuts_base;
-        diff = cuts_all - x.unsqueeze(-1);
-        cumprobs = snorm_cdf(diff);
-        #pdb.set_trace()
-        probs1 = cumprobs.diff(axis=-1); # batchsize x len_seq x num_features x num_cuts
+                # for any x, I want to get an increase seq 
+                # then I apply cdf on it, and take the diff of cdf(seq) 
+                # in such way, each x in x can have a probs vec with uni-modal curve
+                # but the inteval of my cuts-base is fixed makes the prob vec 
+                # less flexiable. 
+                # so I introduce x2 to control the interval.
+        
+                # loss1: probaility: predict X_t from X_t-1
+                # make it >0 
+                cuts_all = x2.unsqueeze(-1) * self.cuts_base;
+                diff = cuts_all - cx.unsqueeze(-1);
+                cumprobs = snorm_cdf(diff);
+                #pdb.set_trace()
+                probs_aux = cumprobs.diff(axis=-1); # batchsize x len_seq x num_features x num_cuts
+                probss_aux.append(probs_aux)
 
         # loss2: predict the label of X_t; seizure or not
         cls = self.fc_cls(x_flt); # batchsize x num_classes
-        log_probs2 = self.logsoftmax(cls);
+        log_probs_cls = self.logsoftmax(cls);
 
         
-        return probs1, log_probs2
+        if self.config.aux_loss:
+            return probss_aux, log_probs_cls
+        else:
+            return log_probs_cls

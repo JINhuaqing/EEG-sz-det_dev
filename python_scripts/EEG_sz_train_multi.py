@@ -16,9 +16,9 @@
 # In[1]:
 
 
-MODEL_NAME = "RAWINPUT"
+MODEL_NAME = "RAWINPUT-MULTI-LONGEP"
 SAVED_MODEL = None
-MODEL_CLASS = "my_net.py"
+MODEL_CLASS = "my_net_multi.py"
 
 
 # # Load pkgs 
@@ -28,14 +28,13 @@ MODEL_CLASS = "my_net.py"
 
 import sys
 sys.path.append("../mypkg")
-from constants import RES_ROOT, FIG_ROOT, DATA_ROOT, MODEL_ROOT
+from constants import RES_ROOT, MODEL_ROOT
 
 
 # In[3]:
 
 
 import numpy as np
-import scipy
 from easydict import EasyDict as edict
 from collections import defaultdict as ddict
 import time
@@ -45,13 +44,12 @@ from pprint import pprint
 
 
 
-
 # In[5]:
 
 
-from models.my_net import myNet
+from models.my_net_multi import myNet
 from models.losses import  ordinal_mse_loss
-from models.model_utils import generate_position_encode, trans_batch, eval_model 
+from models.model_utils import generate_position_encode, trans_batch_multi, eval_model_multi 
 from data_utils.eeg_load_sz import EEGDataSZ
 from data_utils import MyDataLoader
 from utils.misc import delta_time, load_pkl_folder2dict, save_pkl_dict2folder
@@ -85,13 +83,16 @@ argparser.add_argument("--lr_gamma", type=float, default=0.1)
 argparser.add_argument("--aux_loss", action="store_true") # if not specified, then False
 argparser.add_argument("--aux_loss_weight", type=float, default=1)
 argparser.add_argument("--ntrain_batch", type=int, default=0)
+argparser.add_argument("--move_steps", type=int, nargs="+", default=[1, 5, 10])
+argparser.add_argument("--nepoch", type=int, default=0)
 
 args = argparser.parse_args()
-
 # In[ ]:
 
+
 if args.aux_loss:
-    name_update = f"_aux_loss{args.aux_loss}_lr{args.lr*1000000:.0f}_lr_gamma{args.lr_gamma*100:.0f}_ntrain_batch{args.ntrain_batch}_aux_loss_weight{args.aux_loss_weight*100:.0f}"
+    move_steps_str = "-".join([str(i) for i in args.move_steps])
+    name_update = f"_aux_loss{args.aux_loss}_lr{args.lr*1000000:.0f}_lr_gamma{args.lr_gamma*100:.0f}_ntrain_batch{args.ntrain_batch}_aux_loss_weight{args.aux_loss_weight*100:.0f}_move_steps{move_steps_str}"
 else:
     name_update = f"_aux_loss{args.aux_loss}_lr{args.lr*1000000:.0f}_lr_gamma{args.lr_gamma*100:.0f}_ntrain_batch{args.ntrain_batch}"
 
@@ -100,10 +101,12 @@ if SAVED_MODEL is not None:
     SAVED_MODEL = SAVED_MODEL + name_update
 
 
+
 # # training
 
 # ## Model and training params
 
+# In[7]:
 
 
 if SAVED_MODEL is None:
@@ -116,9 +119,10 @@ if SAVED_MODEL is None:
     config.is_mask = True # Use mask to make the attention causal
     config.is_bias = True # Bias  for layernorm
     config.block_size = 256 # the preset length of seq, 
-    config.move_step = 1 # k, movestep
+    # if [1, 5], use X_t to predict X_{t+1}, X_{t+5}
+    config.move_steps = args.move_steps # move steps
     config.fs = 90
-    config.target_dim = 19
+    config.target_dim = 19 # TODO: the target dim can be deprecated in the future 
     config.k = 8 # discretize to 2^k levels
     config.ncls = 2 # number of classes, 2 for my seizure data
     # while include auxiliary loss or not 
@@ -127,13 +131,13 @@ if SAVED_MODEL is None:
     config.aux_loss_weight = args.aux_loss_weight
     
     train_params = edict()
-    train_params.nepoch = 20
+    train_params.nepoch= args.nepoch
     train_params.loss_out = 20
     train_params.val_loss_out = 50
     train_params.clip = 1 # 
     # lr step decay, if lr_step is 0, then no decay
     # if '1epoch', then decay every epoch
-    train_params.lr_step = '10epoch'
+    train_params.lr_step = f'{int(args.nepoch/2):.0f}epoch'
     train_params.lr = args.lr
     train_params.lr_gamma = args.lr_gamma
     train_params.lr_weight_decay = 0
@@ -156,8 +160,8 @@ if SAVED_MODEL is None:
 
     # data parameters
     data_params = edict()
-    data_params.move_params=dict(winsize=config.block_size+config.move_step, 
-                     stepsize=config.block_size+config.move_step, 
+    data_params.move_params=dict(winsize=config.block_size+np.max(config.move_steps), 
+                     stepsize=config.block_size+np.max(config.move_steps), 
                      marginsize=None)
     data_params.pre_params=dict(is_detrend=True, 
                     is_drop=True,
@@ -323,6 +327,8 @@ pprint(data_params)
 pprint(config)
 
 
+# In[11]:
+
 
 def _save_model():
     model_res = edict()
@@ -346,6 +352,7 @@ def _save_model():
     shutil.copy(MODEL_ROOT/MODEL_CLASS, RES_ROOT/cur_model_name/"model_class.py")
 
 
+# In[12]:
 
 
 # training
@@ -383,16 +390,23 @@ for iep in range(train_params.nepoch):
         net.train()
         batch_sz = train_data_sz_loader(ix)
         batch_bckg = train_data_bckg_loader(ix)
-        X_org, Y_dis, szlabels  = trans_batch(batch_sz=batch_sz, batch_bckg=batch_bckg, 
+        trans_res  = trans_batch_multi(batch_sz=batch_sz, batch_bckg=batch_bckg, 
                                               config=config,
                                               shuffle=True)
+        X_org = trans_res[0]
+        Y_diss = trans_res[1:-1]
+        szlabels = trans_res[-1]
         X_org_wpos = X_org + pos_enc
         # Zero the gradients
         optimizer.zero_grad()
         
         if config.aux_loss:
-            probs_aux, log_probs_cls = net(X_org_wpos)
-            loss1 = loss_fn1(probs_aux, Y_dis, num_cls=2**config.k)
+            probss_aux, log_probs_cls = net(X_org_wpos)
+            loss1 = 0
+            for Y_dis, probs_aux in zip(Y_diss, probss_aux):
+                loss1p = loss_fn1(probs_aux, Y_dis, num_cls=2**config.k)
+                loss1 += loss1p
+            loss1 = loss1/len(Y_diss)
             loss2 = loss_fn2(log_probs_cls, szlabels)
             loss = config.aux_loss_weight*loss1 + loss2
         
@@ -417,7 +431,7 @@ for iep in range(train_params.nepoch):
         
         if ix % train_params.loss_out == (train_params.loss_out-1):
             loss_save["train"]["niter_auc"].append(total_iter)
-            curlosses = eval_model(net, 
+            curlosses = eval_model_multi(net, 
                                    data_loader_sz=train_data_sz_loader, 
                                    data_loader_bckg=train_data_bckg_loader,
                                    n_batch=train_params.train_size, random=True)
@@ -438,7 +452,7 @@ for iep in range(train_params.nepoch):
             
         if ix % train_params.val_loss_out == (train_params.val_loss_out-1):
             loss_save["val"]["niter"].append(total_iter)
-            curlosses = eval_model(net, 
+            curlosses = eval_model_multi(net, 
                                    data_loader_sz=val_data_sz_loader, 
                                    data_loader_bckg=val_data_bckg_loader, 
                                    cls_loss_fn=loss_fn2,
@@ -463,7 +477,7 @@ for iep in range(train_params.nepoch):
             # when saving model, test the model on the test data
             loss_save["test"]["niter"].append(total_iter)
 
-            curlosses = eval_model(net, 
+            curlosses = eval_model_multi(net, 
                                    data_loader_sz=test_data_sz_loader, 
                                    data_loader_bckg=test_data_bckg_loader, 
                                    cls_loss_fn=loss_fn2,
@@ -490,6 +504,7 @@ for iep in range(train_params.nepoch):
     _save_model()
 
 
+# In[ ]:
 
 
 

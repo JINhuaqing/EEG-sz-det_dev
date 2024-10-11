@@ -3,7 +3,7 @@ results/
 mid_results/
 __pycache__
 .ipynb_checkpoints
-code_bakup
+*_bakup
 backup
 tests
 rik*

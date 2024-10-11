@@ -1,0 +1,7 @@
+{
+    "search.exclude": {
+        "data/EEG_*": true,
+        "mid_results/": true,
+        "results/": true
+    }
+}
