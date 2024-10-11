@@ -1,4 +1,4 @@
-data/
+data/*
 results/
 mid_results/
 __pycache__
@@ -8,3 +8,4 @@ backup
 tests
 rik*
 logs/
+!data/README.md
