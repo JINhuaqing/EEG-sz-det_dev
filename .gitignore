@@ -9,3 +9,4 @@ tests
 rik*
 logs/
 !data/README.md
+*.log

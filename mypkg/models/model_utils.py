@@ -88,6 +88,52 @@ def trans_batch(batch_sz, batch_bckg, config, shuffle=False):
     res.append(labels)
     return res
 
+def eval_model_selflearning(
+               trained_model, 
+               data_loader,
+               loss_fn, 
+               df_dtype,
+               n_batch=None, 
+               random=False, 
+               seed=None,
+               verbose=False):
+    """Test the model
+    args:
+        - trained_model: the trained model
+        - data_loader: the data loader
+        - loss_fn: the loss function
+        - df_dtype: the data type of the data
+        - n_batch: the number of test batch
+        - verbose: whether to show the progress bar or not
+    return:
+        - res: the loss of the model
+    """
+    pos_enc = generate_position_encode(trained_model.config.block_size,
+                                       trained_model.config.nfeature).unsqueeze(0);
+    if n_batch is None or n_batch == 0:
+        n_batch = len(data_loader)
+    assert n_batch > 0 and n_batch <= len(data_loader), "n_batch is too large or too small"
+    if random:
+        rng = np.random.default_rng(seed)
+        idxs = rng.integers(0, len(data_loader), n_batch)
+    else:
+        idxs = np.arange(n_batch)
+    if verbose:
+        idxs = tqdm(idxs, total=n_batch)
+    
+    
+    res = []
+    for idx in idxs:
+        batch = data_loader(idx)
+        batch = batch.to(df_dtype)
+        batch_wpos = batch + pos_enc
+        
+        trained_model.eval()
+        with torch.no_grad():
+            batch_rec = trained_model(batch_wpos)
+            loss = loss_fn(batch_rec, batch)
+            res.append(loss.item())
+    return res
 
 def eval_model(trained_model, 
                data_loader_sz,
